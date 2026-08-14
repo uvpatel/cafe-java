@@ -1,0 +1,4 @@
+com/cafepos/catalog/CatalogModuleMarker.class
+com/cafepos/shared/money/Money.class
+com/cafepos/catalog/CatalogService.class
+com/cafepos/CafePosApplication.class
