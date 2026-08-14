@@ -14,5 +14,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, UUID> {
 
     Optional<Employee> findByCafeIdAndEmail(UUID cafeId, String email);
 
+    Optional<Employee> findByEmailIgnoreCase(String email);
+
     boolean existsByCafeIdAndEmail(UUID cafeId, String email);
 }
