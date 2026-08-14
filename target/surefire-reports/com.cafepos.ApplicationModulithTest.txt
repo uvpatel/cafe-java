@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.cafepos.ApplicationModulithTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.214 s <<< FAILURE! -- in com.cafepos.ApplicationModulithTest
-com.cafepos.ApplicationModulithTest.verifyModuleStructure -- Time elapsed: 0.204 s <<< ERROR!
-java.lang.IllegalArgumentException: No classes found in packages [com.cafepos]!
-	at org.springframework.util.Assert.notEmpty(Assert.java:418)
-	at org.springframework.modulith.core.ApplicationModules.<init>(ApplicationModules.java:141)
-	at org.springframework.modulith.core.ApplicationModules.<init>(ApplicationModules.java:109)
-	at org.springframework.modulith.core.ApplicationModules.lambda$of$22(ApplicationModules.java:656)
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1735)
-	at org.springframework.modulith.core.ApplicationModules.of(ApplicationModules.java:653)
-	at org.springframework.modulith.core.ApplicationModules.of(ApplicationModules.java:287)
-	at org.springframework.modulith.core.ApplicationModules.of(ApplicationModules.java:272)
-	at com.cafepos.ApplicationModulithTest.verifyModuleStructure(ApplicationModulithTest.java:10)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.240 s -- in com.cafepos.ApplicationModulithTest
