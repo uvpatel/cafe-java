@@ -7,10 +7,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import java.util.Objects;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
+    private final TenantAuthenticationFilter tenantAuthenticationFilter;
+
+    public SecurityConfig(TenantAuthenticationFilter tenantAuthenticationFilter) {
+        this.tenantAuthenticationFilter = Objects.requireNonNull(tenantAuthenticationFilter, "tenantAuthenticationFilter must not be null");
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -20,7 +29,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/auth/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyRequest().permitAll()
-                );
+                )
+                .addFilterBefore(tenantAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 }
