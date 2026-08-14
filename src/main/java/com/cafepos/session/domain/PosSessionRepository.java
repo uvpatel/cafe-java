@@ -18,5 +18,7 @@ public interface PosSessionRepository extends JpaRepository<PosSession, UUID> {
 
     Optional<PosSession> findByCafeIdAndTerminalIdAndStatus(UUID cafeId, UUID terminalId, PosSessionStatus status);
 
+    Optional<PosSession> findByCafeIdAndOpenedByEmployeeIdAndStatus(UUID cafeId, UUID openedByEmployeeId, PosSessionStatus status);
+
     boolean existsByCafeIdAndTerminalIdAndStatus(UUID cafeId, UUID terminalId, PosSessionStatus status);
 }
