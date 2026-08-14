@@ -1,0 +1,17 @@
+package com.cafepos.payment.api;
+
+import java.math.BigDecimal;
+import java.time.Instant;
+import java.util.UUID;
+
+public record RefundResponse(
+        UUID id,
+        UUID cafeId,
+        UUID paymentId,
+        BigDecimal amount,
+        String currency,
+        String reason,
+        UUID refundedByEmployeeId,
+        Instant createdAt
+) {
+}
