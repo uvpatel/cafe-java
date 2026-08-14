@@ -310,7 +310,7 @@ public class Order {
     }
 
     private void assertModifiable() {
-        if (this.status != OrderStatus.DRAFT) {
+        if (this.status != OrderStatus.DRAFT && this.status != OrderStatus.CONFIRMED) {
             throw new IllegalStateException("Order cannot be modified in status: " + this.status);
         }
     }

@@ -115,14 +115,14 @@ class OrderTest {
         order.confirm();
         assertThat(order.getStatus()).isEqualTo(OrderStatus.CONFIRMED);
 
-        // Cannot modify confirmed order
-        assertThatThrownBy(() -> order.addOrUpdateLine(productId2, "Muffin", Money.of(3.00), 1, false))
-                .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("Order cannot be modified in status: CONFIRMED");
-
         // CONFIRMED -> SENT_TO_KITCHEN
         order.markSentToKitchen();
         assertThat(order.getStatus()).isEqualTo(OrderStatus.SENT_TO_KITCHEN);
+
+        // Cannot modify order sent to kitchen
+        assertThatThrownBy(() -> order.addOrUpdateLine(productId2, "Muffin", Money.of(3.00), 1, false))
+                .isInstanceOf(IllegalStateException.class)
+                .hasMessageContaining("Order cannot be modified in status: SENT_TO_KITCHEN");
 
         // SENT_TO_KITCHEN -> READY
         order.markReady();
