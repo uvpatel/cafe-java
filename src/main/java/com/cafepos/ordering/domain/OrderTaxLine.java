@@ -78,6 +78,10 @@ public class OrderTaxLine {
         return taxAmount;
     }
 
+    public com.cafepos.shared.money.Money getTaxAmountMoney(java.util.Currency currency) {
+        return new com.cafepos.shared.money.Money(this.taxAmount, currency);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
