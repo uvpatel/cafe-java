@@ -57,8 +57,16 @@ public class OutboxPublisher {
         }
 
         if (tenantId != null && !tenantId.isBlank()) {
-            String destination = "/topic/kitchen/" + tenantId;
-            messagingTemplate.convertAndSend(destination, event.getPayload());
+            String tenantDestination = "/topic/kitchen/" + tenantId;
+            messagingTemplate.convertAndSend(tenantDestination, event.getPayload());
+
+            if (jsonNode.has("stationId") && !jsonNode.get("stationId").isNull()) {
+                String stationId = jsonNode.get("stationId").asText();
+                if (!stationId.isBlank()) {
+                    String stationDestination = "/topic/kitchen/" + tenantId + "/station/" + stationId;
+                    messagingTemplate.convertAndSend(stationDestination, event.getPayload());
+                }
+            }
         } else {
             log.warn("Outbox event id {} has no cafeId/tenantId in payload, skipping WS broadcast", event.getId());
         }
