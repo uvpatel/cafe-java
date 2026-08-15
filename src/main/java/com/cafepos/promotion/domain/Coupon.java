@@ -163,6 +163,23 @@ public class Coupon {
         return subtotal.amount().compareTo(minOrderAmount) >= 0;
     }
 
+    public Money calculateDiscountAmount(Money subtotal) {
+        if (subtotal == null || subtotal.amount().compareTo(BigDecimal.ZERO) <= 0) {
+            return Money.zero(subtotal != null ? subtotal.currency() : Money.DEFAULT_CURRENCY);
+        }
+        if (!meetsMinimumOrder(subtotal)) {
+            return Money.zero(subtotal.currency());
+        }
+        if (discountType == DiscountType.FIXED_AMOUNT) {
+            Money discount = new Money(discountValue, subtotal.currency());
+            return discount.isGreaterThan(subtotal) ? subtotal : discount;
+        } else {
+            BigDecimal factor = discountValue.divide(new BigDecimal("100"), 4, RoundingMode.HALF_UP);
+            Money discount = subtotal.multiply(factor);
+            return discount.isGreaterThan(subtotal) ? subtotal : discount;
+        }
+    }
+
     public void incrementTimesRedeemed() {
         if (maxRedemptions != null && timesRedeemed >= maxRedemptions) {
             throw new IllegalStateException("Cannot redeem coupon: maximum redemption limit reached");
