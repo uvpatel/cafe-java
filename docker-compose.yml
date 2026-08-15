@@ -1,21 +1,4 @@
 services:
-  postgres:
-    image: postgres:17-alpine
-    container_name: cafepos-postgres
-    environment:
-      POSTGRES_DB: cafepos_db
-      POSTGRES_USER: cafepos_user
-      POSTGRES_PASSWORD: cafepos_password
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U cafepos_user -d cafepos_db"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-
   mailpit:
     image: axllent/mailpit:latest
     container_name: cafepos-mailpit
@@ -34,5 +17,3 @@ services:
       - "9000:9000" # API
       - "9001:9001" # Console
 
-volumes:
-  postgres_data:
