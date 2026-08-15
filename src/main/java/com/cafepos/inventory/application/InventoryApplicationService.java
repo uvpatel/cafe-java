@@ -62,4 +62,11 @@ public class InventoryApplicationService {
     public List<StockMovement> getMovementsForItem(UUID cafeId, UUID itemId) {
         return stockMovementRepository.findByCafeIdAndInventoryItemIdOrderByCreatedAtDesc(cafeId, itemId);
     }
+
+    @Transactional(readOnly = true)
+    public List<InventoryItem> getLowStockItems(UUID cafeId) {
+        return inventoryItemRepository.findByCafeId(cafeId).stream()
+                .filter(item -> item.getCurrentStock().compareTo(item.getReorderThreshold()) <= 0)
+                .toList();
+    }
 }

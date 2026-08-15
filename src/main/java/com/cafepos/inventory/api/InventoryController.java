@@ -75,4 +75,9 @@ public class InventoryController {
     public ResponseEntity<List<StockMovement>> getMovements(@PathVariable UUID cafeId, @PathVariable UUID itemId) {
         return ResponseEntity.ok(inventoryApplicationService.getMovementsForItem(cafeId, itemId));
     }
+
+    @GetMapping("/low-stock")
+    public ResponseEntity<List<InventoryItem>> getLowStockItems(@PathVariable UUID cafeId) {
+        return ResponseEntity.ok(inventoryApplicationService.getLowStockItems(cafeId));
+    }
 }

@@ -13,4 +13,5 @@ public interface InventoryItemRepository extends JpaRepository<InventoryItem, UU
     Optional<InventoryItem> findByCafeIdAndId(UUID cafeId, UUID id);
     Optional<InventoryItem> findByCafeIdAndSku(UUID cafeId, String sku);
     Optional<InventoryItem> findByCafeIdAndProductId(UUID cafeId, UUID productId);
+    List<InventoryItem> findByCafeIdAndCurrentStockLessThanEqual(UUID cafeId, java.math.BigDecimal threshold);
 }
