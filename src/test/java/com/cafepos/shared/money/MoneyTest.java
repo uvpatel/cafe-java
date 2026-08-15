@@ -38,4 +38,25 @@ class MoneyTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("Cannot operate on different currencies");
     }
+
+    @Test
+    @DisplayName("Should divide money correctly and throw on division by zero")
+    void testDivision() {
+        Money m = Money.of(100.00);
+        Money result = m.divide(new BigDecimal("4"));
+        assertThat(result.amount()).isEqualTo(new BigDecimal("25.0000"));
+
+        assertThatThrownBy(() -> m.divide(BigDecimal.ZERO))
+                .isInstanceOf(ArithmeticException.class)
+                .hasMessageContaining("Division by zero");
+    }
+
+    @Test
+    @DisplayName("Should compare monetary amounts of same currency")
+    void testComparison() {
+        Money m1 = Money.of(50.00);
+        Money m2 = Money.of(20.00);
+        assertThat(m1.isGreaterThan(m2)).isTrue();
+        assertThat(m2.isGreaterThan(m1)).isFalse();
+    }
 }
