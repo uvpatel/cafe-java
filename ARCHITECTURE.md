@@ -951,12 +951,12 @@ public class ReportingService {
 **4. Read Replicas**
 ```properties
 # Primary for writes
-spring.datasource.primary.url=jdbc:postgresql://primary:5432/cafepos
-spring.datasource.primary.hikari.maximum-pool-size=20
+spring.datasource.primary.url=${DATABASE_URL}
+spring.datasource.primary.hikari.maximum-pool-size=5
 
-# Replica for reads
-spring.datasource.replica.url=jdbc:postgresql://replica:5432/cafepos
-spring.datasource.replica.hikari.maximum-pool-size=50
+# Replica for reads (Neon read endpoint)
+spring.datasource.replica.url=jdbc:postgresql://<neon-read-replica-host>/<database>?sslmode=require
+spring.datasource.replica.hikari.maximum-pool-size=10
 spring.datasource.replica.hikari.read-only=true
 ```
 
