@@ -74,6 +74,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/session/domain/CashMovementTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/session/domain/PosSessionTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/session/domain/TerminalTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/config/NeonPostgresHealthIndicatorTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/error/ProblemDetailTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/events/OutboxPublisherTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/money/MoneyTest.java

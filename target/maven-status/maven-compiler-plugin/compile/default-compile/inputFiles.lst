@@ -237,6 +237,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/session/domain/PosSessionStatus.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/session/domain/Terminal.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/session/domain/TerminalRepository.java
+/Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/config/NeonPostgresHealthIndicator.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/config/WebSocketConfig.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/error/BusinessException.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/error/GlobalExceptionHandler.java
