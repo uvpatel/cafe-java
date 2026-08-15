@@ -145,6 +145,12 @@ public class TableBooking {
         this.status = BookingStatus.CANCELLED;
     }
 
+    public void expire() {
+        if (this.status == BookingStatus.CONFIRMED) {
+            this.status = BookingStatus.EXPIRED;
+        }
+    }
+
     public void updateDetails(String customerName, String customerPhone, int partySize, Instant bookingStart, Instant bookingEnd) {
         if (this.status != BookingStatus.CONFIRMED) {
             throw new BusinessException("BOOKING_NOT_CONFIRMED", "Only CONFIRMED bookings can be updated", 400);
