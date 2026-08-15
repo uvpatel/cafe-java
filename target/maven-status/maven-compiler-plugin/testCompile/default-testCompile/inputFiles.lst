@@ -20,6 +20,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/customer/application/ConsentApplicationServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/customer/domain/ConsentRecordTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/e2e/FirstSaleVerticalSliceE2ETest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/fixture/CafeFixture.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/floor/api/DiningTableControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/floor/application/FloorApplicationServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/floor/domain/DiningTableTest.java
@@ -31,6 +32,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/domain/UserAccountTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/infrastructure/NimbusJwtTokenServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/infrastructure/PasswordEncodingServiceTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/integration/NeonPostgresIntegrationIT.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/inventory/application/InventoryApplicationServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/inventory/domain/InventoryItemTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/inventory/domain/InventoryStockMovementTest.java
@@ -74,6 +76,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/events/OutboxPublisherTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/money/MoneyTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/security/TenantAuthenticationFilterTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/seed/DatabaseSeederTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/tenancy/TenantContextHolderTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/tenancy/TenantIsolationPolicyTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/shared/tenancy/TenantIsolationSecurityTest.java
