@@ -232,7 +232,7 @@ class TableBookingControllerTest {
         OrderResponse orderResponse = new OrderResponse(
                 orderId, cafeId, posSessionId, diningTableId, "ORD-20260815-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
                 now, now, List.of()
         );
         ConvertToOrderResponse response = new ConvertToOrderResponse(bookingResponse, orderResponse);

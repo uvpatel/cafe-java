@@ -92,7 +92,7 @@ class OrderCouponControllerTest {
                 orderId, cafeId, posSessionId, null, "ORD-001",
                 OrderType.TAKEAWAY, OrderStatus.DRAFT,
                 new BigDecimal("50.0000"), new BigDecimal("5.0000"),
-                new BigDecimal("0.0000"), new BigDecimal("45.0000"),
+                new BigDecimal("0.0000"), new BigDecimal("0.0000"), new BigDecimal("45.0000"),
                 "USD", null, Instant.now(), Instant.now(), List.of()
         );
 
@@ -117,7 +117,7 @@ class OrderCouponControllerTest {
                 orderId, cafeId, posSessionId, null, "ORD-001",
                 OrderType.TAKEAWAY, OrderStatus.DRAFT,
                 new BigDecimal("50.0000"), new BigDecimal("0.0000"),
-                new BigDecimal("0.0000"), new BigDecimal("50.0000"),
+                new BigDecimal("0.0000"), new BigDecimal("0.0000"), new BigDecimal("50.0000"),
                 "USD", null, Instant.now(), Instant.now(), List.of()
         );
 

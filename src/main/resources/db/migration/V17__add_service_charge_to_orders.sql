@@ -1,0 +1,1 @@
+ALTER TABLE orders ADD COLUMN service_charge_amount NUMERIC(19,4) NOT NULL DEFAULT 0.0000;
