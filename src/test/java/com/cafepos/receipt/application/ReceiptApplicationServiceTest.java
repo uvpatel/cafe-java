@@ -2,7 +2,7 @@ package com.cafepos.receipt.application;
 
 import com.cafepos.ordering.domain.Order;
 import com.cafepos.ordering.domain.OrderRepository;
-import com.cafepos.ordering.domain.OrderStatus;
+
 import com.cafepos.ordering.domain.OrderType;
 import com.cafepos.receipt.api.ReceiptDtoMapper;
 import com.cafepos.receipt.api.ReceiptResponse;

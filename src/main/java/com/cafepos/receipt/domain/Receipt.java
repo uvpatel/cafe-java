@@ -1,7 +1,7 @@
 package com.cafepos.receipt.domain;
 
 import com.cafepos.ordering.domain.Order;
-import com.cafepos.ordering.domain.OrderTaxLine;
+
 import com.cafepos.shared.money.Money;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Currency;
+
 import java.util.Objects;
 import java.util.UUID;
 

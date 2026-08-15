@@ -293,7 +293,7 @@ public class Order {
         if (percentage == null || percentage.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Service charge percentage cannot be negative");
         }
-        Currency curr = getCurrency();
+       
         Money subtotal = getSubtotal();
         BigDecimal factor = percentage.divide(new BigDecimal("100"), 4, java.math.RoundingMode.HALF_UP);
         this.serviceChargeAmount = subtotal.multiply(factor).amount();

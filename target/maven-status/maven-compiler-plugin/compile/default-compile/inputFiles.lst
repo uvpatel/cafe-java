@@ -245,6 +245,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/events/OutboxEventStatus.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/events/OutboxPublisher.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/money/Money.java
+/Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/package-info.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/security/SecurityConfig.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/security/TenantAuthenticationFilter.java
 /Users/urvilpatel/freelance-projects/javaproject/src/main/java/com/cafepos/shared/security/UserPrincipal.java

@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 class InventoryStockMovementTest {
 
     private final UUID cafeId = UUID.randomUUID();
-    private final UUID itemId = UUID.randomUUID();
+
 
     @Test
     @DisplayName("Should adjust inventory stock and create stock movement entry")

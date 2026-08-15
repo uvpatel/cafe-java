@@ -1,9 +1,6 @@
 package com.cafepos.receipt.api;
 
-import com.cafepos.ordering.domain.OrderStatus;
-import com.cafepos.ordering.domain.OrderType;
-import com.cafepos.payment.domain.PaymentMethod;
-import com.cafepos.payment.domain.PaymentStatus;
+
 import com.cafepos.receipt.application.ReceiptApplicationService;
 import com.cafepos.shared.error.BusinessException;
 import com.cafepos.shared.error.GlobalExceptionHandler;
@@ -45,10 +42,7 @@ class ReceiptControllerTest {
     private final UUID cafeId = UUID.randomUUID();
     private final UUID employeeId = UUID.randomUUID();
     private final UUID orderId = UUID.randomUUID();
-    private final UUID posSessionId = UUID.randomUUID();
-    private final UUID paymentId = UUID.randomUUID();
-    private final UUID lineId = UUID.randomUUID();
-    private final UUID productId = UUID.randomUUID();
+
 
     @BeforeEach
     void setUp() {
