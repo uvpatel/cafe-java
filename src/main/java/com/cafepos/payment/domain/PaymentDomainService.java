@@ -64,15 +64,21 @@ public class PaymentDomainService {
         Objects.requireNonNull(employeeId, "Employee ID must not be null");
 
         if (payment.getStatus() == PaymentStatus.REFUNDED) {
-            throw new IllegalStateException("Payment has already been refunded");
+            throw new IllegalStateException("Payment has already been fully refunded");
         }
 
         Money paymentAmount = payment.getAmount();
-        if (refundAmount.amount().compareTo(paymentAmount.amount()) != 0) {
-            throw new IllegalArgumentException("Refund amount (" + refundAmount.amount() + ") must match payment amount (" + paymentAmount.amount() + ") exactly");
-        }
         if (!refundAmount.currency().equals(paymentAmount.currency())) {
             throw new IllegalArgumentException("Refund amount currency (" + refundAmount.currency() + ") does not match payment currency (" + paymentAmount.currency() + ")");
+        }
+
+        Money existingRefundsTotal = refundRepository.findByPaymentId(payment.getId()).stream()
+                .map(r -> r.getAmount(paymentAmount.currency()))
+                .reduce(Money.zero(paymentAmount.currency()), Money::add);
+
+        Money newTotalRefunded = existingRefundsTotal.add(refundAmount);
+        if (newTotalRefunded.isGreaterThan(paymentAmount)) {
+            throw new IllegalArgumentException("Total requested refund (" + newTotalRefunded.amount() + ") exceeds payment amount (" + paymentAmount.amount() + ")");
         }
 
         Refund refund = new Refund(
@@ -83,7 +89,9 @@ public class PaymentDomainService {
                 employeeId
         );
 
-        payment.markRefunded();
+        if (newTotalRefunded.amount().compareTo(paymentAmount.amount()) == 0) {
+            payment.markRefunded();
+        }
         paymentRepository.save(payment);
         return refundRepository.save(refund);
     }
