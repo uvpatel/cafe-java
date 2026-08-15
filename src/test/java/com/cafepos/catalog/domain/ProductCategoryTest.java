@@ -143,6 +143,15 @@ class ProductCategoryTest {
             assertThatThrownBy(() -> category.setColorHex("invalid"))
                     .isInstanceOf(IllegalArgumentException.class);
         }
+
+        @Test
+        @DisplayName("Should update sort order on setSortOrder")
+        void shouldUpdateSortOrder() {
+            ProductCategory category = new ProductCategory(UUID.randomUUID(), "Bakery");
+
+            category.setSortOrder(5);
+            assertThat(category.getSortOrder()).isEqualTo(5);
+        }
     }
 
     @Nested
