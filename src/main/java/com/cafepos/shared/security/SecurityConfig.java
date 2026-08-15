@@ -36,4 +36,10 @@ public class SecurityConfig {
                 .addFilterBefore(tenantAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
+
+    @Bean
+    public org.springframework.security.crypto.password.PasswordEncoder passwordEncoder() {
+        return new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder();
+    }
 }
+
