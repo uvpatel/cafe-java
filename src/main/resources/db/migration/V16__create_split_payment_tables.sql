@@ -3,7 +3,7 @@ CREATE TABLE order_split_payments (
     cafe_id UUID NOT NULL REFERENCES cafes(id),
     order_id UUID NOT NULL REFERENCES orders(id),
     split_index INT NOT NULL,
-    payment_method_id UUID NOT NULL REFERENCES payment_methods(id),
+    payment_method_id UUID NOT NULL,
     amount NUMERIC(12, 4) NOT NULL,
     tip_amount NUMERIC(12, 4) NOT NULL DEFAULT 0.0000,
     payer_name VARCHAR(100),
