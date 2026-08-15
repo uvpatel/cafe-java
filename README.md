@@ -861,11 +861,11 @@ Closes #42
 ### Long-Term Goals
 
 This project targets:
-- **1,000+ meaningful commits** – Each delivering reviewable value
-- **500+ pull requests** – Each addressing a specific capability
-- **Production readiness** – Security, performance, observability, reliability
+- **High-Quality Domain Coverage** – Every capability backed by hexagonal domain modules and comprehensive unit/integration tests
+- **Robust PR & Verification Pipeline** – Automated verification (`./mvnw clean verify`), archunit compliance, and static analysis
+- **Production readiness** – Security, performance, observability, fault tolerance, and multi-tenant isolation
 
-See [PLAN.md](PLAN.md) for detailed engineering specifications and architecture decisions.
+See [PLAN.md](PLAN.md) for detailed engineering specifications, [ARCHITECTURE.md](ARCHITECTURE.md) for domain design patterns, and [DOCS.md](DOCS.md) for the complete documentation index.
 
 ---
 
