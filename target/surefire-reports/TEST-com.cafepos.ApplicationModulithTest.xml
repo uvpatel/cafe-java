@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.cafepos.ApplicationModulithTest" time="1.284" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.cafepos.ApplicationModulithTest" time="1.296" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/urvilpatel/freelance-projects/javaproject/target/surefire/surefirebooter-20260815202549858_3.jar /Users/urvilpatel/freelance-projects/javaproject/target/surefire 2026-08-15T20-25-49_819-jvmRun1 surefire-20260815202549858_1tmp surefire_0-20260815202549858_2tmp"/>
+    <property name="sun.java.command" value="/Users/urvilpatel/freelance-projects/javaproject/target/surefire/surefirebooter-20260815210322758_3.jar /Users/urvilpatel/freelance-projects/javaproject/target/surefire 2026-08-15T21-03-22_719-jvmRun1 surefire-20260815210322758_1tmp surefire_0-20260815210322758_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/urvilpatel/freelance-projects/javaproject/target/test-classes:/Users/urvilpatel/freelance-projects/javaproject/target/classes:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.2/spring-boot-starter-web-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.2/spring-boot-starter-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot/3.4.2/spring-boot-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.2/spring-boot-starter-logging-3.4.2.jar:/Users/urvilpatel/.m2/repository/ch/qos/logback/logback-classic/1.5.16/logback-classic-1.5.16.jar:/Users/urvilpatel/.m2/repository/ch/qos/logback/logback-core/1.5.16/logback-core-1.5.16.jar:/Users/urvilpatel/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/urvilpatel/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/urvilpatel/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/urvilpatel/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/urvilpatel/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.2/spring-boot-starter-json-3.4.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.2/jackson-datatype-jdk8-2.18.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.2/jackson-module-parameter-names-2.18.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.2/spring-boot-starter-tomcat-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar:/Users/urvilpatel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.34/tomcat-embed-websocket-10.1.34.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-web/6.2.2/spring-web-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-beans/6.2.2/spring-beans-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-webmvc/6.2.2/spring-webmvc-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-context/6.2.2/spring-context-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-expression/6.2.2/spring-expression-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.2/spring-boot-starter-data-jpa-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.2/spring-boot-starter-jdbc-3.4.2.jar:/Users/urvilpatel/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-jdbc/6.2.2/spring-jdbc-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/hibernate/orm/hibernate-core/6.6.5.Final/hibernate-core-6.6.5.Final.jar:/Users/urvilpatel/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/urvilpatel/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/urvilpatel/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/urvilpatel/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/urvilpatel/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/urvilpatel/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/Users/urvilpatel/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/urvilpatel/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/urvilpatel/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/urvilpatel/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/urvilpatel/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/urvilpatel/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/urvilpatel/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/data/spring-data-jpa/3.4.2/spring-data-jpa-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/data/spring-data-commons/3.4.2/spring-data-commons-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-orm/6.2.2/spring-orm-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-tx/6.2.2/spring-tx-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-aspects/6.2.2/spring-aspects-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.4.2/spring-boot-starter-security-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-aop/6.2.2/spring-aop-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/security/spring-security-config/6.4.2/spring-security-config-6.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/security/spring-security-web/6.4.2/spring-security-web-6.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.4.2/spring-boot-starter-validation-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.34/tomcat-embed-el-10.1.34.jar:/Users/urvilpatel/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/urvilpatel/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-websocket/3.4.2/spring-boot-starter-websocket-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-messaging/6.2.2/spring-messaging-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-websocket/6.2.2/spring-websocket-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.4.2/spring-boot-starter-actuator-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.4.2/spring-boot-actuator-autoconfigure-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-actuator/3.4.2/spring-boot-actuator-3.4.2.jar:/Users/urvilpatel/.m2/repository/io/micrometer/micrometer-observation/1.14.3/micrometer-observation-1.14.3.jar:/Users/urvilpatel/.m2/repository/io/micrometer/micrometer-commons/1.14.3/micrometer-commons-1.14.3.jar:/Users/urvilpatel/.m2/repository/io/micrometer/micrometer-jakarta9/1.14.3/micrometer-jakarta9-1.14.3.jar:/Users/urvilpatel/.m2/repository/io/micrometer/micrometer-core/1.14.3/micrometer-core-1.14.3.jar:/Users/urvilpatel/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/Users/urvilpatel/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/urvilpatel/.m2/repository/com/nimbusds/nimbus-jose-jwt/9.48/nimbus-jose-jwt-9.48.jar:/Users/urvilpatel/.m2/repository/org/postgresql/postgresql/42.7.5/postgresql-42.7.5.jar:/Users/urvilpatel/.m2/repository/org/checkerframework/checker-qual/3.48.3/checker-qual-3.48.3.jar:/Users/urvilpatel/.m2/repository/org/flywaydb/flyway-core/10.20.1/flyway-core-10.20.1.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.18.2/jackson-dataformat-toml-2.18.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.2/jackson-datatype-jsr310-2.18.2.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/Users/urvilpatel/.m2/repository/org/flywaydb/flyway-database-postgresql/10.20.1/flyway-database-postgresql-10.20.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-starter-core/1.3.1/spring-modulith-starter-core-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-api/1.3.1/spring-modulith-api-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-apt/1.3.1/spring-modulith-apt-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/3.4.2/spring-boot-configuration-processor-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-core/1.3.1/spring-modulith-core-1.3.1.jar:/Users/urvilpatel/.m2/repository/com/tngtech/archunit/archunit/1.3.0/archunit-1.3.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-moments/1.3.1/spring-modulith-moments-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/jmolecules/jmolecules-events/1.10.0/jmolecules-events-1.10.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-starter-jpa/1.3.1/spring-modulith-starter-jpa-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-events-api/1.3.1/spring-modulith-events-api-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-events-core/1.3.1/spring-modulith-events-core-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/slf4j/jcl-over-slf4j/2.0.16/jcl-over-slf4j-2.0.16.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-events-jackson/1.3.1/spring-modulith-events-jackson-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-events-jpa/1.3.1/spring-modulith-events-jpa-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.8.4/springdoc-openapi-starter-webmvc-ui-2.8.4.jar:/Users/urvilpatel/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.8.4/springdoc-openapi-starter-webmvc-api-2.8.4.jar:/Users/urvilpatel/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.8.4/springdoc-openapi-starter-common-2.8.4.jar:/Users/urvilpatel/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.28/swagger-core-jakarta-2.2.28.jar:/Users/urvilpatel/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/urvilpatel/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.28/swagger-annotations-jakarta-2.2.28.jar:/Users/urvilpatel/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.28/swagger-models-jakarta-2.2.28.jar:/Users/urvilpatel/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.2/jackson-dataformat-yaml-2.18.2.jar:/Users/urvilpatel/.m2/repository/org/webjars/swagger-ui/5.18.2/swagger-ui-5.18.2.jar:/Users/urvilpatel/.m2/repository/org/webjars/webjars-locator-lite/1.0.1/webjars-locator-lite-1.0.1.jar:/Users/urvilpatel/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/urvilpatel/.m2/repository/org/mapstruct/mapstruct/1.6.3/mapstruct-1.6.3.jar:/Users/urvilpatel/.m2/repository/org/mapstruct/mapstruct-processor/1.6.3/mapstruct-processor-1.6.3.jar:/Users/urvilpatel/.m2/repository/com/google/zxing/core/3.5.3/core-3.5.3.jar:/Users/urvilpatel/.m2/repository/com/google/zxing/javase/3.5.3/javase-3.5.3.jar:/Users/urvilpatel/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/urvilpatel/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.4.0/jai-imageio-core-1.4.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.4.2/spring-boot-starter-test-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-test/3.4.2/spring-boot-test-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.4.2/spring-boot-test-autoconfigure-3.4.2.jar:/Users/urvilpatel/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/urvilpatel/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/urvilpatel/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/urvilpatel/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/urvilpatel/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/urvilpatel/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/urvilpatel/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:/Users/urvilpatel/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/urvilpatel/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/urvilpatel/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.jar:/Users/urvilpatel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar:/Users/urvilpatel/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/urvilpatel/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar:/Users/urvilpatel/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/urvilpatel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.jar:/Users/urvilpatel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.jar:/Users/urvilpatel/.m2/repository/org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.jar:/Users/urvilpatel/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/Users/urvilpatel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar:/Users/urvilpatel/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/urvilpatel/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/Users/urvilpatel/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/urvilpatel/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-core/6.2.2/spring-core-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-jcl/6.2.2/spring-jcl-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/spring-test/6.2.2/spring-test-6.2.2.jar:/Users/urvilpatel/.m2/repository/org/xmlunit/xmlunit-core/2.10.0/xmlunit-core-2.10.0.jar:/Users/urvilpatel/.m2/repository/org/springframework/security/spring-security-test/6.4.2/spring-security-test-6.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/security/spring-security-core/6.4.2/spring-security-core-6.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/security/spring-security-crypto/6.4.2/spring-security-crypto-6.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.4.2/spring-boot-testcontainers-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.2/spring-boot-autoconfigure-3.4.2.jar:/Users/urvilpatel/.m2/repository/org/testcontainers/testcontainers/1.20.4/testcontainers-1.20.4.jar:/Users/urvilpatel/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/urvilpatel/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/urvilpatel/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/urvilpatel/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/urvilpatel/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/urvilpatel/.m2/repository/com/github/docker-java/docker-java-api/3.4.0/docker-java-api-3.4.0.jar:/Users/urvilpatel/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.0/docker-java-transport-zerodep-3.4.0.jar:/Users/urvilpatel/.m2/repository/com/github/docker-java/docker-java-transport/3.4.0/docker-java-transport-3.4.0.jar:/Users/urvilpatel/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/urvilpatel/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/Users/urvilpatel/.m2/repository/org/testcontainers/postgresql/1.20.4/postgresql-1.20.4.jar:/Users/urvilpatel/.m2/repository/org/testcontainers/jdbc/1.20.4/jdbc-1.20.4.jar:/Users/urvilpatel/.m2/repository/org/testcontainers/database-commons/1.20.4/database-commons-1.20.4.jar:/Users/urvilpatel/.m2/repository/org/testcontainers/junit-jupiter/1.20.4/junit-jupiter-1.20.4.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-starter-test/1.3.1/spring-modulith-starter-test-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-test/1.3.1/spring-modulith-test-1.3.1.jar:/Users/urvilpatel/.m2/repository/org/springframework/modulith/spring-modulith-docs/1.3.1/spring-modulith-docs-1.3.1.jar:/Users/urvilpatel/.m2/repository/com/structurizr/structurizr-core/1.29.0/structurizr-core-1.29.0.jar:/Users/urvilpatel/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/urvilpatel/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/urvilpatel/.m2/repository/com/structurizr/structurizr-export/1.19.0/structurizr-export-1.19.0.jar:"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="spring.classformat.ignore" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/urvilpatel/freelance-projects/javaproject/target/surefire/surefirebooter-20260815202549858_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/urvilpatel/freelance-projects/javaproject/target/surefire/surefirebooter-20260815210322758_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.12+8-LTS"/>
@@ -61,9 +61,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="verifyModuleStructure" classname="com.cafepos.ApplicationModulithTest" time="1.284">
-    <system-out><![CDATA[20:25:57.416 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12
-20:25:58.453 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12
+  <testcase name="verifyModuleStructure" classname="com.cafepos.ApplicationModulithTest" time="1.295">
+    <system-out><![CDATA[21:03:30.307 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12
+21:03:31.348 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 21.0.12
 Modulith verification note: - Cycle detected: Slice ordering -> 
                 Slice promotion -> 
                 Slice ordering
@@ -105,25 +105,25 @@ Modulith verification note: - Cycle detected: Slice ordering ->
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenService within module 'identity'!
 TenantAuthenticationFilter declares constructor TenantAuthenticationFilter(JwtTokenService) in (TenantAuthenticationFilter.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
-Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.role()> in (TenantAuthenticationFilter.java:69)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
 Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tokenType()> in (TenantAuthenticationFilter.java:56)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
+Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.email()> in (TenantAuthenticationFilter.java:68)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenService within module 'identity'!
 Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenService.parseToken(java.lang.String)> in (TenantAuthenticationFilter.java:55)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
-Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tenantId()> in (TenantAuthenticationFilter.java:62)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
-Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.employeeId()> in (TenantAuthenticationFilter.java:67)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
 Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.role()> in (TenantAuthenticationFilter.java:73)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
-Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tenantId()> in (TenantAuthenticationFilter.java:66)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
-Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.email()> in (TenantAuthenticationFilter.java:68)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
 Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.role()> in (TenantAuthenticationFilter.java:72)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
 Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tenantId()> in (TenantAuthenticationFilter.java:61)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
+Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.role()> in (TenantAuthenticationFilter.java:69)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
+Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.employeeId()> in (TenantAuthenticationFilter.java:67)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
+Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tenantId()> in (TenantAuthenticationFilter.java:66)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenClaims within module 'identity'!
+Method <com.cafepos.shared.security.TenantAuthenticationFilter.doFilterInternal(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, jakarta.servlet.FilterChain)> calls method <com.cafepos.identity.infrastructure.JwtTokenClaims.tenantId()> in (TenantAuthenticationFilter.java:62)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenService within module 'identity'!
 Field <com.cafepos.shared.security.TenantAuthenticationFilter.jwtTokenService> has type <com.cafepos.identity.infrastructure.JwtTokenService> in (TenantAuthenticationFilter.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.JwtTokenService within module 'identity'!
@@ -156,60 +156,54 @@ EmployeeRole declares parameter EmployeeRole.seedEmployeeAndUser(UUID, String, S
 Floor declares return type Floor.seedFloor(UUID, String, int) in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
 ProductCategory declares return type ProductCategory.seedCategory(UUID, String, String, int) in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.UnitOfMeasure within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> gets field <com.cafepos.catalog.domain.UnitOfMeasure.PIECE> in (DatabaseSeeder.java:152)
-- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.DiscountType within module 'promotion'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.promotion.domain.DiscountType.PERCENTAGE> in (DatabaseSeeder.java:123)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.CASHIER> in (DatabaseSeeder.java:98)
-- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.DiscountType within module 'promotion'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.promotion.domain.DiscountType.PERCENTAGE> in (DatabaseSeeder.java:124)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.MANAGER> in (DatabaseSeeder.java:95)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.KITCHEN_STAFF> in (DatabaseSeeder.java:97)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.CASHIER> in (DatabaseSeeder.java:96)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.OWNER> in (DatabaseSeeder.java:94)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.save(java.lang.Object)> in (DatabaseSeeder.java:142)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.findByCafeId(java.util.UUID)> in (DatabaseSeeder.java:144)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.MANAGER> in (DatabaseSeeder.java:95)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.identity.domain.EmployeeRole.KITCHEN_STAFF> in (DatabaseSeeder.java:97)
+- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.DiscountType within module 'promotion'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.promotion.domain.DiscountType.PERCENTAGE> in (DatabaseSeeder.java:123)
+- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.DiscountType within module 'promotion'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> gets field <com.cafepos.promotion.domain.DiscountType.PERCENTAGE> in (DatabaseSeeder.java:124)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.UnitOfMeasure within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> gets field <com.cafepos.catalog.domain.UnitOfMeasure.PIECE> in (DatabaseSeeder.java:152)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategory.getName()> in (DatabaseSeeder.java:145)
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:110)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.identity.domain.EmployeeRepository.count()> in (DatabaseSeeder.java:127)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:106)
+- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.Cafe within module 'organization'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.Cafe.getId()> in (DatabaseSeeder.java:91)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.existsByCafeIdAndNameIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:141)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.save(java.lang.Object)> in (DatabaseSeeder.java:147)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> calls method <com.cafepos.catalog.domain.ProductRepository.save(java.lang.Object)> in (DatabaseSeeder.java:152)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> calls method <com.cafepos.catalog.domain.ProductRepository.existsByCafeIdAndSku(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:151)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.save(java.lang.Object)> in (DatabaseSeeder.java:164)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.existsByCafeIdAndNameIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:163)
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.count()> in (DatabaseSeeder.java:127)
 - Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.Floor.getName()> in (DatabaseSeeder.java:167)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.save(java.lang.Object)> in (DatabaseSeeder.java:169)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.findByCafeId(java.util.UUID)> in (DatabaseSeeder.java:166)
-- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.CouponRepository within module 'promotion'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> calls method <com.cafepos.promotion.domain.CouponRepository.existsByCafeIdAndCodeIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:179)
-- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.CouponRepository within module 'promotion'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> calls method <com.cafepos.promotion.domain.CouponRepository.save(java.lang.Object)> in (DatabaseSeeder.java:180)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.EmployeeRepository.save(java.lang.Object)> in (DatabaseSeeder.java:133)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.UserAccountRepository.save(java.lang.Object)> in (DatabaseSeeder.java:136)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.infrastructure.PasswordEncodingService.encode(java.lang.CharSequence)> in (DatabaseSeeder.java:134)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.EmployeeRepository.findByCafeIdAndEmail(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:131)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.Employee.getId()> in (DatabaseSeeder.java:136)
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:118)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:107)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:109)
+- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.count()> in (DatabaseSeeder.java:127)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:108)
+- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.findBySlug(java.lang.String)> in (DatabaseSeeder.java:89)
+- Module 'shared' depends on non-exposed type com.cafepos.session.domain.TerminalRepository within module 'session'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.session.domain.TerminalRepository.count()> in (DatabaseSeeder.java:127)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:119)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:120)
+- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.save(java.lang.Object)> in (DatabaseSeeder.java:90)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductRepository.count()> in (DatabaseSeeder.java:127)
 - Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedTable(java.util.UUID, java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.DiningTableRepository.save(java.lang.Object)> in (DatabaseSeeder.java:174)
 - Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
@@ -219,41 +213,49 @@ Method <com.cafepos.shared.seed.DatabaseSeeder.seedTerminal(java.util.UUID, java
 - Module 'shared' depends on non-exposed type com.cafepos.session.domain.TerminalRepository within module 'session'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedTerminal(java.util.UUID, java.lang.String, java.lang.String)> calls method <com.cafepos.session.domain.TerminalRepository.existsByCafeIdAndCodeIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:157)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductRepository.count()> in (DatabaseSeeder.java:127)
-- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.findBySlug(java.lang.String)> in (DatabaseSeeder.java:89)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:109)
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> calls method <com.cafepos.catalog.domain.ProductRepository.existsByCafeIdAndSku(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:151)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> calls method <com.cafepos.catalog.domain.ProductRepository.save(java.lang.Object)> in (DatabaseSeeder.java:152)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.existsByCafeIdAndNameIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:163)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.findByCafeId(java.util.UUID)> in (DatabaseSeeder.java:166)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.Floor.getName()> in (DatabaseSeeder.java:167)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.save(java.lang.Object)> in (DatabaseSeeder.java:169)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls method <com.cafepos.floor.domain.FloorRepository.save(java.lang.Object)> in (DatabaseSeeder.java:164)
+- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.CouponRepository within module 'promotion'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> calls method <com.cafepos.promotion.domain.CouponRepository.save(java.lang.Object)> in (DatabaseSeeder.java:180)
+- Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.CouponRepository within module 'promotion'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> calls method <com.cafepos.promotion.domain.CouponRepository.existsByCafeIdAndCodeIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:179)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.identity.domain.EmployeeRepository.count()> in (DatabaseSeeder.java:127)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:120)
-- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.save(java.lang.Object)> in (DatabaseSeeder.java:90)
-- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.CafeRepository.count()> in (DatabaseSeeder.java:127)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:118)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.floor.domain.Floor.getId()> in (DatabaseSeeder.java:119)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:108)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:107)
-- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.Cafe within module 'organization'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.organization.domain.Cafe.getId()> in (DatabaseSeeder.java:91)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:106)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategory.getId()> in (DatabaseSeeder.java:110)
-- Module 'shared' depends on non-exposed type com.cafepos.session.domain.TerminalRepository within module 'session'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.session.domain.TerminalRepository.count()> in (DatabaseSeeder.java:127)
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.EmployeeRepository.findByCafeIdAndEmail(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:131)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.Employee.getId()> in (DatabaseSeeder.java:136)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.EmployeeRepository.save(java.lang.Object)> in (DatabaseSeeder.java:133)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.infrastructure.PasswordEncodingService.encode(java.lang.CharSequence)> in (DatabaseSeeder.java:134)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls method <com.cafepos.identity.domain.UserAccountRepository.save(java.lang.Object)> in (DatabaseSeeder.java:136)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.count()> in (DatabaseSeeder.java:127)
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.findByCafeId(java.util.UUID)> in (DatabaseSeeder.java:144)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.save(java.lang.Object)> in (DatabaseSeeder.java:142)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.save(java.lang.Object)> in (DatabaseSeeder.java:147)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategoryRepository.existsByCafeIdAndNameIgnoreCase(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:141)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls constructor <com.cafepos.catalog.domain.ProductCategory.<init>(java.util.UUID, java.lang.String, java.lang.String, int)> in (DatabaseSeeder.java:142)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls constructor <com.cafepos.catalog.domain.ProductCategory.<init>(java.util.UUID, java.lang.String, java.lang.String, int)> in (DatabaseSeeder.java:147)
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls method <com.cafepos.catalog.domain.ProductCategory.getName()> in (DatabaseSeeder.java:145)
+- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.Cafe within module 'organization'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls constructor <com.cafepos.organization.domain.Cafe.<init>(java.util.UUID, java.lang.String, java.lang.String, java.lang.String, java.lang.String)> in (DatabaseSeeder.java:90)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTable within module 'floor'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedTable(java.util.UUID, java.util.UUID, java.lang.String, int)> calls constructor <com.cafepos.floor.domain.DiningTable.<init>(java.util.UUID, java.util.UUID, java.lang.String, int)> in (DatabaseSeeder.java:174)
+- Module 'shared' depends on non-exposed type com.cafepos.session.domain.Terminal within module 'session'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedTerminal(java.util.UUID, java.lang.String, java.lang.String)> calls constructor <com.cafepos.session.domain.Terminal.<init>(java.util.UUID, java.lang.String, java.lang.String)> in (DatabaseSeeder.java:158)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedProduct(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, java.math.BigDecimal, boolean)> calls constructor <com.cafepos.catalog.domain.Product.<init>(java.util.UUID, java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, com.cafepos.shared.money.Money, com.cafepos.catalog.domain.UnitOfMeasure, boolean)> in (DatabaseSeeder.java:152)
 - Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
@@ -262,40 +264,38 @@ Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.la
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> calls constructor <com.cafepos.floor.domain.Floor.<init>(java.util.UUID, java.lang.String, int)> in (DatabaseSeeder.java:164)
 - Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.Coupon within module 'promotion'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> calls constructor <com.cafepos.promotion.domain.Coupon.<init>(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> in (DatabaseSeeder.java:180)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccount within module 'identity'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls constructor <com.cafepos.identity.domain.UserAccount.<init>(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:136)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls constructor <com.cafepos.identity.domain.Employee.<init>(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> in (DatabaseSeeder.java:133)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTable within module 'floor'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedTable(java.util.UUID, java.util.UUID, java.lang.String, int)> calls constructor <com.cafepos.floor.domain.DiningTable.<init>(java.util.UUID, java.util.UUID, java.lang.String, int)> in (DatabaseSeeder.java:174)
-- Module 'shared' depends on non-exposed type com.cafepos.session.domain.Terminal within module 'session'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedTerminal(java.util.UUID, java.lang.String, java.lang.String)> calls constructor <com.cafepos.session.domain.Terminal.<init>(java.util.UUID, java.lang.String, java.lang.String)> in (DatabaseSeeder.java:158)
-- Module 'shared' depends on non-exposed type com.cafepos.organization.domain.Cafe within module 'organization'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.run([Ljava.lang.String;)> calls constructor <com.cafepos.organization.domain.Cafe.<init>(java.util.UUID, java.lang.String, java.lang.String, java.lang.String, java.lang.String)> in (DatabaseSeeder.java:90)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.employeeRepository> has type <com.cafepos.identity.domain.EmployeeRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.passwordEncodingService> has type <com.cafepos.identity.infrastructure.PasswordEncodingService> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccount within module 'identity'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedEmployeeAndUser(java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> calls constructor <com.cafepos.identity.domain.UserAccount.<init>(java.util.UUID, java.lang.String)> in (DatabaseSeeder.java:136)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls constructor <com.cafepos.catalog.domain.ProductCategory.<init>(java.util.UUID, java.lang.String, java.lang.String, int)> in (DatabaseSeeder.java:147)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> calls constructor <com.cafepos.catalog.domain.ProductCategory.<init>(java.util.UUID, java.lang.String, java.lang.String, int)> in (DatabaseSeeder.java:142)
 - Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
 Field <com.cafepos.shared.seed.DatabaseSeeder.productRepository> has type <com.cafepos.catalog.domain.ProductRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.floorRepository> has type <com.cafepos.floor.domain.FloorRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.userAccountRepository> has type <com.cafepos.identity.domain.UserAccountRepository> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.employeeRepository> has type <com.cafepos.identity.domain.EmployeeRepository> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.CouponRepository within module 'promotion'!
 Field <com.cafepos.shared.seed.DatabaseSeeder.couponRepository> has type <com.cafepos.promotion.domain.CouponRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.categoryRepository> has type <com.cafepos.catalog.domain.ProductCategoryRepository> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.userAccountRepository> has type <com.cafepos.identity.domain.UserAccountRepository> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.FloorRepository within module 'floor'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.floorRepository> has type <com.cafepos.floor.domain.FloorRepository> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.passwordEncodingService> has type <com.cafepos.identity.infrastructure.PasswordEncodingService> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
 Field <com.cafepos.shared.seed.DatabaseSeeder.cafeRepository> has type <com.cafepos.organization.domain.CafeRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
-Field <com.cafepos.shared.seed.DatabaseSeeder.diningTableRepository> has type <com.cafepos.floor.domain.DiningTableRepository> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.session.domain.TerminalRepository within module 'session'!
 Field <com.cafepos.shared.seed.DatabaseSeeder.terminalRepository> has type <com.cafepos.session.domain.TerminalRepository> in (DatabaseSeeder.java:0)
-- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
-Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> has return type <com.cafepos.catalog.domain.ProductCategory> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategoryRepository within module 'catalog'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.categoryRepository> has type <com.cafepos.catalog.domain.ProductCategoryRepository> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
+Field <com.cafepos.shared.seed.DatabaseSeeder.diningTableRepository> has type <com.cafepos.floor.domain.DiningTableRepository> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.floor.domain.Floor within module 'floor'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedFloor(java.util.UUID, java.lang.String, int)> has return type <com.cafepos.floor.domain.Floor> in (DatabaseSeeder.java:0)
+- Module 'shared' depends on non-exposed type com.cafepos.catalog.domain.ProductCategory within module 'catalog'!
+Method <com.cafepos.shared.seed.DatabaseSeeder.seedCategory(java.util.UUID, java.lang.String, java.lang.String, int)> has return type <com.cafepos.catalog.domain.ProductCategory> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.promotion.domain.DiscountType within module 'promotion'!
 Method <com.cafepos.shared.seed.DatabaseSeeder.seedCoupon(java.util.UUID, java.lang.String, com.cafepos.promotion.domain.DiscountType, java.math.BigDecimal)> has parameter of type <com.cafepos.promotion.domain.DiscountType> in (DatabaseSeeder.java:0)
 - Module 'shared' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
@@ -326,28 +326,28 @@ OrderCouponController declares constructor OrderCouponController(ApplyCouponToOr
 OrderCouponController declares constructor OrderCouponController(ApplyCouponToOrderUseCase, RemoveCouponFromOrderUseCase, PricingPreviewUseCase) in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.PricingPreviewUseCase within module 'promotion'!
 OrderCouponController declares constructor OrderCouponController(ApplyCouponToOrderUseCase, RemoveCouponFromOrderUseCase, PricingPreviewUseCase) in (OrderCouponController.java:0)
-- Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.ApplyCouponRequest within module 'promotion'!
-ApplyCouponRequest declares parameter ApplyCouponRequest.applyCoupon(UUID, ApplyCouponRequest) in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.PricingPreviewRequest within module 'promotion'!
 PricingPreviewRequest declares parameter PricingPreviewRequest.previewPricing(UUID, PricingPreviewRequest) in (OrderCouponController.java:0)
-- Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.RemoveCouponFromOrderUseCase within module 'promotion'!
-Method <com.cafepos.ordering.api.OrderCouponController.removeCoupon(java.util.UUID)> calls method <com.cafepos.promotion.application.RemoveCouponFromOrderUseCase.removeCouponFromOrder(java.util.UUID, java.util.UUID)> in (OrderCouponController.java:53)
-- Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.ApplyCouponToOrderUseCase within module 'promotion'!
-Method <com.cafepos.ordering.api.OrderCouponController.applyCoupon(java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.promotion.application.ApplyCouponToOrderUseCase.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> in (OrderCouponController.java:45)
+- Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.ApplyCouponRequest within module 'promotion'!
+ApplyCouponRequest declares parameter ApplyCouponRequest.applyCoupon(UUID, ApplyCouponRequest) in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.PricingPreviewUseCase within module 'promotion'!
 Method <com.cafepos.ordering.api.OrderCouponController.previewPricing(java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.promotion.application.PricingPreviewUseCase.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> in (OrderCouponController.java:63)
+- Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.ApplyCouponToOrderUseCase within module 'promotion'!
+Method <com.cafepos.ordering.api.OrderCouponController.applyCoupon(java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.promotion.application.ApplyCouponToOrderUseCase.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> in (OrderCouponController.java:45)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.RemoveCouponFromOrderUseCase within module 'promotion'!
-Field <com.cafepos.ordering.api.OrderCouponController.removeCouponFromOrderUseCase> has type <com.cafepos.promotion.application.RemoveCouponFromOrderUseCase> in (OrderCouponController.java:0)
+Method <com.cafepos.ordering.api.OrderCouponController.removeCoupon(java.util.UUID)> calls method <com.cafepos.promotion.application.RemoveCouponFromOrderUseCase.removeCouponFromOrder(java.util.UUID, java.util.UUID)> in (OrderCouponController.java:53)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.PricingPreviewUseCase within module 'promotion'!
 Field <com.cafepos.ordering.api.OrderCouponController.pricingPreviewUseCase> has type <com.cafepos.promotion.application.PricingPreviewUseCase> in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.ApplyCouponToOrderUseCase within module 'promotion'!
 Field <com.cafepos.ordering.api.OrderCouponController.applyCouponToOrderUseCase> has type <com.cafepos.promotion.application.ApplyCouponToOrderUseCase> in (OrderCouponController.java:0)
+- Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.RemoveCouponFromOrderUseCase within module 'promotion'!
+Field <com.cafepos.ordering.api.OrderCouponController.removeCouponFromOrderUseCase> has type <com.cafepos.promotion.application.RemoveCouponFromOrderUseCase> in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.PricingPreviewResponse within module 'promotion'!
 Method <com.cafepos.ordering.api.OrderCouponController.previewPricing(java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> has generic return type <org.springframework.http.ResponseEntity<com.cafepos.promotion.api.PricingPreviewResponse>> with type argument depending on <com.cafepos.promotion.api.PricingPreviewResponse> in (OrderCouponController.java:0)
-- Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.ApplyCouponRequest within module 'promotion'!
-Method <com.cafepos.ordering.api.OrderCouponController.applyCoupon(java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> has parameter of type <com.cafepos.promotion.api.ApplyCouponRequest> in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.PricingPreviewRequest within module 'promotion'!
 Method <com.cafepos.ordering.api.OrderCouponController.previewPricing(java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> has parameter of type <com.cafepos.promotion.api.PricingPreviewRequest> in (OrderCouponController.java:0)
+- Module 'ordering' depends on non-exposed type com.cafepos.promotion.api.ApplyCouponRequest within module 'promotion'!
+Method <com.cafepos.ordering.api.OrderCouponController.applyCoupon(java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> has parameter of type <com.cafepos.promotion.api.ApplyCouponRequest> in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.ApplyCouponToOrderUseCase within module 'promotion'!
 Constructor <com.cafepos.ordering.api.OrderCouponController.<init>(com.cafepos.promotion.application.ApplyCouponToOrderUseCase, com.cafepos.promotion.application.RemoveCouponFromOrderUseCase, com.cafepos.promotion.application.PricingPreviewUseCase)> has parameter of type <com.cafepos.promotion.application.ApplyCouponToOrderUseCase> in (OrderCouponController.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.promotion.application.RemoveCouponFromOrderUseCase within module 'promotion'!
@@ -360,32 +360,32 @@ OrderApplicationService declares constructor OrderApplicationService(OrderReposi
 OrderApplicationService declares constructor OrderApplicationService(OrderRepository, PosSessionRepository, DiningTableRepository, ProductRepository, OrderNumberGenerator, OrderDtoMapper) in (OrderApplicationService.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
 OrderApplicationService declares constructor OrderApplicationService(OrderRepository, PosSessionRepository, DiningTableRepository, ProductRepository, OrderNumberGenerator, OrderDtoMapper) in (OrderApplicationService.java:0)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getId()> in (OrderApplicationService.java:120)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getPrice()> in (OrderApplicationService.java:120)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.isArchived()> in (OrderApplicationService.java:116)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.isKitchenRouted()> in (OrderApplicationService.java:120)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getName()> in (OrderApplicationService.java:120)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
-Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.ProductRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (OrderApplicationService.java:113)
 - Module 'ordering' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Method <com.cafepos.ordering.application.OrderApplicationService.createOrder(java.util.UUID, com.cafepos.ordering.api.CreateOrderRequest)> calls method <com.cafepos.floor.domain.DiningTableRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (OrderApplicationService.java:79)
 - Module 'ordering' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.ordering.application.OrderApplicationService.createOrder(java.util.UUID, com.cafepos.ordering.api.CreateOrderRequest)> calls method <com.cafepos.session.domain.PosSession.isOpen()> in (OrderApplicationService.java:70)
 - Module 'ordering' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
 Method <com.cafepos.ordering.application.OrderApplicationService.createOrder(java.util.UUID, com.cafepos.ordering.api.CreateOrderRequest)> calls method <com.cafepos.session.domain.PosSessionRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (OrderApplicationService.java:67)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getId()> in (OrderApplicationService.java:120)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.isKitchenRouted()> in (OrderApplicationService.java:120)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.ProductRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (OrderApplicationService.java:113)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.isArchived()> in (OrderApplicationService.java:116)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getName()> in (OrderApplicationService.java:120)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.Product within module 'catalog'!
+Method <com.cafepos.ordering.application.OrderApplicationService.addOrderLine(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AddOrderLineRequest)> calls method <com.cafepos.catalog.domain.Product.getPrice()> in (OrderApplicationService.java:120)
 - Module 'ordering' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Method <com.cafepos.ordering.application.OrderApplicationService.assignTable(java.util.UUID, java.util.UUID, com.cafepos.ordering.api.AssignTableRequest)> calls method <com.cafepos.floor.domain.DiningTableRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (OrderApplicationService.java:184)
-- Module 'ordering' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
-Field <com.cafepos.ordering.application.OrderApplicationService.diningTableRepository> has type <com.cafepos.floor.domain.DiningTableRepository> in (OrderApplicationService.java:0)
-- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
-Field <com.cafepos.ordering.application.OrderApplicationService.productRepository> has type <com.cafepos.catalog.domain.ProductRepository> in (OrderApplicationService.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
 Field <com.cafepos.ordering.application.OrderApplicationService.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (OrderApplicationService.java:0)
+- Module 'ordering' depends on non-exposed type com.cafepos.catalog.domain.ProductRepository within module 'catalog'!
+Field <com.cafepos.ordering.application.OrderApplicationService.productRepository> has type <com.cafepos.catalog.domain.ProductRepository> in (OrderApplicationService.java:0)
+- Module 'ordering' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
+Field <com.cafepos.ordering.application.OrderApplicationService.diningTableRepository> has type <com.cafepos.floor.domain.DiningTableRepository> in (OrderApplicationService.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
 Constructor <com.cafepos.ordering.application.OrderApplicationService.<init>(com.cafepos.ordering.domain.OrderRepository, com.cafepos.session.domain.PosSessionRepository, com.cafepos.floor.domain.DiningTableRepository, com.cafepos.catalog.domain.ProductRepository, com.cafepos.ordering.domain.OrderNumberGenerator, com.cafepos.ordering.api.OrderDtoMapper)> has parameter of type <com.cafepos.session.domain.PosSessionRepository> in (OrderApplicationService.java:0)
 - Module 'ordering' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
@@ -410,24 +410,24 @@ BookingApplicationService declares constructor BookingApplicationService(Booking
 BookingApplicationService declares constructor BookingApplicationService(BookingDomainService, TableBookingRepository, DiningTableRepository, CreateOrderUseCase, PosSessionRepository, BookingDtoMapper) in (BookingApplicationService.java:0)
 - Module 'booking' depends on non-exposed type com.cafepos.ordering.domain.OrderType within module 'ordering'!
 Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderType.DINE_IN> in (BookingApplicationService.java:127)
-- Module 'booking' depends on non-exposed type com.cafepos.ordering.application.CreateOrderUseCase within module 'ordering'!
-Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.application.CreateOrderUseCase.createOrder(java.util.UUID, com.cafepos.ordering.api.CreateOrderRequest)> in (BookingApplicationService.java:135)
-- Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.session.domain.PosSession.getId()> in (BookingApplicationService.java:124)
-- Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
-Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (BookingApplicationService.java:120)
 - Module 'booking' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Method <com.cafepos.booking.application.BookingApplicationService.createBooking(java.util.UUID, com.cafepos.booking.api.CreateBookingRequest)> calls method <com.cafepos.floor.domain.DiningTableRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (BookingApplicationService.java:57)
+- Module 'booking' depends on non-exposed type com.cafepos.ordering.application.CreateOrderUseCase within module 'ordering'!
+Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.application.CreateOrderUseCase.createOrder(java.util.UUID, com.cafepos.ordering.api.CreateOrderRequest)> in (BookingApplicationService.java:135)
+- Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
+Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (BookingApplicationService.java:120)
+- Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
+Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls method <com.cafepos.session.domain.PosSession.getId()> in (BookingApplicationService.java:124)
 - Module 'booking' depends on non-exposed type com.cafepos.ordering.api.CreateOrderRequest within module 'ordering'!
 Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> calls constructor <com.cafepos.ordering.api.CreateOrderRequest.<init>(java.util.UUID, com.cafepos.ordering.domain.OrderType, java.util.UUID, java.lang.String, java.lang.String)> in (BookingApplicationService.java:131)
 - Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.booking.application.BookingApplicationService.convertBookingToOrder(java.util.UUID, java.util.UUID, java.util.UUID)> references method <com.cafepos.session.domain.PosSession.isOpen()> in (BookingApplicationService.java:120)
+- Module 'booking' depends on non-exposed type com.cafepos.ordering.application.CreateOrderUseCase within module 'ordering'!
+Field <com.cafepos.booking.application.BookingApplicationService.createOrderUseCase> has type <com.cafepos.ordering.application.CreateOrderUseCase> in (BookingApplicationService.java:0)
 - Module 'booking' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
 Field <com.cafepos.booking.application.BookingApplicationService.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (BookingApplicationService.java:0)
 - Module 'booking' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Field <com.cafepos.booking.application.BookingApplicationService.diningTableRepository> has type <com.cafepos.floor.domain.DiningTableRepository> in (BookingApplicationService.java:0)
-- Module 'booking' depends on non-exposed type com.cafepos.ordering.application.CreateOrderUseCase within module 'ordering'!
-Field <com.cafepos.booking.application.BookingApplicationService.createOrderUseCase> has type <com.cafepos.ordering.application.CreateOrderUseCase> in (BookingApplicationService.java:0)
 - Module 'booking' depends on non-exposed type com.cafepos.floor.domain.DiningTableRepository within module 'floor'!
 Constructor <com.cafepos.booking.application.BookingApplicationService.<init>(com.cafepos.booking.domain.BookingDomainService, com.cafepos.booking.domain.TableBookingRepository, com.cafepos.floor.domain.DiningTableRepository, com.cafepos.ordering.application.CreateOrderUseCase, com.cafepos.session.domain.PosSessionRepository, com.cafepos.booking.api.BookingDtoMapper)> has parameter of type <com.cafepos.floor.domain.DiningTableRepository> in (BookingApplicationService.java:0)
 - Module 'booking' depends on non-exposed type com.cafepos.ordering.application.CreateOrderUseCase within module 'ordering'!
@@ -439,13 +439,13 @@ KitchenTicketDispatchedEvent declares parameter KitchenTicketDispatchedEvent.han
 - Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
 Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.ticketId()> in (AuditEventListener.java:93)
 - Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
-Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.cafeId()> in (AuditEventListener.java:88)
-- Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
-Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.orderId()> in (AuditEventListener.java:85)
+Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.orderNumber()> in (AuditEventListener.java:85)
 - Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
 Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.items()> in (AuditEventListener.java:85)
 - Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
-Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.orderNumber()> in (AuditEventListener.java:85)
+Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.orderId()> in (AuditEventListener.java:85)
+- Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
+Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> calls method <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent.cafeId()> in (AuditEventListener.java:88)
 - Module 'activitylog' depends on non-exposed type com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent within module 'kitchen'!
 Method <com.cafepos.activitylog.application.AuditEventListener.handleKitchenTicketDispatched(com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent)> has parameter of type <com.cafepos.kitchen.domain.KitchenTicketDispatchedEvent> in (AuditEventListener.java:0)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
@@ -456,6 +456,8 @@ Order declares parameter Order.generateReceiptNumber(UUID, Order) in (ReceiptApp
 Order declares parameter Order.buildTaxBreakdownJson(Order) in (ReceiptApplicationService.java:0)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
 Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptForOrder(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ReceiptApplicationService.java:53)
+- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.receipt.application.ReceiptApplicationService.buildTaxBreakdownJson(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getTaxLines()> in (ReceiptApplicationService.java:81)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptForOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (ReceiptApplicationService.java:50)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
@@ -464,26 +466,24 @@ Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceip
 Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptForOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ReceiptApplicationService.java:54)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptNumber(java.util.UUID, com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getOrderNumber()> in (ReceiptApplicationService.java:75)
-- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.receipt.application.ReceiptApplicationService.buildTaxBreakdownJson(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getTaxLines()> in (ReceiptApplicationService.java:81)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Field <com.cafepos.receipt.application.ReceiptApplicationService.orderRepository> has type <com.cafepos.ordering.domain.OrderRepository> in (ReceiptApplicationService.java:0)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptNumber(java.util.UUID, com.cafepos.ordering.domain.Order)> has parameter of type <com.cafepos.ordering.domain.Order> in (ReceiptApplicationService.java:0)
-- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.receipt.application.ReceiptApplicationService.buildTaxBreakdownJson(com.cafepos.ordering.domain.Order)> has parameter of type <com.cafepos.ordering.domain.Order> in (ReceiptApplicationService.java:0)
+- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.receipt.application.ReceiptApplicationService.generateReceiptNumber(java.util.UUID, com.cafepos.ordering.domain.Order)> has parameter of type <com.cafepos.ordering.domain.Order> in (ReceiptApplicationService.java:0)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Constructor <com.cafepos.receipt.application.ReceiptApplicationService.<init>(com.cafepos.receipt.domain.ReceiptRepository, com.cafepos.ordering.domain.OrderRepository, com.cafepos.receipt.api.ReceiptDtoMapper, com.fasterxml.jackson.databind.ObjectMapper)> has parameter of type <com.cafepos.ordering.domain.OrderRepository> in (ReceiptApplicationService.java:0)
+- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (Receipt.java:83)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (Receipt.java:83)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (Receipt.java:83)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (Receipt.java:83)
-- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (Receipt.java:83)
-- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getServiceCharge()> in (Receipt.java:83)
+- Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (Receipt.java:83)
 - Module 'receipt' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Constructor <com.cafepos.receipt.domain.Receipt.<init>(java.util.UUID, java.util.UUID, java.lang.String, com.cafepos.ordering.domain.Order, java.lang.String)> has parameter of type <com.cafepos.ordering.domain.Order> in (Receipt.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
@@ -503,29 +503,29 @@ OnboardCafeUseCase declares constructor OnboardCafeUseCase(CafeRepository, Emplo
 - Module 'organization' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
 OnboardCafeUseCase declares constructor OnboardCafeUseCase(CafeRepository, EmployeeRepository, UserAccountRepository, PasswordEncodingService) in (OnboardCafeUseCase.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
-Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> gets field <com.cafepos.identity.domain.EmployeeRole.OWNER> in (OnboardCafeUseCase.java:61)
-- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
 Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> gets field <com.cafepos.identity.domain.EmployeeRole.OWNER> in (OnboardCafeUseCase.java:77)
-- Module 'organization' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
-Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.infrastructure.PasswordEncodingService.encode(java.lang.CharSequence)> in (OnboardCafeUseCase.java:67)
-- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
-Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.EmployeeRepository.save(java.lang.Object)> in (OnboardCafeUseCase.java:65)
-- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
-Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.UserAccountRepository.save(java.lang.Object)> in (OnboardCafeUseCase.java:73)
+- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRole within module 'identity'!
+Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> gets field <com.cafepos.identity.domain.EmployeeRole.OWNER> in (OnboardCafeUseCase.java:61)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
 Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.Employee.getId()> in (OnboardCafeUseCase.java:77)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
 Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.Employee.getId()> in (OnboardCafeUseCase.java:70)
+- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
+Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.UserAccountRepository.save(java.lang.Object)> in (OnboardCafeUseCase.java:73)
+- Module 'organization' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
+Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.infrastructure.PasswordEncodingService.encode(java.lang.CharSequence)> in (OnboardCafeUseCase.java:67)
+- Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
+Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls method <com.cafepos.identity.domain.EmployeeRepository.save(java.lang.Object)> in (OnboardCafeUseCase.java:65)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.UserAccount within module 'identity'!
 Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls constructor <com.cafepos.identity.domain.UserAccount.<init>(java.util.UUID, java.util.UUID, java.lang.String)> in (OnboardCafeUseCase.java:70)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.Employee within module 'identity'!
 Method <com.cafepos.organization.application.OnboardCafeUseCase.execute(com.cafepos.organization.application.OnboardCafeCommand)> calls constructor <com.cafepos.identity.domain.Employee.<init>(java.util.UUID, java.util.UUID, java.lang.String, java.lang.String, com.cafepos.identity.domain.EmployeeRole)> in (OnboardCafeUseCase.java:61)
-- Module 'organization' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
-Field <com.cafepos.organization.application.OnboardCafeUseCase.passwordEncodingService> has type <com.cafepos.identity.infrastructure.PasswordEncodingService> in (OnboardCafeUseCase.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
 Field <com.cafepos.organization.application.OnboardCafeUseCase.userAccountRepository> has type <com.cafepos.identity.domain.UserAccountRepository> in (OnboardCafeUseCase.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
 Field <com.cafepos.organization.application.OnboardCafeUseCase.employeeRepository> has type <com.cafepos.identity.domain.EmployeeRepository> in (OnboardCafeUseCase.java:0)
+- Module 'organization' depends on non-exposed type com.cafepos.identity.infrastructure.PasswordEncodingService within module 'identity'!
+Field <com.cafepos.organization.application.OnboardCafeUseCase.passwordEncodingService> has type <com.cafepos.identity.infrastructure.PasswordEncodingService> in (OnboardCafeUseCase.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.EmployeeRepository within module 'identity'!
 Constructor <com.cafepos.organization.application.OnboardCafeUseCase.<init>(com.cafepos.organization.domain.CafeRepository, com.cafepos.identity.domain.EmployeeRepository, com.cafepos.identity.domain.UserAccountRepository, com.cafepos.identity.infrastructure.PasswordEncodingService)> has parameter of type <com.cafepos.identity.domain.EmployeeRepository> in (OnboardCafeUseCase.java:0)
 - Module 'organization' depends on non-exposed type com.cafepos.identity.domain.UserAccountRepository within module 'identity'!
@@ -535,45 +535,45 @@ Constructor <com.cafepos.organization.application.OnboardCafeUseCase.<init>(com.
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 PaymentApplicationService declares constructor PaymentApplicationService(OrderRepository, PaymentRepository, PaymentDomainService, UpiQrGeneratorService, PaymentDtoMapper) in (PaymentApplicationService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Order declares return type Order.findAndValidateOrder(UUID, UUID) in (PaymentApplicationService.java:0)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Order declares return type Order.findAndValidateOrderForUpiIntent(UUID, UUID) in (PaymentApplicationService.java:0)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.CANCELLED> in (PaymentApplicationService.java:217)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Order declares return type Order.findAndValidateOrder(UUID, UUID) in (PaymentApplicationService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (PaymentApplicationService.java:213)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.CANCELLED> in (PaymentApplicationService.java:198)
+Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.CANCELLED> in (PaymentApplicationService.java:217)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (PaymentApplicationService.java:194)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.processCardPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCardPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:97)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
+Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.CANCELLED> in (PaymentApplicationService.java:198)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.processUpiConfirmation(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessUpiConfirmationRequest)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:150)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.generateUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getOrderNumber()> in (PaymentApplicationService.java:117)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.generateUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:116)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentApplicationService.java:209)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:217)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:213)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findById(java.lang.Object)> in (PaymentApplicationService.java:206)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:213)
+Method <com.cafepos.payment.application.PaymentApplicationService.processCashPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCashPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PaymentApplicationService.java:62)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrderForUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:217)
+Method <com.cafepos.payment.application.PaymentApplicationService.processCashPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCashPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:61)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentApplicationService.java:190)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:194)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findById(java.lang.Object)> in (PaymentApplicationService.java:187)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentApplicationService.java:190)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.application.PaymentApplicationService.findAndValidateOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (PaymentApplicationService.java:198)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.processCashPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCashPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PaymentApplicationService.java:62)
+Method <com.cafepos.payment.application.PaymentApplicationService.generateUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getOrderNumber()> in (PaymentApplicationService.java:117)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.application.PaymentApplicationService.processCashPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCashPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:61)
+Method <com.cafepos.payment.application.PaymentApplicationService.generateUpiIntent(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:116)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.application.PaymentApplicationService.processCardPayment(java.util.UUID, java.util.UUID, com.cafepos.payment.api.ProcessCardPaymentRequest)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentApplicationService.java:97)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Field <com.cafepos.payment.application.PaymentApplicationService.orderRepository> has type <com.cafepos.ordering.domain.OrderRepository> in (PaymentApplicationService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
@@ -589,27 +589,27 @@ Order declares parameter Order.processPayment(Order, PaymentMethod, Money, Money
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Order declares parameter Order.processPayment(Order, PaymentMethod, Money, Money, String) in (PaymentDomainService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentDomainService.java:35)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.markPaid()> in (PaymentDomainService.java:63)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getId()> in (PaymentDomainService.java:41)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (PaymentDomainService.java:45)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentDomainService.java:35)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getId()> in (PaymentDomainService.java:55)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.markPaid()> in (PaymentDomainService.java:63)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (PaymentDomainService.java:54)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (PaymentDomainService.java:64)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.Order.getId()> in (PaymentDomainService.java:42)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (PaymentDomainService.java:64)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Field <com.cafepos.payment.domain.PaymentDomainService.orderRepository> has type <com.cafepos.ordering.domain.OrderRepository> in (PaymentDomainService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String)> has parameter of type <com.cafepos.ordering.domain.Order> in (PaymentDomainService.java:0)
-- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String, java.lang.String)> has parameter of type <com.cafepos.ordering.domain.Order> in (PaymentDomainService.java:0)
+- Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.payment.domain.PaymentDomainService.processPayment(com.cafepos.ordering.domain.Order, com.cafepos.payment.domain.PaymentMethod, com.cafepos.shared.money.Money, com.cafepos.shared.money.Money, java.lang.String)> has parameter of type <com.cafepos.ordering.domain.Order> in (PaymentDomainService.java:0)
 - Module 'payment' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Constructor <com.cafepos.payment.domain.PaymentDomainService.<init>(com.cafepos.payment.domain.PaymentRepository, com.cafepos.payment.domain.RefundRepository, com.cafepos.ordering.domain.OrderRepository)> has parameter of type <com.cafepos.ordering.domain.OrderRepository> in (PaymentDomainService.java:0)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
@@ -618,18 +618,18 @@ KitchenApplicationService declares constructor KitchenApplicationService(OrderRe
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.CONFIRMED> in (KitchenApplicationService.java:59)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> gets field <com.cafepos.ordering.domain.OrderStatus.DRAFT> in (KitchenApplicationService.java:55)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.markSentToKitchen()> in (KitchenApplicationService.java:57)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (KitchenApplicationService.java:59)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.markSentToKitchen()> in (KitchenApplicationService.java:60)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (KitchenApplicationService.java:52)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.markSentToKitchen()> in (KitchenApplicationService.java:57)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (KitchenApplicationService.java:61)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (KitchenApplicationService.java:59)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.confirm()> in (KitchenApplicationService.java:56)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.markSentToKitchen()> in (KitchenApplicationService.java:60)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.kitchen.application.KitchenApplicationService.dispatchOrderToKitchen(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (KitchenApplicationService.java:58)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
@@ -641,49 +641,49 @@ Constructor <com.cafepos.kitchen.application.KitchenApplicationService.<init>(co
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Order declares parameter Order.dispatchOrder(Order) in (KitchenDispatchService.java:0)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getOrderNumber()> in (KitchenDispatchService.java:55)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getId()> in (KitchenDispatchService.java:50)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:70)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getLines()> in (KitchenDispatchService.java:42)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:59)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:72)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:59)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:57)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getId()> in (KitchenDispatchService.java:55)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:70)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:70)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:69)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:59)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:59)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (KitchenDispatchService.java:55)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:57)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:72)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:70)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:57)
+- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:72)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:57)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:72)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:70)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:70)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:72)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:72)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:57)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (KitchenDispatchService.java:59)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:70)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getCafeId()> in (KitchenDispatchService.java:55)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:59)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getId()> in (KitchenDispatchService.java:55)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:59)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:72)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getOrderNumber()> in (KitchenDispatchService.java:55)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:59)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:57)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (KitchenDispatchService.java:57)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getId()> in (KitchenDispatchService.java:69)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (KitchenDispatchService.java:70)
-- Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> calls method <com.cafepos.ordering.domain.Order.getId()> in (KitchenDispatchService.java:50)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.kitchen.domain.KitchenDispatchService.dispatchOrder(com.cafepos.ordering.domain.Order)> references method <com.cafepos.ordering.domain.OrderLine.isKitchenRouted()> in (KitchenDispatchService.java:42)
 - Module 'kitchen' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
@@ -695,73 +695,73 @@ ExportJobRunner declares constructor ExportJobRunner(ExportJobRepository, OrderR
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
 ExportJobRunner declares constructor ExportJobRunner(ExportJobRepository, OrderRepository, PaymentRepository, PosSessionRepository) in (ExportJobRunner.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ExportJobRunner.java:102)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ExportJobRunner.java:121)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:101)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (ExportJobRunner.java:109)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (ExportJobRunner.java:108)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (ExportJobRunner.java:106)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ExportJobRunner.java:102)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (ExportJobRunner.java:107)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosedAt()> in (ExportJobRunner.java:146)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ExportJobRunner.java:102)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosingExpectedAmount()> in (ExportJobRunner.java:143)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getOpenedAt()> in (ExportJobRunner.java:146)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getOpeningBalanceAmount()> in (ExportJobRunner.java:142)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:140)
+Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosingCountedAmount()> in (ExportJobRunner.java:144)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getId()> in (ExportJobRunner.java:146)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getOpenedAt()> in (ExportJobRunner.java:146)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:140)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getOpeningBalanceAmount()> in (ExportJobRunner.java:142)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosingVarianceAmount()> in (ExportJobRunner.java:145)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosingCountedAmount()> in (ExportJobRunner.java:144)
+Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getClosedAt()> in (ExportJobRunner.java:146)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeShiftReconciliation(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.session.domain.PosSession.getStatus()> in (ExportJobRunner.java:146)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getAmount()> in (ExportJobRunner.java:95)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getId()> in (ExportJobRunner.java:95)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getOrderId()> in (ExportJobRunner.java:95)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.PaymentRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:93)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getPaymentMethod()> in (ExportJobRunner.java:95)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getStatus()> in (ExportJobRunner.java:95)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getCreatedAt()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (ExportJobRunner.java:128)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (ExportJobRunner.java:128)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ExportJobRunner.java:121)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:120)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getLineTotalAmount()> in (ExportJobRunner.java:130)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getLines()> in (ExportJobRunner.java:126)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (ExportJobRunner.java:128)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (ExportJobRunner.java:129)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:120)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (ExportJobRunner.java:128)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ExportJobRunner.writeTopProducts(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ExportJobRunner.java:121)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
-Field <com.cafepos.reporting.application.ExportJobRunner.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (ExportJobRunner.java:0)
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (ExportJobRunner.java:106)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (ExportJobRunner.java:109)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (ExportJobRunner.java:107)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ExportJobRunner.java:102)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (ExportJobRunner.java:108)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writeSalesSummary(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:101)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.PaymentRepository.findByCafeId(java.util.UUID)> in (ExportJobRunner.java:93)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getId()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getOrderId()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getAmount()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getPaymentMethod()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getCreatedAt()> in (ExportJobRunner.java:95)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ExportJobRunner.writePaymentBreakdown(java.util.UUID, java.io.PrintWriter)> calls method <com.cafepos.payment.domain.Payment.getStatus()> in (ExportJobRunner.java:95)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Field <com.cafepos.reporting.application.ExportJobRunner.orderRepository> has type <com.cafepos.ordering.domain.OrderRepository> in (ExportJobRunner.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
 Field <com.cafepos.reporting.application.ExportJobRunner.paymentRepository> has type <com.cafepos.payment.domain.PaymentRepository> in (ExportJobRunner.java:0)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
+Field <com.cafepos.reporting.application.ExportJobRunner.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (ExportJobRunner.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Constructor <com.cafepos.reporting.application.ExportJobRunner.<init>(com.cafepos.reporting.domain.ExportJobRepository, com.cafepos.ordering.domain.OrderRepository, com.cafepos.payment.domain.PaymentRepository, com.cafepos.session.domain.PosSessionRepository)> has parameter of type <com.cafepos.ordering.domain.OrderRepository> in (ExportJobRunner.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
@@ -777,75 +777,75 @@ ReportingApplicationService declares constructor ReportingApplicationService(Ord
 - Module 'reporting' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
 ReportingApplicationService declares constructor ReportingApplicationService(OrderRepository, PaymentRepository, PosSessionRepository, CafeRepository, ExportJobRepository, ExportJobRunner) in (ReportingApplicationService.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ReportingApplicationService.java:58)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ReportingApplicationService.java:118)
 - Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentStatus within module 'payment'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> gets field <com.cafepos.payment.domain.PaymentStatus.COMPLETED> in (ReportingApplicationService.java:86)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderStatus within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ReportingApplicationService.java:118)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (ReportingApplicationService.java:69)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (ReportingApplicationService.java:77)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.PaymentRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:81)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getCreatedAt()> in (ReportingApplicationService.java:59)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ReportingApplicationService.java:58)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (ReportingApplicationService.java:65)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getStatus()> in (ReportingApplicationService.java:86)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (ReportingApplicationService.java:73)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSession.getClosedAt()> in (ReportingApplicationService.java:96)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSession.getClosingVarianceAmount()> in (ReportingApplicationService.java:97)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentMethod within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.PaymentMethod.name()> in (ReportingApplicationService.java:87)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getOrderId()> in (ReportingApplicationService.java:86)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:56)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:93)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getPaymentMethod()> in (ReportingApplicationService.java:87)
-- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getAmount()> in (ReportingApplicationService.java:88)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> gets field <com.cafepos.ordering.domain.OrderStatus.PAID> in (ReportingApplicationService.java:58)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.Order.getLines()> in (ReportingApplicationService.java:120)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getLineTotalAmount()> in (ReportingApplicationService.java:124)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (ReportingApplicationService.java:123)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getProductId()> in (ReportingApplicationService.java:122)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getQuantity()> in (ReportingApplicationService.java:123)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (ReportingApplicationService.java:122)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.Order.getCreatedAt()> in (ReportingApplicationService.java:119)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:113)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.Order.getCreatedAt()> in (ReportingApplicationService.java:119)
-- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ReportingApplicationService.java:118)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderLine within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getProductNameSnapshot()> in (ReportingApplicationService.java:122)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getTopProducts(java.util.UUID, java.time.Instant, java.time.Instant, int)> calls method <com.cafepos.ordering.domain.OrderLine.getLineTotalAmount()> in (ReportingApplicationService.java:124)
 - Module 'reporting' depends on non-exposed type com.cafepos.organization.domain.Cafe within module 'organization'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getCafeZoneId(java.util.UUID)> calls method <com.cafepos.organization.domain.Cafe.getTimezone()> in (ReportingApplicationService.java:153)
 - Module 'reporting' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getCafeZoneId(java.util.UUID)> calls method <com.cafepos.organization.domain.CafeRepository.findById(java.lang.Object)> in (ReportingApplicationService.java:150)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentMethod within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.PaymentMethod.name()> in (ReportingApplicationService.java:87)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> references method <com.cafepos.ordering.domain.Order.getId()> in (ReportingApplicationService.java:84)
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (ReportingApplicationService.java:73)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getStatus()> in (ReportingApplicationService.java:86)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.OrderRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:56)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (ReportingApplicationService.java:65)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSession.getClosingVarianceAmount()> in (ReportingApplicationService.java:97)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getPaymentMethod()> in (ReportingApplicationService.java:87)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.PaymentRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:81)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getTotal()> in (ReportingApplicationService.java:77)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getAmount()> in (ReportingApplicationService.java:88)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSession.getClosedAt()> in (ReportingApplicationService.java:96)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.session.domain.PosSessionRepository.findByCafeId(java.util.UUID)> in (ReportingApplicationService.java:93)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getStatus()> in (ReportingApplicationService.java:58)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getCreatedAt()> in (ReportingApplicationService.java:59)
+- Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.Payment within module 'payment'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.payment.domain.Payment.getOrderId()> in (ReportingApplicationService.java:86)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (ReportingApplicationService.java:69)
 - Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSession within module 'session'!
 Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> references method <com.cafepos.session.domain.PosSession.isClosed()> in (ReportingApplicationService.java:94)
-- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
-Field <com.cafepos.reporting.application.ReportingApplicationService.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (ReportingApplicationService.java:0)
-- Module 'reporting' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
-Field <com.cafepos.reporting.application.ReportingApplicationService.cafeRepository> has type <com.cafepos.organization.domain.CafeRepository> in (ReportingApplicationService.java:0)
+- Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.reporting.application.ReportingApplicationService.getSalesSummary(java.util.UUID, java.time.Instant, java.time.Instant)> references method <com.cafepos.ordering.domain.Order.getId()> in (ReportingApplicationService.java:84)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Field <com.cafepos.reporting.application.ReportingApplicationService.orderRepository> has type <com.cafepos.ordering.domain.OrderRepository> in (ReportingApplicationService.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
 Field <com.cafepos.reporting.application.ReportingApplicationService.paymentRepository> has type <com.cafepos.payment.domain.PaymentRepository> in (ReportingApplicationService.java:0)
+- Module 'reporting' depends on non-exposed type com.cafepos.organization.domain.CafeRepository within module 'organization'!
+Field <com.cafepos.reporting.application.ReportingApplicationService.cafeRepository> has type <com.cafepos.organization.domain.CafeRepository> in (ReportingApplicationService.java:0)
+- Module 'reporting' depends on non-exposed type com.cafepos.session.domain.PosSessionRepository within module 'session'!
+Field <com.cafepos.reporting.application.ReportingApplicationService.posSessionRepository> has type <com.cafepos.session.domain.PosSessionRepository> in (ReportingApplicationService.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Constructor <com.cafepos.reporting.application.ReportingApplicationService.<init>(com.cafepos.ordering.domain.OrderRepository, com.cafepos.payment.domain.PaymentRepository, com.cafepos.session.domain.PosSessionRepository, com.cafepos.organization.domain.CafeRepository, com.cafepos.reporting.domain.ExportJobRepository, com.cafepos.reporting.application.ExportJobRunner)> has parameter of type <com.cafepos.ordering.domain.OrderRepository> in (ReportingApplicationService.java:0)
 - Module 'reporting' depends on non-exposed type com.cafepos.payment.domain.PaymentRepository within module 'payment'!
@@ -869,43 +869,43 @@ OrderResponse declares return type OrderResponse.removeCouponFromOrder(UUID, UUI
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.api.OrderResponse within module 'ordering'!
 OrderResponse declares return type OrderResponse.removeCouponFromOrder(UUID, UUID) in (PromotionApplicationService.java:0)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:225)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:191)
+Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:234)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:223)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (PromotionApplicationService.java:217)
+Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (PromotionApplicationService.java:192)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (PromotionApplicationService.java:188)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getTax()> in (PromotionApplicationService.java:192)
+Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getDiscount()> in (PromotionApplicationService.java:217)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:234)
+Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:191)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:141)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (PromotionApplicationService.java:128)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:139)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (PromotionApplicationService.java:144)
+Method <com.cafepos.promotion.application.PromotionApplicationService.previewPricing(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.PricingPreviewRequest)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:225)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.setDiscount(com.cafepos.shared.money.Money)> in (PromotionApplicationService.java:143)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getId()> in (PromotionApplicationService.java:153)
+Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:141)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (PromotionApplicationService.java:144)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (PromotionApplicationService.java:128)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.api.OrderDtoMapper within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.api.OrderDtoMapper.toOrderResponse(com.cafepos.ordering.domain.Order)> in (PromotionApplicationService.java:159)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getSubtotal()> in (PromotionApplicationService.java:139)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.applyCouponToOrder(java.util.UUID, java.util.UUID, com.cafepos.promotion.api.ApplyCouponRequest)> calls method <com.cafepos.ordering.domain.Order.getId()> in (PromotionApplicationService.java:153)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.setDiscount(com.cafepos.shared.money.Money)> in (PromotionApplicationService.java:176)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (PromotionApplicationService.java:168)
+- Module 'promotion' depends on non-exposed type com.cafepos.ordering.api.OrderDtoMapper within module 'ordering'!
+Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.api.OrderDtoMapper.toOrderResponse(com.cafepos.ordering.domain.Order)> in (PromotionApplicationService.java:179)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.save(java.lang.Object)> in (PromotionApplicationService.java:177)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
 Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.getCurrency()> in (PromotionApplicationService.java:176)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.api.OrderDtoMapper within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.api.OrderDtoMapper.toOrderResponse(com.cafepos.ordering.domain.Order)> in (PromotionApplicationService.java:179)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.OrderRepository.findByIdAndCafeId(java.util.UUID, java.util.UUID)> in (PromotionApplicationService.java:168)
-- Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.Order within module 'ordering'!
-Method <com.cafepos.promotion.application.PromotionApplicationService.removeCouponFromOrder(java.util.UUID, java.util.UUID)> calls method <com.cafepos.ordering.domain.Order.setDiscount(com.cafepos.shared.money.Money)> in (PromotionApplicationService.java:176)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.api.OrderDtoMapper within module 'ordering'!
 Field <com.cafepos.promotion.application.PromotionApplicationService.orderDtoMapper> has type <com.cafepos.ordering.api.OrderDtoMapper> in (PromotionApplicationService.java:0)
 - Module 'promotion' depends on non-exposed type com.cafepos.ordering.domain.OrderRepository within module 'ordering'!
