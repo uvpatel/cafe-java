@@ -18,5 +18,7 @@ public interface DiningTableRepository extends JpaRepository<DiningTable, UUID> 
 
     Optional<DiningTable> findByIdAndCafeId(UUID id, UUID cafeId);
 
+    List<DiningTable> findByCafeIdAndMergedIntoTableId(UUID cafeId, UUID mergedIntoTableId);
+
     boolean existsByCafeIdAndFloorIdAndTableNumberIgnoreCase(UUID cafeId, UUID floorId, String tableNumber);
 }
