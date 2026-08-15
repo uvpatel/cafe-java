@@ -2,7 +2,6 @@ package com.cafepos.payment.application;
 
 import com.cafepos.ordering.domain.Order;
 import com.cafepos.ordering.domain.OrderRepository;
-import com.cafepos.ordering.domain.OrderStatus;
 import com.cafepos.ordering.domain.OrderType;
 import com.cafepos.payment.api.PaymentDtoMapper;
 import com.cafepos.payment.api.PaymentResponse;
@@ -16,7 +15,6 @@ import com.cafepos.payment.domain.Payment;
 import com.cafepos.payment.domain.PaymentDomainService;
 import com.cafepos.payment.domain.PaymentMethod;
 import com.cafepos.payment.domain.PaymentRepository;
-import com.cafepos.payment.domain.PaymentStatus;
 import com.cafepos.payment.domain.Refund;
 import com.cafepos.payment.infrastructure.UpiQrGeneratorService;
 import com.cafepos.shared.error.BusinessException;

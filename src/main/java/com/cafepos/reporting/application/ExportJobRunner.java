@@ -5,12 +5,10 @@ import com.cafepos.ordering.domain.OrderRepository;
 import com.cafepos.ordering.domain.OrderStatus;
 import com.cafepos.payment.domain.Payment;
 import com.cafepos.payment.domain.PaymentRepository;
-import com.cafepos.payment.domain.PaymentStatus;
 import com.cafepos.session.domain.PosSession;
 import com.cafepos.session.domain.PosSessionRepository;
 import com.cafepos.reporting.domain.ExportJob;
 import com.cafepos.reporting.domain.ExportJobRepository;
-import com.cafepos.reporting.domain.ExportStatus;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +22,6 @@ import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -86,7 +83,16 @@ public class ExportJobRunner {
                 case SALES_SUMMARY -> writeSalesSummary(job.getCafeId(), writer);
                 case TOP_PRODUCTS -> writeTopProducts(job.getCafeId(), writer);
                 case SHIFT_RECONCILIATION -> writeShiftReconciliation(job.getCafeId(), writer);
+                case PAYMENT_BREAKDOWN -> writePaymentBreakdown(job.getCafeId(), writer);
             }
+        }
+    }
+
+    private void writePaymentBreakdown(UUID cafeId, PrintWriter writer) {
+        writer.println("Payment ID,Order ID,Payment Method,Amount,Status,Processed At");
+        List<Payment> payments = paymentRepository.findByCafeId(cafeId);
+        for (Payment p : payments) {
+            writer.println(p.getId() + "," + p.getOrderId() + "," + p.getPaymentMethod() + "," + p.getAmount().amount().toPlainString() + "," + p.getStatus() + "," + p.getCreatedAt());
         }
     }
 

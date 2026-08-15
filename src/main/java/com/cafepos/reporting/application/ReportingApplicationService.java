@@ -1,6 +1,5 @@
 package com.cafepos.reporting.application;
 
-import com.cafepos.organization.domain.Cafe;
 import com.cafepos.organization.domain.CafeRepository;
 import com.cafepos.ordering.domain.Order;
 import com.cafepos.ordering.domain.OrderRepository;
@@ -20,7 +19,6 @@ import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

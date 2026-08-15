@@ -10,7 +10,6 @@ import com.cafepos.ordering.api.AssignTableRequest;
 import com.cafepos.ordering.api.CreateOrderRequest;
 import com.cafepos.ordering.api.OrderDtoMapper;
 import com.cafepos.ordering.api.OrderResponse;
-import com.cafepos.ordering.api.UpdateOrderLineRequest;
 import com.cafepos.ordering.domain.Order;
 import com.cafepos.ordering.domain.OrderNumberGenerator;
 import com.cafepos.ordering.domain.OrderRepository;
@@ -29,7 +28,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.dao.DataIntegrityViolationException;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -37,7 +35,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
