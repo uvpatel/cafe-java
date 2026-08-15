@@ -4,7 +4,6 @@ import com.cafepos.catalog.domain.Product;
 import com.cafepos.catalog.domain.ProductCategory;
 import org.springframework.stereotype.Component;
 
-import java.util.Objects;
 
 @Component
 public class CatalogDtoMapper {
