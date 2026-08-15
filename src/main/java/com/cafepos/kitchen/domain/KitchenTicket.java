@@ -62,6 +62,8 @@ public class KitchenTicket {
         this.orderId = orderId;
         this.orderNumber = orderNumber.trim();
         this.status = status != null ? status : KitchenTicketStatus.TO_COOK;
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     public KitchenTicket(UUID cafeId, UUID orderId, String orderNumber) {
@@ -175,6 +177,15 @@ public class KitchenTicket {
 
     public Instant getUpdatedAt() {
         return updatedAt;
+    }
+
+    public boolean isSlaBreached(long targetMinutes, Instant currentTime) {
+        if (targetMinutes <= 0) {
+            throw new IllegalArgumentException("targetMinutes must be greater than zero");
+        }
+        Instant referenceTime = currentTime != null ? currentTime : Instant.now();
+        Instant deadline = (createdAt != null ? createdAt : referenceTime).plusSeconds(targetMinutes * 60);
+        return referenceTime.isAfter(deadline) && status != KitchenTicketStatus.COMPLETED;
     }
 
     public List<KitchenTicketItem> getItems() {

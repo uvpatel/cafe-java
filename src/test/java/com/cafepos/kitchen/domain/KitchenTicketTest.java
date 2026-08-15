@@ -136,4 +136,29 @@ class KitchenTicketTest {
                     .hasMessageContaining("not found");
         }
     }
+
+    @Nested
+    @DisplayName("SLA Breach Tests")
+    class SlaBreachTests {
+
+        @Test
+        @DisplayName("Should correctly identify SLA breach when elapsed time exceeds target minutes")
+        void isSlaBreached_ReturnsTrueWhenElapsedExceedsTarget() {
+            KitchenTicket ticket = new KitchenTicket(cafeId, orderId, orderNumber);
+            java.time.Instant now = java.time.Instant.now();
+
+            boolean breached = ticket.isSlaBreached(15, now.plusSeconds(16 * 60));
+            assertThat(breached).isTrue();
+        }
+
+        @Test
+        @DisplayName("Should return false when elapsed time is within target minutes")
+        void isSlaBreached_ReturnsFalseWhenWithinTarget() {
+            KitchenTicket ticket = new KitchenTicket(cafeId, orderId, orderNumber);
+            java.time.Instant now = java.time.Instant.now();
+
+            boolean breached = ticket.isSlaBreached(15, now.plusSeconds(10 * 60));
+            assertThat(breached).isFalse();
+        }
+    }
 }
