@@ -328,5 +328,22 @@ class BookingApplicationServiceTest {
                     .extracting(ex -> ((BusinessException) ex).getStatus())
                     .isEqualTo(404);
         }
+
+        @Test
+        @DisplayName("Should expire lapsed CONFIRMED bookings")
+        void shouldExpireLapsedBookings() {
+            Instant lapsedStart = Instant.now().minus(3, ChronoUnit.HOURS);
+            Instant lapsedEnd = lapsedStart.plus(1, ChronoUnit.HOURS);
+            TableBooking lapsedBooking = new TableBooking(bookingId, cafeId, tableId, "John Doe", "+1234567890", 4, lapsedStart, lapsedEnd, BookingStatus.CONFIRMED);
+
+            when(tableBookingRepository.findByCafeIdAndStatus(cafeId, BookingStatus.CONFIRMED)).thenReturn(List.of(lapsedBooking));
+            when(tableBookingRepository.save(any(TableBooking.class))).thenAnswer(i -> i.getArgument(0));
+
+            int count = bookingApplicationService.expireLapsedBookings(cafeId);
+
+            assertThat(count).isEqualTo(1);
+            assertThat(lapsedBooking.getStatus()).isEqualTo(BookingStatus.EXPIRED);
+            verify(tableBookingRepository).save(lapsedBooking);
+        }
     }
 }
