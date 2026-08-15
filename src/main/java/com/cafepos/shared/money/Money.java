@@ -45,6 +45,19 @@ public record Money(BigDecimal amount, Currency currency) {
         return new Money(this.amount.multiply(factor), this.currency);
     }
 
+    public Money divide(BigDecimal divisor) {
+        Objects.requireNonNull(divisor, "Divisor cannot be null");
+        if (divisor.compareTo(BigDecimal.ZERO) == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return new Money(this.amount.divide(divisor, 4, DEFAULT_ROUNDING), this.currency);
+    }
+
+    public boolean isGreaterThan(Money other) {
+        assertSameCurrency(other);
+        return this.amount.compareTo(other.amount) > 0;
+    }
+
     private void assertSameCurrency(Money other) {
         if (!this.currency.equals(other.currency)) {
             throw new IllegalArgumentException("Cannot operate on different currencies: " 
