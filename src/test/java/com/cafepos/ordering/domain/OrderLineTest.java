@@ -98,4 +98,25 @@ class OrderLineTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("Quantity must be greater than zero");
     }
+
+    @Test
+    @DisplayName("Should add modifiers and recalculate line subtotal with modifier price deltas")
+    void addModifierRecalculatesSubtotal() {
+        OrderLine line = new OrderLine(
+                null,
+                null,
+                java.util.UUID.randomUUID(),
+                "Cappuccino",
+                Money.of(4.50),
+                2,
+                true
+        );
+
+        line.addModifier(java.util.UUID.randomUUID(), java.util.UUID.randomUUID(), "Extra Shot", new java.math.BigDecimal("1.0000"), usd);
+
+        assertThat(line.getModifiers()).hasSize(1);
+        assertThat(line.getLineSubtotalAmount()).isEqualByComparingTo("11.0000"); // (4.50 + 1.00) * 2
+        assertThat(line.getLineTotalAmount()).isEqualByComparingTo("11.0000");
+    }
 }
+

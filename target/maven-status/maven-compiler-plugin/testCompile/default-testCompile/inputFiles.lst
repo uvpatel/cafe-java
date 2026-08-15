@@ -42,6 +42,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/api/OrderControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/api/OrderCouponControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/application/OrderApplicationServiceTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/domain/OrderLineModifierTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/domain/OrderLineTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/domain/OrderTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/organization/application/OnboardCafeUseCaseTest.java

@@ -44,6 +44,10 @@ public class OrderLine {
     @Column(name = "is_kitchen_routed", nullable = false)
     private boolean kitchenRouted;
 
+    @jakarta.persistence.OneToMany(cascade = jakarta.persistence.CascadeType.ALL, orphanRemoval = true)
+    @jakarta.persistence.JoinColumn(name = "order_line_id")
+    private java.util.List<OrderLineModifier> modifiers = new java.util.ArrayList<>();
+
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
 
@@ -100,6 +104,16 @@ public class OrderLine {
         }
     }
 
+    public void addModifier(UUID modifierGroupId, UUID modifierOptionId, String optionNameSnapshot, BigDecimal priceDeltaSnapshot, Currency currency) {
+        OrderLineModifier modifier = new OrderLineModifier(this.id, modifierGroupId, modifierOptionId, optionNameSnapshot, priceDeltaSnapshot);
+        this.modifiers.add(modifier);
+        calculateAmounts(currency);
+    }
+
+    public java.util.List<OrderLineModifier> getModifiers() {
+        return java.util.Collections.unmodifiableList(modifiers);
+    }
+
     public void updateQuantity(int newQuantity, Currency currency) {
         if (newQuantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than zero");
@@ -109,12 +123,19 @@ public class OrderLine {
     }
 
     public void calculateAmounts(Currency currency) {
-        Money unitPrice = getUnitPriceSnapshot(currency);
-        Money subtotal = unitPrice.multiply(BigDecimal.valueOf(quantity));
+        Money baseUnitPrice = getUnitPriceSnapshot(currency);
+        BigDecimal modifiersTotalDelta = BigDecimal.ZERO;
+        for (OrderLineModifier modifier : modifiers) {
+            if (modifier != null && modifier.getPriceDeltaSnapshotAmount() != null) {
+                modifiersTotalDelta = modifiersTotalDelta.add(modifier.getPriceDeltaSnapshotAmount());
+            }
+        }
+        Money effectiveUnitPrice = baseUnitPrice.add(new Money(modifiersTotalDelta, currency));
+        Money subtotal = effectiveUnitPrice.multiply(BigDecimal.valueOf(quantity));
         this.lineSubtotal = subtotal.amount();
-        // lineTotal is lineSubtotal for now (no line-level discount)
         this.lineTotal = subtotal.amount();
     }
+
 
     public UUID getId() {
         return id;
