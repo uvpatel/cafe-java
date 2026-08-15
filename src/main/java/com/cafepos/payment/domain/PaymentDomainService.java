@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -25,10 +26,17 @@ public class PaymentDomainService {
     }
 
     @Transactional
-    public Payment processPayment(Order order, PaymentMethod paymentMethod, Money paymentAmount, Money tenderedAmount, String transactionReference) {
+    public Payment processPayment(Order order, PaymentMethod paymentMethod, Money paymentAmount, Money tenderedAmount, String transactionReference, String idempotencyKey) {
         Objects.requireNonNull(order, "Order must not be null");
         Objects.requireNonNull(paymentMethod, "PaymentMethod must not be null");
         Objects.requireNonNull(paymentAmount, "PaymentAmount must not be null");
+
+        if (idempotencyKey != null && !idempotencyKey.isBlank()) {
+            Optional<Payment> existing = paymentRepository.findByCafeIdAndIdempotencyKey(order.getCafeId(), idempotencyKey.trim());
+            if (existing.isPresent()) {
+                return existing.get();
+            }
+        }
 
         if (paymentRepository.findByOrderId(order.getId()).isPresent()) {
             throw new IllegalStateException("Payment already exists for order ID: " + order.getId());
@@ -48,12 +56,18 @@ public class PaymentDomainService {
                 paymentMethod,
                 paymentAmount,
                 tenderedAmount,
-                transactionReference
+                transactionReference,
+                idempotencyKey
         );
 
         order.markPaid();
         orderRepository.save(order);
         return paymentRepository.save(payment);
+    }
+
+    @Transactional
+    public Payment processPayment(Order order, PaymentMethod paymentMethod, Money paymentAmount, Money tenderedAmount, String transactionReference) {
+        return processPayment(order, paymentMethod, paymentAmount, tenderedAmount, transactionReference, null);
     }
 
     @Transactional

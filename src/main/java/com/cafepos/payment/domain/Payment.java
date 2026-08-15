@@ -47,6 +47,9 @@ public class Payment {
     @Column(name = "transaction_reference", length = 100)
     private String transactionReference;
 
+    @Column(name = "idempotency_key", length = 100)
+    private String idempotencyKey;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false, length = 20)
     private PaymentStatus status;
@@ -91,8 +94,17 @@ public class Payment {
         this.status = PaymentStatus.COMPLETED;
     }
 
+    public Payment(UUID id, UUID cafeId, UUID orderId, PaymentMethod paymentMethod, Money amount, Money tenderedAmount, Money changeAmount, String transactionReference, String idempotencyKey) {
+        this(id, cafeId, orderId, paymentMethod, amount, tenderedAmount, changeAmount, transactionReference);
+        this.idempotencyKey = (idempotencyKey != null && !idempotencyKey.isBlank()) ? idempotencyKey.trim() : null;
+    }
+
+    public Payment(UUID cafeId, UUID orderId, PaymentMethod paymentMethod, Money amount, Money tenderedAmount, String transactionReference, String idempotencyKey) {
+        this(UUID.randomUUID(), cafeId, orderId, paymentMethod, amount, tenderedAmount, null, transactionReference, idempotencyKey);
+    }
+
     public Payment(UUID cafeId, UUID orderId, PaymentMethod paymentMethod, Money amount, Money tenderedAmount, String transactionReference) {
-        this(UUID.randomUUID(), cafeId, orderId, paymentMethod, amount, tenderedAmount, null, transactionReference);
+        this(UUID.randomUUID(), cafeId, orderId, paymentMethod, amount, tenderedAmount, null, transactionReference, null);
     }
 
     private static void validateInputs(UUID cafeId, UUID orderId, PaymentMethod paymentMethod, Money amount) {
@@ -165,6 +177,10 @@ public class Payment {
 
     public String getTransactionReference() {
         return transactionReference;
+    }
+
+    public String getIdempotencyKey() {
+        return idempotencyKey;
     }
 
     public PaymentStatus getStatus() {

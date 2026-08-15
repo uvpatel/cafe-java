@@ -10,5 +10,6 @@ import java.util.UUID;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, UUID> {
     Optional<Payment> findByOrderId(UUID orderId);
+    Optional<Payment> findByCafeIdAndIdempotencyKey(UUID cafeId, String idempotencyKey);
     List<Payment> findByCafeId(UUID cafeId);
 }
