@@ -129,6 +129,7 @@ class PaymentDomainServiceTest {
         Payment payment = new Payment(cafeId, order.getId(), PaymentMethod.CARD, paymentAmount, null, "TXN-123");
         UUID employeeId = UUID.randomUUID();
 
+        when(refundRepository.findByPaymentId(payment.getId())).thenReturn(java.util.List.of());
         when(refundRepository.save(any(Refund.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
         Refund refund = paymentDomainService.processRefund(payment, paymentAmount, "Wrong item served", employeeId);
@@ -145,7 +146,7 @@ class PaymentDomainServiceTest {
     }
 
     @Test
-    @DisplayName("Should throw exception when processing refund for already refunded payment")
+    @DisplayName("Should throw exception when processing refund for already fully refunded payment")
     void shouldThrowExceptionWhenRefundingAlreadyRefundedPayment() {
         Money paymentAmount = Money.of(10.00);
         Payment payment = new Payment(cafeId, order.getId(), PaymentMethod.CARD, paymentAmount, null, "TXN-123");
@@ -153,17 +154,21 @@ class PaymentDomainServiceTest {
 
         assertThatThrownBy(() -> paymentDomainService.processRefund(payment, paymentAmount, "Reason", UUID.randomUUID()))
                 .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("Payment has already been refunded");
+                .hasMessageContaining("Payment has already been fully refunded");
     }
 
     @Test
-    @DisplayName("Should throw exception when refund amount does not match payment amount")
-    void shouldThrowExceptionWhenRefundAmountMismatchesPaymentAmount() {
+    @DisplayName("Should allow partial refund and throw exception when cumulative refund exceeds payment total")
+    void shouldValidatePartialRefundLimits() {
         Money paymentAmount = Money.of(10.00);
         Payment payment = new Payment(cafeId, order.getId(), PaymentMethod.CARD, paymentAmount, null, "TXN-123");
+        UUID employeeId = UUID.randomUUID();
 
-        assertThatThrownBy(() -> paymentDomainService.processRefund(payment, Money.of(5.00), "Partial refund attempt", UUID.randomUUID()))
+        Refund existingRefund = new Refund(cafeId, payment.getId(), Money.of(7.00), "First partial refund", employeeId);
+        when(refundRepository.findByPaymentId(payment.getId())).thenReturn(java.util.List.of(existingRefund));
+
+        assertThatThrownBy(() -> paymentDomainService.processRefund(payment, Money.of(5.00), "Second refund attempt", employeeId))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("must match payment amount");
+                .hasMessageContaining("exceeds payment amount");
     }
 }
