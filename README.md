@@ -4,7 +4,7 @@
 
 **Production-grade, multi-tenant restaurant Point-of-Sale platform built in Java.**
 
-[![Java 25](https://img.shields.io/badge/Java-25-blue?logo=openjdk)](https://openjdk.java.net)
+[![Java 21](https://img.shields.io/badge/Java-21-blue?logo=openjdk)](https://openjdk.java.net)
 [![Spring Boot 3.4](https://img.shields.io/badge/Spring%20Boot-3.4-green?logo=spring)](https://spring.io/projects/spring-boot)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16+-blue?logo=postgresql)](https://www.postgresql.org)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
@@ -62,7 +62,7 @@
 
 ### Prerequisites
 
-- **Java 25 SDK** (or latest LTS)
+- **Java 21 SDK** (LTS)
 - **Docker & Docker Compose** (for PostgreSQL, Redis)
 - **Maven 3.8+** (bundled as `./mvnw`)
 - **Git**
@@ -420,7 +420,7 @@ HTTP Request
 
 | Layer | Technology | Version |
 |-------|-----------|---------|
-| **Language** | Java | 25 |
+| **Language** | Java | 21 |
 | **Framework** | Spring Boot | 3.4.2 |
 | **Modular Framework** | Spring Modulith | 1.3.1 |
 | **API Framework** | Spring MVC | 6.x |
@@ -495,7 +495,7 @@ module/
 
 ### Code Style
 
-- **Language**: Java 25 features encouraged (records, sealed classes, pattern matching)
+- **Language**: Java 21 features encouraged (records, sealed classes, pattern matching)
 - **Formatting**: Spotless with Google Java Style
 - **Naming**: Clear, explicit, no abbreviations (ProductName not ProdName)
 - **Comments**: Domain logic only; self-documenting code preferred
@@ -891,7 +891,7 @@ docker compose logs postgres
 ./mvnw clean compile
 
 # Check Java version
-java -version  # Should be 25+
+java -version  # Should be 21+
 
 # Update Maven
 ./mvnw wrapper:wrapper@maven-wrapper

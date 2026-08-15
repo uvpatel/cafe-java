@@ -964,11 +964,11 @@ spring.datasource.replica.hikari.read-only=true
 
 ## Technology Decisions
 
-### Why Java 25?
+### Why Java 21?
 
-- Latest LTS features (records, sealed classes, pattern matching)
+- Current Long Term Support (LTS) release features (records, sealed classes, pattern matching)
 - Steady cadence of language improvements
-- 5-year support window
+- Multi-year LTS support window
 - Tooling maturity and IDE support
 
 ### Why Spring Boot?

@@ -34,7 +34,7 @@ Unacceptable behavior includes harassment, discrimination, or any form of abuse.
 
 ### Prerequisites
 
-- Java 25 SDK (or latest LTS)
+- Java 21 SDK (LTS)
 - Docker & Docker Compose
 - Maven 3.8+
 - Git 2.30+
@@ -673,7 +673,7 @@ Include:
 [What actually happens]
 
 ### Environment
-- Java version: 25
+- Java version: 21
 - Spring Boot version: 3.4.2
 - Database: PostgreSQL 16
 - OS: [your OS]

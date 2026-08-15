@@ -18,22 +18,22 @@ This guide provides detailed instructions for setting up and working with the Ca
 
 ### Prerequisites
 
-- **Java 25 SDK** (https://adoptium.net/)
+- **Java 21 SDK** (https://adoptium.net/)
 - **Docker & Docker Compose** (https://www.docker.com/)
 - **Git** (https://git-scm.com/)
 - **Maven 3.8+** (included as `./mvnw`)
 - **IDE**: IntelliJ IDEA (recommended) or VS Code
 - **5 GB disk space** for dependencies and Docker images
 
-### Step 1: Install Java 25
+### Step 1: Install Java 21
 
 ```bash
 # macOS (using Homebrew)
-brew install openjdk@25
+brew install openjdk@21
 
 # Verify installation
 java -version
-# Should output: openjdk 25...
+# Should output: openjdk 21...
 ```
 
 ### Step 2: Clone Repository
@@ -47,7 +47,7 @@ cd cafe-pos-backend
 
 ```bash
 ./mvnw --version
-# Should output: Maven 3.8+ with Java 25
+# Should output: Maven 3.8+ with Java 21
 ```
 
 ### Step 4: Start Docker Infrastructure
@@ -83,7 +83,7 @@ docker compose ps
 
 2. **Configure JDK**
    - File → Project Structure → Project
-   - Set Project SDK to Java 25
+   - Set Project SDK to Java 21
    - Click Apply
 
 3. **Enable Annotation Processing**
@@ -107,7 +107,7 @@ docker compose ps
    - Create `.vscode/settings.json`:
    ```json
    {
-     "java.home": "/path/to/java-25",
+     "java.home": "/path/to/java-21",
      "java.configuration.updateBuildConfiguration": "automatic",
      "editor.formatOnSave": true,
      "editor.defaultFormatter": "esbenp.prettier-vscode"
