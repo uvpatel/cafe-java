@@ -1,0 +1,121 @@
+{
+  "name": "Cafe POS Backend API Suite",
+  "version": "1.0.0",
+  "variables": {
+    "baseUrl": "http://localhost:3000",
+    "token": "",
+    "tenantId": ""
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/actuator/health"
+      }
+    },
+    {
+      "name": "Auth - Signup Cafe",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/auth/signup",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cafeName\": \"Central Perk Cafe\",\n  \"slug\": \"central-perk\",\n  \"timezone\": \"UTC\",\n  \"currency\": \"USD\",\n  \"adminName\": \"Rachel Green\",\n  \"adminEmail\": \"rachel@centralperk.com\",\n  \"adminPassword\": \"password123\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/auth/login",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"rachel@centralperk.com\",\n  \"password\": \"password123\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Catalog - Get Categories",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/categories",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenantId}}" }
+        ]
+      }
+    },
+    {
+      "name": "Catalog - Create Product",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/products",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenantId}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": \"{{categoryId}}\",\n  \"name\": \"Artisan Caramel Macchiato\",\n  \"sku\": \"COF-CAR-001\",\n  \"priceAmount\": 5.50,\n  \"currency\": \"USD\",\n  \"unitOfMeasure\": \"PIECE\",\n  \"kitchenRouted\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "POS Sessions - Open Session",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/pos-sessions",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenantId}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"terminalId\": \"11111111-1111-1111-1111-111111111111\",\n  \"openingBalanceAmount\": 100.00\n}"
+        }
+      }
+    },
+    {
+      "name": "Orders - Create Order",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/orders",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenantId}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"posSessionId\": \"{{sessionId}}\",\n  \"orderType\": \"TAKEAWAY\",\n  \"currency\": \"USD\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Payments - Process Cash Payment",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/orders/{{orderId}}/payments/cash",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "X-Tenant-ID", "value": "{{tenantId}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tenderedAmount\": 20.00\n}"
+        }
+      }
+    }
+  ]
+}
