@@ -171,4 +171,19 @@ public class BookingApplicationService implements CreateBookingUseCase, UpdateBo
 
         return dtoMapper.toBookingResponse(booking);
     }
+
+    public int expireLapsedBookings(UUID cafeId) {
+        Objects.requireNonNull(cafeId, "cafeId must not be null");
+        List<TableBooking> confirmedBookings = tableBookingRepository.findByCafeIdAndStatus(cafeId, BookingStatus.CONFIRMED);
+        java.time.Instant now = java.time.Instant.now();
+        int expiredCount = 0;
+        for (TableBooking booking : confirmedBookings) {
+            if (booking.getBookingEnd().isBefore(now)) {
+                booking.expire();
+                tableBookingRepository.save(booking);
+                expiredCount++;
+            }
+        }
+        return expiredCount;
+    }
 }
