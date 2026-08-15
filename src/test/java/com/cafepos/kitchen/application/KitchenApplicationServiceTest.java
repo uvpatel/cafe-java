@@ -79,6 +79,7 @@ class KitchenApplicationServiceTest {
 
         KitchenTicket ticket = new KitchenTicket(cafeId, orderId, "ORD-001");
         KitchenTicketItem item = ticket.addItem(order.getLines().get(0).getId(), productId, "Latte", 2);
+        assertThat(item.getQuantity()).isEqualTo(2);
 
         when(orderRepository.findByIdAndCafeId(orderId, cafeId)).thenReturn(Optional.of(order));
         when(kitchenDispatchService.dispatchOrder(order)).thenReturn(ticket);

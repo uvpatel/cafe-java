@@ -1,7 +1,6 @@
 package com.cafepos.catalog.api;
 
 import com.cafepos.catalog.application.ManageCategoryUseCase;
-import com.cafepos.shared.error.BusinessException;
 import com.cafepos.shared.security.UserPrincipal;
 import com.cafepos.shared.tenancy.TenantContextHolder;
 import com.fasterxml.jackson.databind.ObjectMapper;
