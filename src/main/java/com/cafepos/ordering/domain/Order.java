@@ -60,6 +60,9 @@ public class Order {
     @Column(name = "tax_amount", nullable = false, precision = 19, scale = 4)
     private BigDecimal taxAmount;
 
+    @Column(name = "service_charge_amount", nullable = false, precision = 19, scale = 4)
+    private BigDecimal serviceChargeAmount;
+
     @Column(name = "total_amount", nullable = false, precision = 19, scale = 4)
     private BigDecimal totalAmount;
 
@@ -106,6 +109,7 @@ public class Order {
         this.subtotalAmount = Money.zero(curr).amount();
         this.discountAmount = Money.zero(curr).amount();
         this.taxAmount = Money.zero(curr).amount();
+        this.serviceChargeAmount = Money.zero(curr).amount();
         this.totalAmount = Money.zero(curr).amount();
     }
 
@@ -161,6 +165,13 @@ public class Order {
 
     public Money getTax() {
         return new Money(this.taxAmount, getCurrency());
+    }
+
+    public Money getServiceCharge() {
+        if (this.serviceChargeAmount == null) {
+            return Money.zero(getCurrency());
+        }
+        return new Money(this.serviceChargeAmount, getCurrency());
     }
 
     public Money getTotal() {
@@ -257,18 +268,36 @@ public class Order {
         Money taxMoney = new Money(calculatedTaxAmount, curr);
         this.taxAmount = taxMoney.amount();
 
-        // Total = Subtotal - Discount + Tax
-        Money discountMoney = getDiscount();
-        if (discountMoney.amount().compareTo(this.subtotalAmount) > 0) {
-            // Cap discount at subtotal if needed or keep as is. Let's ensure total >= 0
-            Money netAfterDiscount = Money.zero(curr);
-            Money calculatedTotal = netAfterDiscount.add(taxMoney);
-            this.totalAmount = calculatedTotal.amount();
-        } else {
-            Money netAfterDiscount = calculatedSubtotal.subtract(discountMoney);
-            Money calculatedTotal = netAfterDiscount.add(taxMoney);
-            this.totalAmount = calculatedTotal.amount();
+        if (this.serviceChargeAmount == null) {
+            this.serviceChargeAmount = Money.zero(curr).amount();
         }
+
+        // Total = Subtotal - Discount + Tax + ServiceCharge
+        Money discountMoney = new Money(this.discountAmount, curr);
+        Money serviceChargeMoney = new Money(this.serviceChargeAmount, curr);
+        
+        Money calculatedTotal = calculatedSubtotal
+                .subtract(discountMoney)
+                .add(taxMoney)
+                .add(serviceChargeMoney);
+                
+        if (calculatedTotal.amount().compareTo(BigDecimal.ZERO) < 0) {
+            calculatedTotal = Money.zero(curr);
+        }
+        
+        this.totalAmount = calculatedTotal.amount();
+    }
+
+    public void applyServiceChargePercent(BigDecimal percentage) {
+        assertModifiable();
+        if (percentage == null || percentage.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Service charge percentage cannot be negative");
+        }
+        Currency curr = getCurrency();
+        Money subtotal = getSubtotal();
+        BigDecimal factor = percentage.divide(new BigDecimal("100"), 4, java.math.RoundingMode.HALF_UP);
+        this.serviceChargeAmount = subtotal.multiply(factor).amount();
+        recalculateTotals();
     }
 
     public void confirm() {

@@ -105,7 +105,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Test note",
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Test note",
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -128,7 +128,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -148,7 +148,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -170,7 +170,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, new BigDecimal("8.0000"), BigDecimal.ZERO,
-                BigDecimal.ZERO, new BigDecimal("8.0000"), "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, new BigDecimal("8.0000"), "USD", null,
                 Instant.now(), Instant.now(), List.of(lineResponse)
         );
 
@@ -192,7 +192,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, new BigDecimal("12.0000"), BigDecimal.ZERO,
-                BigDecimal.ZERO, new BigDecimal("12.0000"), "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, new BigDecimal("12.0000"), "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -212,7 +212,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -230,7 +230,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 
@@ -265,7 +265,7 @@ class OrderControllerTest {
         OrderResponse response = new OrderResponse(
                 orderId, cafeId, sessionId, tableId, "ORD-20260814-0001",
                 OrderType.DINE_IN, OrderStatus.CANCELLED, BigDecimal.ZERO, BigDecimal.ZERO,
-                BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
+                BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", null,
                 Instant.now(), Instant.now(), List.of()
         );
 

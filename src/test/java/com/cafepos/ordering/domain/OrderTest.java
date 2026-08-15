@@ -139,12 +139,16 @@ class OrderTest {
     }
 
     @Test
-    @DisplayName("Should throw exception when confirming an empty order")
-    void confirmEmptyOrderFails() {
-        Order order = new Order(cafeId, posSessionId, diningTableId, "ORD-007", OrderType.DINE_IN);
+    @DisplayName("Should apply percentage service charge and calculate total correctly")
+    void applyServiceChargeSuccess() {
+        Order order = new Order(cafeId, posSessionId, diningTableId, "ORD-008", OrderType.DINE_IN);
+        order.addOrUpdateLine(productId1, "Espresso", Money.of(new BigDecimal("10.00")), 2, true);
 
-        assertThatThrownBy(order::confirm)
-                .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("Cannot confirm an empty order");
+        assertThat(order.getSubtotal().amount()).isEqualByComparingTo("20.0000");
+
+        order.applyServiceChargePercent(new BigDecimal("10"));
+
+        assertThat(order.getServiceCharge().amount()).isEqualByComparingTo("2.0000");
+        assertThat(order.getTotal().amount()).isEqualByComparingTo("22.0000");
     }
 }

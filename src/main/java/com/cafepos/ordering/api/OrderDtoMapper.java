@@ -27,6 +27,7 @@ public class OrderDtoMapper {
                 order.getSubtotal().amount(),
                 order.getDiscount().amount(),
                 order.getTax().amount(),
+                order.getServiceCharge().amount(),
                 order.getTotal().amount(),
                 order.getCurrency().getCurrencyCode(),
                 order.getNotes(),

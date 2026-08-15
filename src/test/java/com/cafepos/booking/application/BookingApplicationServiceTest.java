@@ -231,7 +231,7 @@ class BookingApplicationServiceTest {
             OrderResponse orderResponse = new OrderResponse(
                     orderId, cafeId, posSessionId, tableId, "ORD-0001",
                     OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                    BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
+                    BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
                     now, now, List.of()
             );
 
@@ -257,7 +257,7 @@ class BookingApplicationServiceTest {
             OrderResponse orderResponse = new OrderResponse(
                     orderId, cafeId, posSessionId, tableId, "ORD-0001",
                     OrderType.DINE_IN, OrderStatus.DRAFT, BigDecimal.ZERO, BigDecimal.ZERO,
-                    BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
+                    BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "USD", "Converted from booking for John Doe",
                     now, now, List.of()
             );
 
