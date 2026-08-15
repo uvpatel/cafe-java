@@ -152,4 +152,12 @@ class OnboardCafeUseCaseTest {
         verify(employeeRepository).save(employeeCaptor.capture());
         assertThat(employeeCaptor.getValue().getRole()).isEqualTo(EmployeeRole.OWNER);
     }
+
+    @Test
+    @DisplayName("Should throw NullPointerException when command is null")
+    void shouldThrowExceptionWhenCommandIsNull() {
+        assertThatThrownBy(() -> onboardCafeUseCase.execute(null))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessageContaining("OnboardCafeCommand must not be null");
+    }
 }
