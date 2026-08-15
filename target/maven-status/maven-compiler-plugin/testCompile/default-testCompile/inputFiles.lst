@@ -26,6 +26,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/floor/domain/DiningTableTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/floor/domain/FloorTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/api/AuthControllerTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/api/EmployeeShiftControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/application/AuthenticateUserUseCaseTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/domain/EmployeeShiftTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/identity/domain/EmployeeTest.java
