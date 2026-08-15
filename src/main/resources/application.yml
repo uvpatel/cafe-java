@@ -45,8 +45,14 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
 
+app:
+  seed:
+    enabled: ${SEED_DATA:false}
+    admin-password: ${SEED_ADMIN_PASSWORD:password123}
+
 logging:
   level:
     root: INFO
     com.cafepos: DEBUG
+
 
