@@ -44,6 +44,9 @@ public class DiningTable {
     @Column(name = "pos_y", nullable = false)
     private int posY;
 
+    @Column(name = "merged_into_table_id")
+    private UUID mergedIntoTableId;
+
     @Column(name = "is_active", nullable = false)
     private boolean active;
 
@@ -184,6 +187,28 @@ public class DiningTable {
 
     public void setPosY(int posY) {
         this.posY = posY;
+    }
+
+    public void mergeInto(UUID targetTableId) {
+        if (targetTableId == null) {
+            throw new IllegalArgumentException("Target table ID for merge must not be null");
+        }
+        if (targetTableId.equals(this.id)) {
+            throw new IllegalArgumentException("Table cannot be merged into itself");
+        }
+        this.mergedIntoTableId = targetTableId;
+    }
+
+    public void unmerge() {
+        this.mergedIntoTableId = null;
+    }
+
+    public UUID getMergedIntoTableId() {
+        return mergedIntoTableId;
+    }
+
+    public boolean isMerged() {
+        return mergedIntoTableId != null;
     }
 
     public boolean isActive() {
