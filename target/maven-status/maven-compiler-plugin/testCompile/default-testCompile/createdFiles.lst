@@ -1,5 +1,4 @@
 com/cafepos/booking/application/BookingApplicationServiceTest$ConvertBookingToOrderTests.class
-com/cafepos/floor/domain/DiningTableTest$StateModificationsAndEquality.class
 com/cafepos/booking/application/BookingApplicationServiceTest$GetBookingsTests.class
 com/cafepos/ordering/domain/OrderLineTest.class
 com/cafepos/kitchen/application/KitchenApplicationServiceTest.class
@@ -46,7 +45,6 @@ com/cafepos/floor/domain/FloorTest$StateModificationsAndEquality.class
 com/cafepos/identity/domain/EmployeeTest$EqualsAndHashCodeTests.class
 com/cafepos/session/api/PosSessionControllerTest.class
 com/cafepos/promotion/application/PromotionApplicationServiceTest.class
-com/cafepos/floor/domain/DiningTableTest$CreationAndValidation.class
 com/cafepos/organization/domain/CafeTest.class
 com/cafepos/payment/domain/RefundTest.class
 com/cafepos/receipt/api/ReceiptControllerTest.class
@@ -59,7 +57,6 @@ com/cafepos/session/domain/TerminalTest$StateModificationsAndEquality.class
 com/cafepos/session/domain/TerminalTest$CreationAndValidation.class
 com/cafepos/shared/events/OutboxPublisherTest.class
 com/cafepos/booking/application/BookingApplicationServiceTest$CancelBookingTests.class
-com/cafepos/ordering/application/OrderApplicationServiceTest.class
 com/cafepos/payment/infrastructure/UpiQrGeneratorServiceTest.class
 com/cafepos/session/domain/PosSessionTest.class
 com/cafepos/kitchen/domain/KitchenTicketTest.class
@@ -74,7 +71,6 @@ com/cafepos/session/domain/CashMovementTest$CreationAndValidationTests.class
 com/cafepos/kitchen/domain/KitchenDispatchServiceTest.class
 com/cafepos/identity/domain/UserAccountTest$FailedAttemptsAndLocking.class
 com/cafepos/promotion/domain/CouponTest$RedemptionTests.class
-com/cafepos/floor/domain/DiningTableTest.class
 com/cafepos/catalog/domain/CategoryValidationServiceTest.class
 com/cafepos/floor/domain/FloorTest$CreationAndValidation.class
 com/cafepos/catalog/application/ProductApplicationServiceTest.class

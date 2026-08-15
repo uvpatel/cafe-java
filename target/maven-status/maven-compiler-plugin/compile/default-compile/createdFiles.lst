@@ -34,7 +34,6 @@ com/cafepos/ordering/application/OrderApplicationService.class
 com/cafepos/promotion/application/PricingPreviewUseCase.class
 com/cafepos/booking/application/CreateBookingUseCase.class
 com/cafepos/reporting/application/ReportingApplicationService.class
-com/cafepos/receipt/api/ReceiptResponse$ReceiptTaxLineResponse.class
 com/cafepos/floor/domain/DiningTable.class
 com/cafepos/payment/domain/PaymentMethod.class
 com/cafepos/kitchen/application/KitchenApplicationService.class
@@ -107,7 +106,6 @@ com/cafepos/payment/api/PaymentDtoMapper.class
 com/cafepos/kitchen/domain/KitchenTicketItem.class
 com/cafepos/session/domain/Terminal.class
 com/cafepos/payment/api/PaymentController.class
-com/cafepos/receipt/api/ReceiptResponse$ReceiptLineResponse.class
 com/cafepos/catalog/application/ManageCategoryUseCase.class
 com/cafepos/session/domain/PosSessionRepository.class
 com/cafepos/reporting/domain/ExportType.class
@@ -216,4 +214,3 @@ com/cafepos/identity/api/AuthController.class
 com/cafepos/payment/domain/Payment.class
 com/cafepos/catalog/api/ProductCategoryController.class
 com/cafepos/kitchen/api/KitchenDtoMapper.class
-com/cafepos/receipt/api/ReceiptResponse$ReceiptPaymentInfo.class
