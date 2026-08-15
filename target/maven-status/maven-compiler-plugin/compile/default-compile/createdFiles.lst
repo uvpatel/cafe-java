@@ -74,6 +74,7 @@ com/cafepos/activitylog/domain/events/OrderLineChangedEvent.class
 com/cafepos/inventory/api/InventoryController$CreateInventoryItemRequest.class
 com/cafepos/ordering/domain/OrderTaxLine.class
 com/cafepos/catalog/CatalogService.class
+com/cafepos/shared/seed/ApiSeedController.class
 com/cafepos/inventory/domain/InventoryItemRepository.class
 com/cafepos/customer/api/CustomerConsentController.class
 com/cafepos/kitchen/domain/KitchenItemStatus.class
@@ -141,6 +142,7 @@ com/cafepos/catalog/application/ManageCategoryUseCase.class
 com/cafepos/session/domain/PosSessionRepository.class
 com/cafepos/reporting/domain/ExportType.class
 com/cafepos/activitylog/application/AuditEventListener.class
+com/cafepos/shared/seed/DatabaseSeeder.class
 com/cafepos/catalog/domain/ProductCategoryRepository.class
 com/cafepos/activitylog/domain/events/PosSessionClosedEvent.class
 com/cafepos/session/api/PosSessionDtoMapper.class
@@ -194,6 +196,7 @@ com/cafepos/organization/domain/CafeRepository.class
 com/cafepos/catalog/domain/ModifierGroupRepository.class
 com/cafepos/identity/api/EmployeeShiftController.class
 com/cafepos/shared/events/OutboxPublisher.class
+com/cafepos/shared/package-info.class
 com/cafepos/session/application/PosSessionApplicationService.class
 com/cafepos/loyalty/domain/LoyaltyTransaction$TransactionType.class
 com/cafepos/shared/error/ProblemDetail$FieldError.class
@@ -207,6 +210,7 @@ com/cafepos/organization/application/OnboardCafeCommand.class
 com/cafepos/payment/api/ProcessCashPaymentRequest.class
 com/cafepos/shared/security/TenantAuthenticationFilter.class
 com/cafepos/shared/events/OutboxEvent.class
+com/cafepos/shared/config/NeonPostgresHealthIndicator.class
 com/cafepos/payment/api/RefundResponse.class
 com/cafepos/payment/domain/PaymentStatus.class
 com/cafepos/booking/api/UpdateBookingRequest.class
@@ -218,9 +222,11 @@ com/cafepos/ordering/application/ManageOrderLinesUseCase.class
 com/cafepos/reporting/application/TopProductProjection.class
 com/cafepos/catalog/api/UpdateCategoryRequest.class
 com/cafepos/shared/events/OutboxEventStatus.class
+com/cafepos/ordering/api/OrderLineModifierResponse.class
 com/cafepos/payment/application/SplitBillingApplicationService.class
 com/cafepos/reporting/domain/ExportStatus.class
 com/cafepos/booking/application/UpdateBookingUseCase.class
+com/cafepos/shared/seed/ApiSeedController$ApiSeedResponse.class
 com/cafepos/floor/domain/DiningTableRepository.class
 com/cafepos/identity/application/RefreshTokenResponse.class
 com/cafepos/activitylog/domain/events/ExportTriggeredEvent.class
