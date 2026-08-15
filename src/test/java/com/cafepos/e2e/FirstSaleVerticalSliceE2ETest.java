@@ -79,6 +79,8 @@ import com.cafepos.payment.infrastructure.UpiQrGeneratorService;
 import com.cafepos.receipt.api.ReceiptDtoMapper;
 import com.cafepos.receipt.api.ReceiptResponse;
 import com.cafepos.receipt.application.ReceiptApplicationService;
+import com.cafepos.receipt.domain.Receipt;
+import com.cafepos.receipt.domain.ReceiptRepository;
 import com.cafepos.reporting.application.ExportJobRunner;
 import com.cafepos.reporting.application.ReportingApplicationService;
 import com.cafepos.reporting.application.SalesSummaryProjection;
@@ -126,6 +128,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 class FirstSaleVerticalSliceE2ETest {
@@ -147,6 +150,7 @@ class FirstSaleVerticalSliceE2ETest {
     private OutboxEventRepository outboxEventRepository;
     private PaymentRepository paymentRepository;
     private RefundRepository refundRepository;
+    private ReceiptRepository receiptRepository;
     private ActivityLogRepository activityLogRepository;
     private ExportJobRepository exportJobRepository;
     private SimpMessagingTemplate messagingTemplate;
@@ -189,6 +193,7 @@ class FirstSaleVerticalSliceE2ETest {
     private final Map<UUID, OutboxEvent> outboxEvents = new ConcurrentHashMap<>();
     private final Map<UUID, Payment> payments = new ConcurrentHashMap<>();
     private final Map<UUID, Refund> refunds = new ConcurrentHashMap<>();
+    private final Map<UUID, Receipt> receipts = new ConcurrentHashMap<>();
     private final List<ActivityLog> activityLogs = Collections.synchronizedList(new ArrayList<>());
 
     @BeforeEach
@@ -209,6 +214,7 @@ class FirstSaleVerticalSliceE2ETest {
         outboxEvents.clear();
         payments.clear();
         refunds.clear();
+        receipts.clear();
         activityLogs.clear();
 
         // 1. Setup CafeRepository
@@ -569,8 +575,20 @@ class FirstSaleVerticalSliceE2ETest {
         UpiQrGeneratorService upiQrGeneratorService = new UpiQrGeneratorService();
         paymentApplicationService = new PaymentApplicationService(orderRepository, paymentRepository, paymentDomainService, upiQrGeneratorService, paymentDtoMapper);
 
+        // 11. Setup ReceiptRepository
+        receiptRepository = mock(ReceiptRepository.class);
+        when(receiptRepository.findByOrderId(any(UUID.class))).thenAnswer(inv -> {
+            UUID oId = inv.getArgument(0);
+            return receipts.values().stream().filter(r -> r.getOrderId().equals(oId)).findFirst();
+        });
+        when(receiptRepository.save(any(Receipt.class))).thenAnswer(inv -> {
+            Receipt r = inv.getArgument(0);
+            receipts.put(r.getId(), r);
+            return r;
+        });
+
         ReceiptDtoMapper receiptDtoMapper = new ReceiptDtoMapper();
-        receiptApplicationService = new ReceiptApplicationService(orderRepository, paymentRepository, receiptDtoMapper);
+        receiptApplicationService = new ReceiptApplicationService(receiptRepository, orderRepository, receiptDtoMapper, objectMapper);
 
         activityLogApplicationService = new ActivityLogApplicationService(activityLogRepository, objectMapper);
         auditEventListener = new AuditEventListener(activityLogApplicationService);
@@ -804,16 +822,12 @@ class FirstSaleVerticalSliceE2ETest {
         // =========================================================================
         // STEP 12: Receipt payload is generated (ReceiptApplicationService)
         // =========================================================================
-        ReceiptResponse receiptResp = receiptApplicationService.getReceiptForOrder(cafeId, paidOrderResp.id());
+        ReceiptResponse receiptResp = receiptApplicationService.generateReceiptForOrder(cafeId, paidOrderResp.id());
 
         assertThat(receiptResp).isNotNull();
         assertThat(receiptResp.orderId()).isEqualTo(paidOrderResp.id());
-        assertThat(receiptResp.orderNumber()).isEqualTo(paidOrderResp.orderNumber());
+        assertThat(receiptResp.receiptNumber()).contains(paidOrderResp.orderNumber());
         assertThat(receiptResp.totalAmount()).isEqualByComparingTo("13.00");
-        assertThat(receiptResp.payment().tenderedAmount()).isEqualByComparingTo("20.00");
-        assertThat(receiptResp.payment().changeAmount()).isEqualByComparingTo("7.00");
-        assertThat(receiptResp.payment().paymentMethod()).isEqualTo(PaymentMethod.CASH);
-        assertThat(receiptResp.lines()).hasSize(1);
 
         // =========================================================================
         // STEP 13: Cashier closes and reconciles session shift with expected balance and zero cash variance (ClosePosSessionUseCase)

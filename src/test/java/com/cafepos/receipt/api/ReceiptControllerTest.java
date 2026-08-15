@@ -30,6 +30,7 @@ import java.util.UUID;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -71,61 +72,52 @@ class ReceiptControllerTest {
     }
 
     @Test
-    @DisplayName("GET /api/v1/orders/{id}/receipt should return receipt snapshot with 200 OK")
-    void shouldGetReceiptForPaidOrder() throws Exception {
-        ReceiptResponse.ReceiptPaymentInfo paymentInfo = new ReceiptResponse.ReceiptPaymentInfo(
-                paymentId, PaymentMethod.CASH, new BigDecimal("20.00"),
-                new BigDecimal("25.00"), new BigDecimal("5.00"), null,
-                PaymentStatus.COMPLETED, Instant.now()
-        );
-
-        ReceiptResponse.ReceiptLineResponse lineResponse = new ReceiptResponse.ReceiptLineResponse(
-                lineId, productId, "Espresso", new BigDecimal("10.00"), 2,
-                new BigDecimal("20.00"), new BigDecimal("20.00")
-        );
-
+    @DisplayName("POST /api/v1/receipts/orders/{orderId} should generate receipt with 201 CREATED")
+    void shouldGenerateReceiptForPaidOrder() throws Exception {
         ReceiptResponse response = new ReceiptResponse(
-                orderId, "ORD-1001", cafeId, posSessionId, null,
-                OrderType.TAKEAWAY, OrderStatus.PAID, new BigDecimal("20.00"),
-                BigDecimal.ZERO, BigDecimal.ZERO, new BigDecimal("20.00"),
-                "USD", "Extra hot", Instant.now(), Instant.now(),
-                paymentInfo, List.of(lineResponse), List.of()
+                UUID.randomUUID(), cafeId, orderId, "RCP-20260815-ORD-1001",
+                new BigDecimal("20.0000"), BigDecimal.ZERO, BigDecimal.ZERO,
+                BigDecimal.ZERO, new BigDecimal("20.0000"), "USD", "[]", Instant.now()
         );
 
-        when(receiptApplicationService.getReceiptForOrder(cafeId, orderId)).thenReturn(response);
+        when(receiptApplicationService.generateReceiptForOrder(cafeId, orderId)).thenReturn(response);
 
-        mockMvc.perform(get("/api/v1/orders/{id}/receipt", orderId))
+        mockMvc.perform(post("/api/v1/receipts/orders/{orderId}", orderId))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.orderId").value(orderId.toString()))
+                .andExpect(jsonPath("$.receiptNumber").value("RCP-20260815-ORD-1001"))
+                .andExpect(jsonPath("$.totalAmount").value(20.0000));
+
+        verify(receiptApplicationService).generateReceiptForOrder(cafeId, orderId);
+    }
+
+    @Test
+    @DisplayName("GET /api/v1/receipts/orders/{orderId} should return receipt with 200 OK")
+    void shouldGetReceiptByOrderId() throws Exception {
+        ReceiptResponse response = new ReceiptResponse(
+                UUID.randomUUID(), cafeId, orderId, "RCP-20260815-ORD-1001",
+                new BigDecimal("20.0000"), BigDecimal.ZERO, BigDecimal.ZERO,
+                BigDecimal.ZERO, new BigDecimal("20.0000"), "USD", "[]", Instant.now()
+        );
+
+        when(receiptApplicationService.getReceiptByOrderId(cafeId, orderId)).thenReturn(response);
+
+        mockMvc.perform(get("/api/v1/receipts/orders/{orderId}", orderId))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.orderId").value(orderId.toString()))
-                .andExpect(jsonPath("$.orderNumber").value("ORD-1001"))
-                .andExpect(jsonPath("$.orderStatus").value("PAID"))
-                .andExpect(jsonPath("$.payment.paymentId").value(paymentId.toString()))
-                .andExpect(jsonPath("$.payment.paymentMethod").value("CASH"))
-                .andExpect(jsonPath("$.payment.tenderedAmount").value(25.00))
-                .andExpect(jsonPath("$.lines[0].productName").value("Espresso"));
+                .andExpect(jsonPath("$.receiptNumber").value("RCP-20260815-ORD-1001"));
 
-        verify(receiptApplicationService).getReceiptForOrder(cafeId, orderId);
+        verify(receiptApplicationService).getReceiptByOrderId(cafeId, orderId);
     }
 
     @Test
-    @DisplayName("GET /api/v1/orders/{id}/receipt when order is not paid should return 400 Bad Request")
-    void shouldReturn400WhenOrderNotPaid() throws Exception {
-        when(receiptApplicationService.getReceiptForOrder(cafeId, orderId))
-                .thenThrow(new BusinessException("ORDER_NOT_PAID", "Receipt can only be generated for paid orders", 400));
+    @DisplayName("GET /api/v1/receipts/orders/{orderId} when receipt does not exist should return 404 Not Found")
+    void shouldReturn404WhenReceiptNotFound() throws Exception {
+        when(receiptApplicationService.getReceiptByOrderId(cafeId, orderId))
+                .thenThrow(new BusinessException("RECEIPT_NOT_FOUND", "Receipt not found for order id " + orderId, 404));
 
-        mockMvc.perform(get("/api/v1/orders/{id}/receipt", orderId))
-                .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.code").value("ORDER_NOT_PAID"));
-    }
-
-    @Test
-    @DisplayName("GET /api/v1/orders/{id}/receipt when order does not exist should return 404 Not Found")
-    void shouldReturn404WhenOrderNotFound() throws Exception {
-        when(receiptApplicationService.getReceiptForOrder(cafeId, orderId))
-                .thenThrow(new BusinessException("ORDER_NOT_FOUND", "Order not found with id " + orderId, 404));
-
-        mockMvc.perform(get("/api/v1/orders/{id}/receipt", orderId))
+        mockMvc.perform(get("/api/v1/receipts/orders/{orderId}", orderId))
                 .andExpect(status().isNotFound())
-                .andExpect(jsonPath("$.code").value("ORDER_NOT_FOUND"));
+                .andExpect(jsonPath("$.code").value("RECEIPT_NOT_FOUND"));
     }
 }
