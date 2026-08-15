@@ -161,6 +161,21 @@ class ProductTest {
             assertThatThrownBy(() -> product.setPrice(negativePrice))
                     .isInstanceOf(IllegalArgumentException.class);
         }
+
+        @Test
+        @DisplayName("Should attach and detach modifier groups")
+        void shouldAttachAndDetachModifierGroups() {
+            Product product = new Product(UUID.randomUUID(), UUID.randomUUID(), "Latte", Money.of(4.00));
+            UUID groupId = UUID.randomUUID();
+
+            assertThat(product.getModifierGroupIds()).isEmpty();
+
+            product.attachModifierGroup(groupId);
+            assertThat(product.getModifierGroupIds()).containsExactly(groupId);
+
+            product.detachModifierGroup(groupId);
+            assertThat(product.getModifierGroupIds()).isEmpty();
+        }
     }
 
     @Nested
