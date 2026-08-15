@@ -257,11 +257,11 @@ docker compose down
 
 ### Running on Different Port
 
-If port  is in use:
+If port 3000 is in use:
 
 ```bash
 # Via environment variable
-PORT=8081 ./mvnw spring-boot:run
+SERVER_PORT=3001 ./mvnw spring-boot:run
 
 # Via application.yml override
 ./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
@@ -357,7 +357,7 @@ Create `.http` files to test endpoints:
 
 ```http
 ### Create Order
-POST http://localhost:/api/v1/orders
+POST http://localhost:3000/api/v1/orders
 Content-Type: application/json
 Authorization: Bearer eyJhbGc...
 
@@ -371,7 +371,7 @@ Authorization: Bearer eyJhbGc...
 }
 
 ### Get Order
-GET http://localhost:/api/v1/orders/123e4567-e89b-12d3-a456-426614174000
+GET http://localhost:3000/api/v1/orders/123e4567-e89b-12d3-a456-426614174000
 Authorization: Bearer eyJhbGc...
 ```
 
@@ -379,13 +379,13 @@ Authorization: Bearer eyJhbGc...
 
 ```bash
 # Create order
-curl -X POST http://localhost:/api/v1/orders \
+curl -X POST http://localhost:3000/api/v1/orders \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{"items": [{"productId": "...", "quantity": 1}]}'
 
 # Get order
-curl http://localhost:/api/v1/orders/123 \
+curl http://localhost:3000/api/v1/orders/123 \
   -H "Authorization: Bearer $TOKEN"
 ```
 
@@ -607,8 +607,8 @@ CREATE SCHEMA public;
 ### Port Already in Use
 
 ```bash
-# Find process using port 
-lsof -i :
+# Find process using port 3000
+lsof -i :3000
 
 # Kill process
 kill -9 <PID>
