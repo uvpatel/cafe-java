@@ -114,6 +114,18 @@ class TableBookingTest {
         }
 
         @Test
+        @DisplayName("Should transition CONFIRMED booking to EXPIRED when hold time lapses")
+        void shouldExpireBooking() {
+            Instant start = Instant.now().minus(2, ChronoUnit.HOURS);
+            Instant end = start.plus(1, ChronoUnit.HOURS);
+            TableBooking booking = new TableBooking(cafeId, diningTableId, "Bob", "+9876543210", 2, start, end);
+
+            booking.expire();
+
+            assertThat(booking.getStatus()).isEqualTo(BookingStatus.EXPIRED);
+        }
+
+        @Test
         @DisplayName("Should fail transition to order if booking is already CANCELLED or CONVERTED_TO_ORDER")
         void shouldFailConversionIfAlreadyFinalized() {
             Instant start = Instant.now().plus(1, ChronoUnit.HOURS);
