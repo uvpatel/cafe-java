@@ -157,5 +157,39 @@ class DiningTableTest {
             assertThat(table1.hashCode()).isEqualTo(table2.hashCode());
             assertThat(table1).isNotEqualTo(table3);
         }
+
+        @Test
+        @DisplayName("Should merge table into target table and unmerge")
+        void mergeAndUnmergeTable() {
+            DiningTable table1 = new DiningTable(cafeId, floorId, "T-1");
+            UUID targetTableId = UUID.randomUUID();
+
+            assertThat(table1.isMerged()).isFalse();
+            assertThat(table1.getMergedIntoTableId()).isNull();
+
+            table1.mergeInto(targetTableId);
+
+            assertThat(table1.isMerged()).isTrue();
+            assertThat(table1.getMergedIntoTableId()).isEqualTo(targetTableId);
+
+            table1.unmerge();
+
+            assertThat(table1.isMerged()).isFalse();
+            assertThat(table1.getMergedIntoTableId()).isNull();
+        }
+
+        @Test
+        @DisplayName("Should throw exception when merging table into itself or null target")
+        void invalidMergeThrowsException() {
+            DiningTable table = new DiningTable(cafeId, floorId, "T-1");
+
+            assertThatThrownBy(() -> table.mergeInto(null))
+                    .isInstanceOf(IllegalArgumentException.class)
+                    .hasMessageContaining("Target table ID for merge must not be null");
+
+            assertThatThrownBy(() -> table.mergeInto(table.getId()))
+                    .isInstanceOf(IllegalArgumentException.class)
+                    .hasMessageContaining("Table cannot be merged into itself");
+        }
     }
 }
