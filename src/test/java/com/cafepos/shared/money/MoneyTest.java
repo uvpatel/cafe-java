@@ -56,7 +56,14 @@ class MoneyTest {
     void testComparison() {
         Money m1 = Money.of(50.00);
         Money m2 = Money.of(20.00);
+        Money m3 = Money.of(-5.00);
+
         assertThat(m1.isGreaterThan(m2)).isTrue();
         assertThat(m2.isGreaterThan(m1)).isFalse();
+        assertThat(m2.isLessThan(m1)).isTrue();
+        assertThat(m1.isLessThan(m2)).isFalse();
+        assertThat(m3.isNegative()).isTrue();
+        assertThat(m1.isNegative()).isFalse();
     }
 }
+

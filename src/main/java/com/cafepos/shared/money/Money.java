@@ -66,6 +66,15 @@ public record Money(BigDecimal amount, Currency currency) {
         return this.amount.compareTo(other.amount) > 0;
     }
 
+    public boolean isLessThan(Money other) {
+        assertSameCurrency(other);
+        return this.amount.compareTo(other.amount) < 0;
+    }
+
+    public boolean isNegative() {
+        return this.amount.compareTo(BigDecimal.ZERO) < 0;
+    }
+
     private void assertSameCurrency(Money other) {
         if (!this.currency.equals(other.currency)) {
             throw new IllegalArgumentException("Cannot operate on different currencies: " 
@@ -73,3 +82,4 @@ public record Money(BigDecimal amount, Currency currency) {
         }
     }
 }
+
