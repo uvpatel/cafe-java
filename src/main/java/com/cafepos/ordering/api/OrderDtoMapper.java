@@ -39,6 +39,16 @@ public class OrderDtoMapper {
 
     public OrderLineResponse toOrderLineResponse(OrderLine line) {
         Objects.requireNonNull(line, "line must not be null");
+        List<OrderLineModifierResponse> modifierResponses = line.getModifiers().stream()
+                .map(m -> new OrderLineModifierResponse(
+                        m.getId(),
+                        m.getModifierGroupId(),
+                        m.getModifierOptionId(),
+                        m.getOptionNameSnapshot(),
+                        m.getPriceDeltaSnapshotAmount()
+                ))
+                .toList();
+
         return new OrderLineResponse(
                 line.getId(),
                 line.getOrderId(),
@@ -49,7 +59,9 @@ public class OrderDtoMapper {
                 line.getLineSubtotalAmount(),
                 line.getLineTotalAmount(),
                 line.isKitchenRouted(),
-                line.getCreatedAt()
+                line.getCreatedAt(),
+                modifierResponses
         );
     }
+
 }

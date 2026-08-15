@@ -11,6 +11,13 @@ public record AddOrderLineRequest(
 
         @NotNull(message = "Quantity must not be null")
         @Min(value = 1, message = "Quantity must be at least 1")
-        Integer quantity
+        Integer quantity,
+
+        java.util.List<UUID> selectedModifierOptionIds
 ) {
+    public AddOrderLineRequest(UUID productId, Integer quantity) {
+        this(productId, quantity, java.util.List.of());
+    }
 }
+
+
