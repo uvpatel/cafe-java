@@ -83,4 +83,26 @@ class OutboxPublisherTest {
         assertThat(event.getStatus()).isEqualTo(OutboxEventStatus.FAILED);
         verify(outboxEventRepository).save(event);
     }
+
+    @Test
+    @DisplayName("publishPendingEvents should route to both tenant and station-specific STOMP topics when stationId is present")
+    void shouldPublishToStationSpecificTopicWhenStationIdPresent() {
+        UUID stationId = UUID.randomUUID();
+        String payload = """
+                {
+                  "ticketId": "%s",
+                  "cafeId": "%s",
+                  "stationId": "%s"
+                }
+                """.formatted(ticketId, cafeId, stationId);
+
+        OutboxEvent event = new OutboxEvent("KitchenTicket", ticketId.toString(), "KitchenTicketDispatchedEvent", payload);
+        when(outboxEventRepository.findByStatus(OutboxEventStatus.PENDING)).thenReturn(List.of(event));
+
+        outboxPublisher.publishPendingEvents();
+
+        verify(messagingTemplate).convertAndSend(eq("/topic/kitchen/" + cafeId), eq(payload));
+        verify(messagingTemplate).convertAndSend(eq("/topic/kitchen/" + cafeId + "/station/" + stationId), eq(payload));
+        assertThat(event.getStatus()).isEqualTo(OutboxEventStatus.PROCESSED);
+    }
 }
