@@ -71,6 +71,17 @@ class PaymentTest {
     }
 
     @Test
+    @DisplayName("Should throw exception when CASH payment tendered currency mismatched order currency")
+    void shouldThrowExceptionWhenTenderedCurrencyMismatched() {
+        Money amount = Money.of(new BigDecimal("10.00"), "USD");
+        Money tenderedEUR = Money.of(new BigDecimal("20.00"), "EUR");
+
+        assertThatThrownBy(() -> new Payment(cafeId, orderId, PaymentMethod.CASH, amount, tenderedEUR, null))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("Tendered amount currency mismatch");
+    }
+
+    @Test
     @DisplayName("Should mark payment as refunded")
     void shouldMarkPaymentAsRefunded() {
         Money amount = Money.of(BigDecimal.valueOf(10.00));

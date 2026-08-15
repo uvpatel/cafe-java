@@ -27,6 +27,14 @@ public record Money(BigDecimal amount, Currency currency) {
         return new Money(amount, DEFAULT_CURRENCY);
     }
 
+    public static Money of(BigDecimal amount, Currency currency) {
+        return new Money(amount, currency);
+    }
+
+    public static Money of(BigDecimal amount, String currencyCode) {
+        return new Money(amount, Currency.getInstance(currencyCode));
+    }
+
     public static Money zero(Currency currency) {
         return new Money(BigDecimal.ZERO, currency);
     }
