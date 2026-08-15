@@ -121,4 +121,27 @@ class ModifierGroupControllerTest {
 
         verify(catalogModifierApplicationService).getModifierGroups(eq(cafeId));
     }
+
+    @Test
+    @DisplayName("POST /api/v1/catalog/modifiers/products/{productId}/groups/{groupId} should link group to product and return 204 NO_CONTENT")
+    void linkGroupToProductEndpointSuccess() throws Exception {
+        UUID productId = UUID.randomUUID();
+
+        mockMvc.perform(post("/api/v1/catalog/modifiers/products/{productId}/groups/{groupId}", productId, groupId))
+                .andExpect(status().isNoContent());
+
+        verify(catalogModifierApplicationService).linkModifierGroupToProduct(eq(cafeId), eq(productId), eq(groupId));
+    }
+
+    @Test
+    @DisplayName("DELETE /api/v1/catalog/modifiers/products/{productId}/groups/{groupId} should unlink group from product and return 204 NO_CONTENT")
+    void unlinkGroupFromProductEndpointSuccess() throws Exception {
+        UUID productId = UUID.randomUUID();
+
+        mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete("/api/v1/catalog/modifiers/products/{productId}/groups/{groupId}", productId, groupId))
+                .andExpect(status().isNoContent());
+
+        verify(catalogModifierApplicationService).unlinkModifierGroupFromProduct(eq(cafeId), eq(productId), eq(groupId));
+    }
 }
+
