@@ -200,6 +200,19 @@ class CouponTest {
             assertThat(coupon.meetsMinimumOrder(Money.of(100.00))).isTrue();
             assertThat(coupon.meetsMinimumOrder(null)).isFalse();
         }
+
+        @Test
+        @DisplayName("Should calculate fixed amount and percentage discounts correctly")
+        void shouldCalculateDiscountAmount() {
+            UUID cafeId = UUID.randomUUID();
+            Coupon fixedCoupon = new Coupon(UUID.randomUUID(), cafeId, "FLAT10", DiscountType.FIXED_AMOUNT, BigDecimal.TEN, BigDecimal.valueOf(20), null, null, null);
+            Coupon percentCoupon = new Coupon(UUID.randomUUID(), cafeId, "PERCENT15", DiscountType.PERCENTAGE, BigDecimal.valueOf(15), BigDecimal.ZERO, null, null, null);
+
+            assertThat(fixedCoupon.calculateDiscountAmount(Money.of(15.00)).amount()).isEqualByComparingTo("0.0000");
+            assertThat(fixedCoupon.calculateDiscountAmount(Money.of(25.00)).amount()).isEqualByComparingTo("10.0000");
+
+            assertThat(percentCoupon.calculateDiscountAmount(Money.of(100.00)).amount()).isEqualByComparingTo("15.0000");
+        }
     }
 
     @Nested
