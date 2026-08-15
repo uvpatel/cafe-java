@@ -664,8 +664,8 @@ SELECT * FROM orders;  -- Only returns org's orders
 **Encrypted backups with retention policy:**
 ```bash
 #!/bin/bash
-# Backup with encryption
-pg_dump -h localhost -U postgres cafepos | \
+# Backup with encryption (Neon PostgreSQL)
+pg_dump "$DATABASE_URL" | \
   openssl enc -aes-256-cbc -out cafepos_$(date +%Y%m%d).sql.enc
 
 # Retention: Keep last 30 days
