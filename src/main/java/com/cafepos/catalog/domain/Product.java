@@ -45,6 +45,14 @@ public class Product {
     @Column(name = "unit_of_measure", nullable = false, length = 20)
     private UnitOfMeasure unitOfMeasure;
 
+    @jakarta.persistence.ElementCollection
+    @jakarta.persistence.CollectionTable(
+            name = "product_modifier_group_links",
+            joinColumns = @jakarta.persistence.JoinColumn(name = "product_id")
+    )
+    @Column(name = "group_id")
+    private java.util.Set<UUID> modifierGroupIds = new java.util.HashSet<>();
+
     @Column(name = "is_kitchen_routed", nullable = false)
     private boolean kitchenRouted;
 
@@ -204,6 +212,23 @@ public class Product {
 
     public void setUnitOfMeasure(UnitOfMeasure unitOfMeasure) {
         this.unitOfMeasure = unitOfMeasure != null ? unitOfMeasure : UnitOfMeasure.UNIT;
+    }
+
+    public void attachModifierGroup(UUID groupId) {
+        if (groupId == null) {
+            throw new IllegalArgumentException("Modifier group ID must not be null");
+        }
+        this.modifierGroupIds.add(groupId);
+    }
+
+    public void detachModifierGroup(UUID groupId) {
+        if (groupId != null) {
+            this.modifierGroupIds.remove(groupId);
+        }
+    }
+
+    public java.util.Set<UUID> getModifierGroupIds() {
+        return java.util.Collections.unmodifiableSet(modifierGroupIds);
     }
 
     public boolean isKitchenRouted() {
