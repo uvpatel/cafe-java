@@ -57,4 +57,20 @@ class ProductPricingValidatorTest {
         assertThatThrownBy(() -> validator.calculateDiscountedPrice(price, BigDecimal.valueOf(105)))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("Should calculate product price with modifiers correctly")
+    void shouldCalculateProductPriceWithModifiers() {
+        Money basePrice = Money.of(4.50);
+        java.util.UUID groupId = java.util.UUID.randomUUID();
+
+        ModifierOption option1 = new ModifierOption(groupId, "Oat Milk", new BigDecimal("0.75"));
+        ModifierOption option2 = new ModifierOption(groupId, "Extra Shot", new BigDecimal("1.25"));
+
+        Money totalPrice = validator.calculateProductPriceWithModifiers(basePrice, java.util.List.of(option1, option2));
+
+        assertThat(totalPrice.amount()).isEqualByComparingTo(new BigDecimal("6.5000"));
+        assertThat(totalPrice.currency()).isEqualTo(Currency.getInstance("USD"));
+    }
 }
+

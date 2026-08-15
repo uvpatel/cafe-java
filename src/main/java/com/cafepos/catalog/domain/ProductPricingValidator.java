@@ -34,4 +34,25 @@ public class ProductPricingValidator {
         BigDecimal multiplier = BigDecimal.ONE.subtract(discountPercentage.divide(BigDecimal.valueOf(100)));
         return originalPrice.multiply(multiplier);
     }
+
+    public Money calculateProductPriceWithModifiers(Money basePrice, java.util.List<ModifierOption> selectedModifiers) {
+        validatePrice(basePrice);
+        if (selectedModifiers == null || selectedModifiers.isEmpty()) {
+            return basePrice;
+        }
+
+        BigDecimal totalDelta = BigDecimal.ZERO;
+        for (ModifierOption modifier : selectedModifiers) {
+            if (modifier != null && modifier.getPriceDelta() != null) {
+                totalDelta = totalDelta.add(modifier.getPriceDelta());
+            }
+        }
+
+        if (totalDelta.compareTo(BigDecimal.ZERO) == 0) {
+            return basePrice;
+        }
+
+        Money deltaMoney = new Money(totalDelta, basePrice.currency());
+        return basePrice.add(deltaMoney);
+    }
 }
