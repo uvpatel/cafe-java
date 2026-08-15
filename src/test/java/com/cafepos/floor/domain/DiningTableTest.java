@@ -129,6 +129,23 @@ class DiningTableTest {
         }
 
         @Test
+        @DisplayName("Should update table shape and visual layout coordinates")
+        void updateShapeAndCoordinates() {
+            DiningTable table = new DiningTable(cafeId, floorId, "T-1");
+            assertThat(table.getShape()).isEqualTo(TableShape.SQUARE);
+            assertThat(table.getPosX()).isEqualTo(0);
+            assertThat(table.getPosY()).isEqualTo(0);
+
+            table.setShape(TableShape.ROUND);
+            table.setPosX(150);
+            table.setPosY(300);
+
+            assertThat(table.getShape()).isEqualTo(TableShape.ROUND);
+            assertThat(table.getPosX()).isEqualTo(150);
+            assertThat(table.getPosY()).isEqualTo(300);
+        }
+
+        @Test
         @DisplayName("Should verify equality based on ID")
         void equalsAndHashCode() {
             UUID id = UUID.randomUUID();

@@ -2,6 +2,8 @@ package com.cafepos.floor.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -31,6 +33,16 @@ public class DiningTable {
 
     @Column(name = "seating_capacity", nullable = false)
     private int seatingCapacity;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "shape", nullable = false, length = 20)
+    private TableShape shape = TableShape.SQUARE;
+
+    @Column(name = "pos_x", nullable = false)
+    private int posX;
+
+    @Column(name = "pos_y", nullable = false)
+    private int posY;
 
     @Column(name = "is_active", nullable = false)
     private boolean active;
@@ -148,6 +160,30 @@ public class DiningTable {
     public void setSeatingCapacity(int seatingCapacity) {
         validateInputs(this.cafeId, this.floorId, this.tableNumber, seatingCapacity);
         this.seatingCapacity = seatingCapacity;
+    }
+
+    public TableShape getShape() {
+        return shape != null ? shape : TableShape.SQUARE;
+    }
+
+    public void setShape(TableShape shape) {
+        this.shape = shape != null ? shape : TableShape.SQUARE;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
     }
 
     public boolean isActive() {
