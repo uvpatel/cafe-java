@@ -257,7 +257,7 @@ docker compose down
 
 ### Running on Different Port
 
-If port 8080 is in use:
+If port  is in use:
 
 ```bash
 # Via environment variable
@@ -357,7 +357,7 @@ Create `.http` files to test endpoints:
 
 ```http
 ### Create Order
-POST http://localhost:8080/api/v1/orders
+POST http://localhost:/api/v1/orders
 Content-Type: application/json
 Authorization: Bearer eyJhbGc...
 
@@ -371,7 +371,7 @@ Authorization: Bearer eyJhbGc...
 }
 
 ### Get Order
-GET http://localhost:8080/api/v1/orders/123e4567-e89b-12d3-a456-426614174000
+GET http://localhost:/api/v1/orders/123e4567-e89b-12d3-a456-426614174000
 Authorization: Bearer eyJhbGc...
 ```
 
@@ -379,13 +379,13 @@ Authorization: Bearer eyJhbGc...
 
 ```bash
 # Create order
-curl -X POST http://localhost:8080/api/v1/orders \
+curl -X POST http://localhost:/api/v1/orders \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{"items": [{"productId": "...", "quantity": 1}]}'
 
 # Get order
-curl http://localhost:8080/api/v1/orders/123 \
+curl http://localhost:/api/v1/orders/123 \
   -H "Authorization: Bearer $TOKEN"
 ```
 
@@ -396,14 +396,12 @@ curl http://localhost:8080/api/v1/orders/123 \
 ### Accessing PostgreSQL
 
 ```bash
-# Via Docker Compose
-docker compose exec postgres psql -U cafepos -d cafepos
+# Via psql using Neon connection string
+psql "$DATABASE_URL"
 
-# Via local psql (if installed)
-psql -h localhost -U cafepos -d cafepos
+# Connection string format
+jdbc:postgresql://<neon-host>/<database>?sslmode=require
 
-# Connection string
-postgresql://cafepos:secure-password@localhost:5432/cafepos
 ```
 
 ### Common SQL Queries
@@ -609,8 +607,8 @@ CREATE SCHEMA public;
 ### Port Already in Use
 
 ```bash
-# Find process using port 8080
-lsof -i :8080
+# Find process using port 
+lsof -i :
 
 # Kill process
 kill -9 <PID>
