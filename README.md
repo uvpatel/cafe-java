@@ -75,11 +75,8 @@
    cd cafe-pos-backend
    ```
 
-2. **Start Infrastructure**
-   ```bash
-   docker compose up -d
-   ```
-   This starts PostgreSQL (port 5432) and Redis (port 6379).
+2. **Configure Environment Variables**
+   Set `DATABASE_URL`, `DATABASE_USERNAME`, and `DATABASE_PASSWORD` for Neon Serverless PostgreSQL in `.env`.
 
 3. **Build the Project**
    ```bash
@@ -95,11 +92,11 @@
    ```bash
    ./mvnw spring-boot:run
    ```
-   Application runs on `http://localhost:8080`
+   Application runs on `http://localhost:3000`
 
 6. **Access API Documentation**
-   - Swagger UI: `http://localhost:8080/swagger-ui.html`
-   - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
+   - Swagger UI: `http://localhost:3000/swagger-ui.html`
+   - OpenAPI JSON: `http://localhost:3000/v3/api-docs`
 
 ---
 
@@ -641,9 +638,9 @@ Current migrations are in `src/main/resources/db/migration/`.
 The API is fully documented with OpenAPI 3.1 specification via Springdoc OpenAPI.
 
 **Access:**
-- Swagger UI: `http://localhost:8080/swagger-ui.html`
-- OpenAPI JSON: `http://localhost:8080/v3/api-docs`
-- OpenAPI YAML: `http://localhost:8080/v3/api-docs.yaml`
+- Swagger UI: `http://localhost:3000/swagger-ui.html`
+- OpenAPI JSON: `http://localhost:3000/v3/api-docs`
+- OpenAPI YAML: `http://localhost:3000/v3/api-docs.yaml`
 
 ### API Versioning
 
@@ -741,11 +738,9 @@ docker compose up
 
 **Environment Variables:**
 ```env
-SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/cafepos
-SPRING_DATASOURCE_USERNAME=cafepos
-SPRING_DATASOURCE_PASSWORD=secure-password
-SPRING_REDIS_HOST=redis
-SPRING_REDIS_PORT=6379
+DATABASE_URL=jdbc:postgresql://<neon-host>/<database>?sslmode=require
+DATABASE_USERNAME=<neon-username>
+DATABASE_PASSWORD=<neon-password>
 LOGGING_LEVEL_COM_CAFEPOS=INFO
 ```
 
@@ -771,7 +766,7 @@ GET /actuator/health
 Metrics are exposed via Micrometer on `/actuator/prometheus`:
 
 ```bash
-curl http://localhost:8080/actuator/prometheus
+curl http://localhost:3000/actuator/prometheus
 ```
 
 Key metrics:
@@ -909,7 +904,7 @@ docker ps
 
 ### Port Conflicts
 
-If port 8080 is in use:
+If port 3000 is in use:
 ```bash
 # Change in application.yml
 server:
@@ -921,9 +916,9 @@ server:
 ## Quick Links
 
 - **Full Plan**: [PLAN.md](PLAN.md)
-- **API Docs**: `http://localhost:8080/swagger-ui.html`
-- **Health Check**: `http://localhost:8080/actuator/health`
-- **Metrics**: `http://localhost:8080/actuator/prometheus`
+- **API Docs**: `http://localhost:3000/swagger-ui.html`
+- **Health Check**: `http://localhost:3000/actuator/health`
+- **Metrics**: `http://localhost:3000/actuator/prometheus`
 - **Spring Boot Docs**: https://spring.io/projects/spring-boot
 - **Spring Modulith Docs**: https://spring.io/projects/spring-modulith
 
