@@ -74,4 +74,19 @@ public class ModifierGroupController {
         UUID cafeId = UUID.fromString(TenantContextHolder.getRequiredTenantId());
         return ResponseEntity.ok(catalogModifierApplicationService.getOptionsForGroup(cafeId, groupId));
     }
+
+    @PostMapping("/products/{productId}/groups/{groupId}")
+    public ResponseEntity<Void> linkGroupToProduct(@PathVariable("productId") UUID productId, @PathVariable("groupId") UUID groupId) {
+        UUID cafeId = UUID.fromString(TenantContextHolder.getRequiredTenantId());
+        catalogModifierApplicationService.linkModifierGroupToProduct(cafeId, productId, groupId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @org.springframework.web.bind.annotation.DeleteMapping("/products/{productId}/groups/{groupId}")
+    public ResponseEntity<Void> unlinkGroupFromProduct(@PathVariable("productId") UUID productId, @PathVariable("groupId") UUID groupId) {
+        UUID cafeId = UUID.fromString(TenantContextHolder.getRequiredTenantId());
+        catalogModifierApplicationService.unlinkModifierGroupFromProduct(cafeId, productId, groupId);
+        return ResponseEntity.noContent().build();
+    }
 }
+

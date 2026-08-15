@@ -32,13 +32,16 @@ class CatalogModifierApplicationServiceTest {
     @Mock
     private ModifierOptionRepository modifierOptionRepository;
 
+    @Mock
+    private com.cafepos.catalog.domain.ProductRepository productRepository;
+
     private CatalogModifierApplicationService catalogModifierApplicationService;
 
     private final UUID cafeId = UUID.randomUUID();
 
     @BeforeEach
     void setUp() {
-        catalogModifierApplicationService = new CatalogModifierApplicationService(modifierGroupRepository, modifierOptionRepository);
+        catalogModifierApplicationService = new CatalogModifierApplicationService(modifierGroupRepository, modifierOptionRepository, productRepository);
     }
 
     @Test
@@ -85,4 +88,52 @@ class CatalogModifierApplicationServiceTest {
                 .extracting(ex -> ((BusinessException) ex).getStatus())
                 .isEqualTo(404);
     }
+
+    @Test
+    @DisplayName("Should link modifier group to product successfully")
+    void linkModifierGroupToProductSuccess() {
+        UUID productId = UUID.randomUUID();
+        UUID groupId = UUID.randomUUID();
+        UUID categoryId = UUID.randomUUID();
+
+        com.cafepos.catalog.domain.Product product = new com.cafepos.catalog.domain.Product(
+                productId, cafeId, categoryId, "Espresso", "ESP-01",
+                new com.cafepos.shared.money.Money(new BigDecimal("3.50"), java.util.Currency.getInstance("USD")),
+                com.cafepos.catalog.domain.UnitOfMeasure.UNIT, true
+        );
+        ModifierGroup group = new ModifierGroup(groupId, cafeId, "Syrups", 0, 2);
+
+        when(productRepository.findByIdAndCafeId(productId, cafeId)).thenReturn(Optional.of(product));
+        when(modifierGroupRepository.findByIdAndCafeId(groupId, cafeId)).thenReturn(Optional.of(group));
+        when(productRepository.save(any(com.cafepos.catalog.domain.Product.class))).thenAnswer(i -> i.getArgument(0));
+
+        com.cafepos.catalog.domain.Product updated = catalogModifierApplicationService.linkModifierGroupToProduct(cafeId, productId, groupId);
+
+        assertThat(updated.getModifierGroupIds()).contains(groupId);
+        verify(productRepository).save(product);
+    }
+
+    @Test
+    @DisplayName("Should unlink modifier group from product successfully")
+    void unlinkModifierGroupFromProductSuccess() {
+        UUID productId = UUID.randomUUID();
+        UUID groupId = UUID.randomUUID();
+        UUID categoryId = UUID.randomUUID();
+
+        com.cafepos.catalog.domain.Product product = new com.cafepos.catalog.domain.Product(
+                productId, cafeId, categoryId, "Espresso", "ESP-01",
+                new com.cafepos.shared.money.Money(new BigDecimal("3.50"), java.util.Currency.getInstance("USD")),
+                com.cafepos.catalog.domain.UnitOfMeasure.UNIT, true
+        );
+        product.attachModifierGroup(groupId);
+
+        when(productRepository.findByIdAndCafeId(productId, cafeId)).thenReturn(Optional.of(product));
+        when(productRepository.save(any(com.cafepos.catalog.domain.Product.class))).thenAnswer(i -> i.getArgument(0));
+
+        com.cafepos.catalog.domain.Product updated = catalogModifierApplicationService.unlinkModifierGroupFromProduct(cafeId, productId, groupId);
+
+        assertThat(updated.getModifierGroupIds()).doesNotContain(groupId);
+        verify(productRepository).save(product);
+    }
 }
+
