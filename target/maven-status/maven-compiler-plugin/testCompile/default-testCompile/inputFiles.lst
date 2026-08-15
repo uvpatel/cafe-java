@@ -40,6 +40,7 @@
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/kitchen/application/KitchenApplicationServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/kitchen/domain/KitchenDispatchServiceTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/kitchen/domain/KitchenTicketTest.java
+/Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/loyalty/api/LoyaltyControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/loyalty/domain/LoyaltyAccountTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/api/OrderControllerTest.java
 /Users/urvilpatel/freelance-projects/javaproject/src/test/java/com/cafepos/ordering/api/OrderCouponControllerTest.java
