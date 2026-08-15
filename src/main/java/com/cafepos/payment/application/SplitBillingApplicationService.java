@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -31,7 +32,7 @@ public class SplitBillingApplicationService {
         if (totalSplits <= 1) throw new IllegalArgumentException("Total splits must be greater than 1");
         if (totalOrderAmount == null || totalOrderAmount.compareTo(BigDecimal.ZERO) <= 0) throw new IllegalArgumentException("Total order amount must be positive");
 
-        BigDecimal splitAmount = totalOrderAmount.divide(new BigDecimal(totalSplits), 4, BigDecimal.ROUND_HALF_UP);
+        BigDecimal splitAmount = totalOrderAmount.divide(new BigDecimal(totalSplits), 4, RoundingMode.HALF_UP);
         List<SplitPayment> splits = new ArrayList<>();
 
         for (int i = 1; i <= totalSplits; i++) {
