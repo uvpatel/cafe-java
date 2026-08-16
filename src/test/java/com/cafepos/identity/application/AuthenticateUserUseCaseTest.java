@@ -235,4 +235,63 @@ class AuthenticateUserUseCaseTest {
                 .isInstanceOf(BusinessException.class)
                 .hasMessageContaining("not a refresh token");
     }
+
+    @Test
+    @DisplayName("Should retrieve authenticated current user profile")
+    void shouldGetCurrentUserProfileSuccessfully() {
+        when(employeeRepository.findById(employeeId)).thenReturn(Optional.of(employee));
+        when(userAccountRepository.findByEmployeeId(employeeId)).thenReturn(Optional.of(userAccount));
+
+        UserProfileResponse profile = authenticateUserUseCase.getCurrentUserProfile(employeeId);
+
+        assertThat(profile).isNotNull();
+        assertThat(profile.employeeId()).isEqualTo(employeeId);
+        assertThat(profile.cafeId()).isEqualTo(cafeId);
+        assertThat(profile.fullName()).isEqualTo("John Doe");
+        assertThat(profile.email()).isEqualTo("john@cafepos.com");
+        assertThat(profile.role()).isEqualTo(EmployeeRole.CASHIER);
+        assertThat(profile.active()).isTrue();
+    }
+
+    @Test
+    @DisplayName("Should change user password successfully when current password matches")
+    void shouldChangePasswordSuccessfully() {
+        ChangePasswordCommand command = new ChangePasswordCommand("correctPassword", "newSecurePassword456");
+
+        when(userAccountRepository.findByEmployeeId(employeeId)).thenReturn(Optional.of(userAccount));
+        when(passwordEncodingService.matches("correctPassword", userAccount.getPasswordHash())).thenReturn(true);
+        when(passwordEncodingService.encode("newSecurePassword456")).thenReturn("$2a$10$newEncodedPasswordHash");
+
+        authenticateUserUseCase.changePassword(employeeId, command);
+
+        ArgumentCaptor<UserAccount> captor = ArgumentCaptor.forClass(UserAccount.class);
+        verify(userAccountRepository).save(captor.capture());
+        assertThat(captor.getValue().getPasswordHash()).isEqualTo("$2a$10$newEncodedPasswordHash");
+    }
+
+    @Test
+    @DisplayName("Should reject password change when current password is wrong")
+    void shouldRejectPasswordChangeWhenCurrentPasswordWrong() {
+        ChangePasswordCommand command = new ChangePasswordCommand("wrongCurrentPassword", "newSecurePassword456");
+
+        when(userAccountRepository.findByEmployeeId(employeeId)).thenReturn(Optional.of(userAccount));
+        when(passwordEncodingService.matches("wrongCurrentPassword", userAccount.getPasswordHash())).thenReturn(false);
+
+        assertThatThrownBy(() -> authenticateUserUseCase.changePassword(employeeId, command))
+                .isInstanceOf(BusinessException.class)
+                .hasMessageContaining("Current password does not match");
+    }
+
+    @Test
+    @DisplayName("Should reject password change when new password is identical to current password")
+    void shouldRejectPasswordChangeWhenSamePassword() {
+        ChangePasswordCommand command = new ChangePasswordCommand("samePassword", "samePassword");
+
+        when(userAccountRepository.findByEmployeeId(employeeId)).thenReturn(Optional.of(userAccount));
+        when(passwordEncodingService.matches("samePassword", userAccount.getPasswordHash())).thenReturn(true);
+
+        assertThatThrownBy(() -> authenticateUserUseCase.changePassword(employeeId, command))
+                .isInstanceOf(BusinessException.class)
+                .hasMessageContaining("cannot be identical");
+    }
 }

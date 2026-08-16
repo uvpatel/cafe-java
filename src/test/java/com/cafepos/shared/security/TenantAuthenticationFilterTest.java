@@ -4,6 +4,8 @@ import com.cafepos.identity.infrastructure.JwtTokenClaims;
 import com.cafepos.identity.infrastructure.JwtTokenService;
 import com.cafepos.shared.error.BusinessException;
 import com.cafepos.shared.tenancy.TenantContextHolder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,6 +42,8 @@ class TenantAuthenticationFilterTest {
     private MockHttpServletRequest request;
     private MockHttpServletResponse response;
 
+    private final ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
+
     private final UUID tenantId = UUID.randomUUID();
     private final UUID employeeId = UUID.randomUUID();
     private final String email = "employee@cafe.com";
@@ -47,7 +51,7 @@ class TenantAuthenticationFilterTest {
 
     @BeforeEach
     void setUp() {
-        filter = new TenantAuthenticationFilter(jwtTokenService);
+        filter = new TenantAuthenticationFilter(jwtTokenService, objectMapper);
         request = new MockHttpServletRequest();
         response = new MockHttpServletResponse();
         TenantContextHolder.clear();
@@ -114,6 +118,7 @@ class TenantAuthenticationFilterTest {
 
         assertThat(response.getStatus()).isEqualTo(401);
         assertThat(response.getContentAsString()).contains("EXPIRED_TOKEN");
+        assertThat(response.getContentAsString()).contains("Authentication Required");
         verify(filterChain, never()).doFilter(any(), any());
 
         // Contexts must be cleared
