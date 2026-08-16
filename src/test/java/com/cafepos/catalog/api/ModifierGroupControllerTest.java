@@ -144,4 +144,3 @@ class ModifierGroupControllerTest {
         verify(catalogModifierApplicationService).unlinkModifierGroupFromProduct(eq(cafeId), eq(productId), eq(groupId));
     }
 }
-

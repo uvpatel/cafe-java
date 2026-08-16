@@ -42,4 +42,3 @@ public class SecurityConfig {
         return new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder();
     }
 }
-

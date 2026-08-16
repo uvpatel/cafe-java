@@ -92,4 +92,3 @@ public class CatalogModifierApplicationService {
         return modifierOptionRepository.findByGroupIdOrderBySortOrderAsc(groupId);
     }
 }
-

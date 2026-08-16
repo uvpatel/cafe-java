@@ -2,7 +2,6 @@ package com.cafepos.loyalty.api;
 
 import com.cafepos.loyalty.application.LoyaltyApplicationService;
 import com.cafepos.loyalty.domain.LoyaltyAccount;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

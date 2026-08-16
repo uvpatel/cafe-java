@@ -73,4 +73,3 @@ class ProductPricingValidatorTest {
         assertThat(totalPrice.currency()).isEqualTo(Currency.getInstance("USD"));
     }
 }
-
