@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 import java.util.Objects;
+import java.util.UUID;
 
 @Service
 public class AuthenticateUserUseCase {
@@ -137,5 +138,51 @@ public class AuthenticateUserUseCase {
                 "Bearer",
                 jwtTokenService.getAccessTokenExpirationSeconds()
         );
+    }
+
+    @Transactional(readOnly = true)
+    public UserProfileResponse getCurrentUserProfile(UUID employeeId) {
+        if (employeeId == null) {
+            throw new BusinessException("UNAUTHORIZED", "Authenticated employee ID is required", 401);
+        }
+
+        Employee employee = employeeRepository.findById(employeeId)
+                .orElseThrow(() -> new BusinessException("USER_NOT_FOUND", "Employee not found", 404));
+
+        UserAccount userAccount = userAccountRepository.findByEmployeeId(employee.getId()).orElse(null);
+        Instant lastLogin = userAccount != null ? userAccount.getLastLoginAt() : null;
+
+        return new UserProfileResponse(
+                employee.getId(),
+                employee.getCafeId(),
+                employee.getFullName(),
+                employee.getEmail(),
+                employee.getRole(),
+                employee.isActive(),
+                lastLogin
+        );
+    }
+
+    @Transactional
+    public void changePassword(UUID employeeId, ChangePasswordCommand command) {
+        if (employeeId == null) {
+            throw new BusinessException("UNAUTHORIZED", "Authenticated employee ID is required", 401);
+        }
+        Objects.requireNonNull(command, "ChangePasswordCommand must not be null");
+
+        UserAccount userAccount = userAccountRepository.findByEmployeeId(employeeId)
+                .orElseThrow(() -> new BusinessException("USER_NOT_FOUND", "User account not found", 404));
+
+        if (!passwordEncodingService.matches(command.currentPassword(), userAccount.getPasswordHash())) {
+            throw new BusinessException("INVALID_PASSWORD", "Current password does not match", 400);
+        }
+
+        if (command.currentPassword().equals(command.newPassword())) {
+            throw new BusinessException("SAME_PASSWORD", "New password cannot be identical to current password", 400);
+        }
+
+        String encodedNewPassword = passwordEncodingService.encode(command.newPassword());
+        userAccount.updatePassword(encodedNewPassword);
+        userAccountRepository.save(userAccount);
     }
 }
