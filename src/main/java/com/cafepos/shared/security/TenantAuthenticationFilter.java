@@ -3,7 +3,10 @@ package com.cafepos.shared.security;
 import com.cafepos.identity.infrastructure.JwtTokenClaims;
 import com.cafepos.identity.infrastructure.JwtTokenService;
 import com.cafepos.shared.error.BusinessException;
+import com.cafepos.shared.error.ProblemDetail;
 import com.cafepos.shared.tenancy.TenantContextHolder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,9 +36,11 @@ public class TenantAuthenticationFilter extends OncePerRequestFilter {
     private static final String BEARER_PREFIX = "Bearer ";
 
     private final JwtTokenService jwtTokenService;
+    private final ObjectMapper objectMapper;
 
-    public TenantAuthenticationFilter(JwtTokenService jwtTokenService) {
+    public TenantAuthenticationFilter(JwtTokenService jwtTokenService, ObjectMapper objectMapper) {
         this.jwtTokenService = Objects.requireNonNull(jwtTokenService, "jwtTokenService must not be null");
+        this.objectMapper = objectMapper != null ? objectMapper : new ObjectMapper().registerModule(new JavaTimeModule());
     }
 
     @Override
@@ -98,21 +103,14 @@ public class TenantAuthenticationFilter extends OncePerRequestFilter {
     private void sendUnauthorizedResponse(HttpServletRequest request, HttpServletResponse response, String code, String message)
             throws IOException {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-        response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-        String body = String.format(
-                "{\"code\":\"%s\",\"message\":\"%s\",\"status\":401,\"detail\":\"%s\",\"path\":\"%s\"}",
+        response.setContentType(MediaType.APPLICATION_PROBLEM_JSON_VALUE);
+        ProblemDetail problem = ProblemDetail.of(
                 code,
-                escapeJson(message),
-                escapeJson(message),
+                "Authentication Required",
+                HttpServletResponse.SC_UNAUTHORIZED,
+                message,
                 request.getRequestURI()
         );
-        response.getWriter().write(body);
-    }
-
-    private String escapeJson(String input) {
-        if (input == null) {
-            return "";
-        }
-        return input.replace("\"", "\\\"");
+        objectMapper.writeValue(response.getWriter(), problem);
     }
 }
