@@ -26,7 +26,7 @@ This roadmap outlines the 200 focused Pull Requests designed to transform `uvpat
 
 | PR # | Workstream | Title | Status | Branch | Commits | Tests | Dependencies | Risk Level | Follow-up Work |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **PR-001** | Baseline | Fix Modulith boundary violations, untrack build artifacts, and establish ArchUnit rules | **In Progress** | `fix/architecture-modulith-boundaries-and-hygiene` | 5 | ApplicationModulithTest, ArchitectureBoundariesTest, full suite (468 tests) | None | Low | Setup Spotless automated formatting in CI |
+| **PR-001** | Baseline | Fix Modulith boundary violations, untrack build artifacts, and align seed bean conditions | **Merged to main** | `main` | 10 | ApplicationModulithTest, ArchitectureBoundariesTest, full suite (472 tests) | None | Low | Setup Spotless automated formatting in CI |
 | **PR-002** | CI/CD | Enhance GitHub Actions workflow with Spotless linting, JaCoCo coverage, and caching | Planned | `ci/enhance-pipeline-quality-gates` | 4 | Maven spotless:check, verify | PR-001 | Low | Add Dependency Check scanning |
 | **PR-003** | Security | Enforce strict JWT token expiration, refresh rotation, and type validation | Planned | `security/jwt-token-rotation-and-validation` | 5 | JwtAuthenticationFilterTest, SecurityConfigTest | PR-001 | Medium | Implement rate limiting on login |
 | **PR-004** | Multi-Tenancy | Enforce tenant-isolated repository queries and TenantContext cleanup filters | Planned | `security/tenant-context-isolation-and-filters` | 5 | TenantContextHolderTest, TenantIsolationIT | PR-003 | High | Add cross-tenant data access security tests |
