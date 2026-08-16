@@ -14,6 +14,7 @@
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Engineering Roadmap & Backlog](#engineering-roadmap--backlog)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Architecture](#architecture)
@@ -26,6 +27,17 @@
 - [Security](#security)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
+
+
+---
+
+## 🗺️ Engineering Roadmap & Backlog
+
+The long-term development of this enterprise application is tracked via standard engineering management documentation:
+
+* 📊 [Master Engineering Roadmap (200 PR Target)](docs/engineering/ROADMAP.md)
+* 📋 [Prioritized Backlog (P0–P3)](docs/engineering/BACKLOG.md)
+* 📑 [Architectural Decision Records (ADR Log)](docs/engineering/DECISIONS.md)
 
 ---
 
