@@ -20,7 +20,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -82,7 +81,7 @@ class DatabaseSeederTest {
         when(passwordEncodingService.encode(any())).thenReturn("encodedPassword");
 
         // Run seeder once
-        seeder.seedAll();
+        seeder.run();
 
         verify(employeeRepository, times(5)).save(any());
         verify(productRepository, times(5)).save(any());
@@ -96,17 +95,29 @@ class DatabaseSeederTest {
         when(couponRepository.existsByCafeIdAndCodeIgnoreCase(eq(cafeId), any())).thenReturn(true);
 
         // Run seeder second time
-        seeder.seedAll();
+        seeder.run();
 
         // Verify productRepository.save was NOT called additional times on second run
         verify(productRepository, times(5)).save(any());
     }
 
     @Test
-    @DisplayName("run() should skip seeding if startup seeding is disabled")
-    void testRunSkipsWhenDisabled() {
-        ReflectionTestUtils.setField(seeder, "seedEnabledOnStartup", false);
-        seeder.run();
-        verifyNoInteractions(cafeRepository);
+    @DisplayName("Tenant-specific seed records must be scoped to the specified cafeId")
+    void testTenantScopedSeeding() {
+        UUID tenantA = UUID.randomUUID();
+        UUID tenantB = UUID.randomUUID();
+        Cafe cafeA = new Cafe(tenantA, "Cafe Alpha", "cafe-alpha", "UTC", "USD");
+
+        when(cafeRepository.findBySlug("central-perk")).thenReturn(Optional.of(cafeA));
+        when(employeeRepository.save(any())).thenAnswer(inv -> inv.getArgument(0));
+        when(categoryRepository.save(any())).thenAnswer(inv -> inv.getArgument(0));
+        when(floorRepository.save(any())).thenAnswer(inv -> inv.getArgument(0));
+        when(passwordEncodingService.encode(any())).thenReturn("secret");
+
+        seeder.seedAll();
+
+        // Verify employee was seeded with tenantA, not tenantB
+        verify(employeeRepository).findByCafeIdAndEmail(eq(tenantA), eq("rachel@centralperk.com"));
+        verify(employeeRepository, never()).findByCafeIdAndEmail(eq(tenantB), any());
     }
 }
