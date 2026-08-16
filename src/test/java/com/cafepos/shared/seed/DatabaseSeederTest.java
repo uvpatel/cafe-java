@@ -3,9 +3,9 @@ package com.cafepos.shared.seed;
 import com.cafepos.catalog.domain.ProductCategory;
 import com.cafepos.catalog.domain.ProductCategoryRepository;
 import com.cafepos.catalog.domain.ProductRepository;
+import com.cafepos.floor.domain.DiningTableRepository;
 import com.cafepos.floor.domain.Floor;
 import com.cafepos.floor.domain.FloorRepository;
-import com.cafepos.floor.domain.DiningTableRepository;
 import com.cafepos.identity.domain.Employee;
 import com.cafepos.identity.domain.EmployeeRepository;
 import com.cafepos.identity.domain.UserAccountRepository;
@@ -20,6 +20,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -81,7 +82,7 @@ class DatabaseSeederTest {
         when(passwordEncodingService.encode(any())).thenReturn("encodedPassword");
 
         // Run seeder once
-        seeder.run();
+        seeder.seedAll();
 
         verify(employeeRepository, times(5)).save(any());
         verify(productRepository, times(5)).save(any());
@@ -95,9 +96,17 @@ class DatabaseSeederTest {
         when(couponRepository.existsByCafeIdAndCodeIgnoreCase(eq(cafeId), any())).thenReturn(true);
 
         // Run seeder second time
-        seeder.run();
+        seeder.seedAll();
 
         // Verify productRepository.save was NOT called additional times on second run
         verify(productRepository, times(5)).save(any());
+    }
+
+    @Test
+    @DisplayName("run() should skip seeding if startup seeding is disabled")
+    void testRunSkipsWhenDisabled() {
+        ReflectionTestUtils.setField(seeder, "seedEnabledOnStartup", false);
+        seeder.run();
+        verifyNoInteractions(cafeRepository);
     }
 }
