@@ -57,7 +57,7 @@ class PaymentDomainServiceTest {
     void shouldReturnExistingPaymentOnDuplicateIdempotencyKey() {
         String idempotencyKey = "IDEM-KEY-999";
         Payment existingPayment = new Payment(cafeId, order.getId(), PaymentMethod.CARD, order.getTotal(), null, "TXN-888", idempotencyKey);
-        
+
         when(paymentRepository.findByCafeIdAndIdempotencyKey(cafeId, idempotencyKey)).thenReturn(Optional.of(existingPayment));
 
         Payment payment = paymentDomainService.processPayment(order, PaymentMethod.CARD, order.getTotal(), null, "TXN-888", idempotencyKey);

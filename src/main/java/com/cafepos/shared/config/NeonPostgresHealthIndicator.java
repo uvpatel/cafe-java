@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 @Component
@@ -20,8 +21,9 @@ public class NeonPostgresHealthIndicator implements HealthIndicator {
     @Override
     public Health health() {
         try (Connection conn = dataSource.getConnection();
-             Statement stmt = conn.createStatement()) {
-            boolean valid = conn.isValid(3);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT 1")) {
+            boolean valid = conn.isValid(3) && rs.next();
             if (valid) {
                 return Health.up()
                         .withDetail("database", "Neon PostgreSQL")

@@ -39,6 +39,7 @@ public class ActivityLogController {
         return ResponseEntity.ok(responsePage);
     }
 
+    @SuppressWarnings("PMD.UnusedPrivateMethod")
     private ActivityLogResponse toResponse(ActivityLog log) {
         return new ActivityLogResponse(
                 log.getId(),

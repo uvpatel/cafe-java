@@ -66,4 +66,3 @@ class MoneyTest {
         assertThat(m1.isNegative()).isFalse();
     }
 }
-

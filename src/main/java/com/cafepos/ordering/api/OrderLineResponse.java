@@ -21,5 +21,3 @@ public record OrderLineResponse(
         this(id, orderId, productId, productNameSnapshot, unitPriceSnapshot, quantity, lineSubtotal, lineTotal, isKitchenRouted, createdAt, java.util.List.of());
     }
 }
-
-

@@ -49,7 +49,7 @@ public class PromotionEvaluationService {
         }
 
         if (!coupon.meetsMinimumOrder(subtotal)) {
-            throw new BusinessException("COUPON_MIN_ORDER_NOT_MET", 
+            throw new BusinessException("COUPON_MIN_ORDER_NOT_MET",
                     "Order subtotal " + subtotal.amount() + " does not meet coupon minimum order amount " + coupon.getMinOrderAmount());
         }
     }

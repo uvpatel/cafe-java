@@ -82,7 +82,7 @@ public class Payment {
                 throw new IllegalArgumentException("Tendered amount cannot be less than order total amount");
             }
             this.tenderedAmount = tenderedAmount.amount();
-            
+
             Money calculatedChange = tenderedAmount.subtract(amount);
             this.changeAmount = calculatedChange.amount();
         } else {

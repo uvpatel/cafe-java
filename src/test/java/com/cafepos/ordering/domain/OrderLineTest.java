@@ -119,4 +119,3 @@ class OrderLineTest {
         assertThat(line.getLineTotalAmount()).isEqualByComparingTo("11.0000");
     }
 }
-
