@@ -1,10 +1,8 @@
-package com.cafepos.ordering.api;
+package com.cafepos.promotion.api;
 
+import com.cafepos.ordering.api.OrderResponse;
 import com.cafepos.ordering.domain.OrderStatus;
 import com.cafepos.ordering.domain.OrderType;
-import com.cafepos.promotion.api.ApplyCouponRequest;
-import com.cafepos.promotion.api.PricingPreviewRequest;
-import com.cafepos.promotion.api.PricingPreviewResponse;
 import com.cafepos.promotion.application.ApplyCouponToOrderUseCase;
 import com.cafepos.promotion.application.PricingPreviewUseCase;
 import com.cafepos.promotion.application.RemoveCouponFromOrderUseCase;
