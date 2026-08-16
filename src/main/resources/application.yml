@@ -8,13 +8,16 @@ spring:
     password: ${DATABASE_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
     hikari:
+      pool-name: CafePosHikariPool
       maximum-pool-size: 5
       minimum-idle: 1
-      connection-timeout: 30000
-      idle-timeout: 300000
-      max-lifetime: 600000
-      keepalive-time: 120000
-      validation-timeout: 5000
+      connection-timeout: 20000
+      idle-timeout: 60000
+      max-lifetime: 120000
+      keepalive-time: 30000
+      validation-timeout: 3000
+      connection-test-query: SELECT 1
+      leak-detection-threshold: 60000
 
   jpa:
     open-in-view: false
