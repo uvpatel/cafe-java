@@ -1,4 +1,4 @@
-name: Build and Test Pipeline
+name: Build, Quality Gate & Test Pipeline
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    name: Build, Quality Check & Verify
+    name: Java 21 Build, Quality Check & Verification
     runs-on: ubuntu-latest
 
     steps:
@@ -25,17 +25,33 @@ jobs:
       - name: Make Maven wrapper executable
         run: chmod +x mvnw
 
-      - name: Run Spotless Format Check
+      - name: Code Formatting Check (Spotless)
         run: ./mvnw spotless:check
 
-      - name: Run PMD Static Code Analysis Check
+      - name: PMD Static Code Analysis
         run: ./mvnw pmd:check
 
       - name: Compile Application
         run: ./mvnw compile
 
-      - name: Run Unit & Integration Tests
+      - name: Execute Unit & Modulith Boundary Tests
         run: ./mvnw test
 
-      - name: Run Verification Pipeline & Package
+      - name: Run Verification Pipeline & Integration Tests
         run: ./mvnw verify
+
+      - name: Upload Surefire Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-test-reports
+          path: target/surefire-reports/
+          retention-days: 7
+
+      - name: Upload JaCoCo Code Coverage Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-coverage-report
+          path: target/site/jacoco/
+          retention-days: 7
