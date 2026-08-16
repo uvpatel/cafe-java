@@ -91,7 +91,7 @@ public class NeonPostgresIntegrationIT {
     void testCompletePosWorkflowAgainstNeonPostgres() {
         // 1. Create Category & Product
         var categoryResp = categoryApplicationService.createCategory(cafeId, new CreateCategoryRequest("Coffee", "#8B4513", 1));
-        
+
         CreateProductRequest productReq = new CreateProductRequest(
                 categoryResp.id(),
                 "Espresso Single",
@@ -122,7 +122,7 @@ public class NeonPostgresIntegrationIT {
                 "USD"
         );
         OrderResponse orderResp = orderApplicationService.createOrder(cafeId, createOrderReq);
-        
+
         OrderResponse updatedOrder = orderApplicationService.addOrderLine(
                 cafeId,
                 orderResp.id(),

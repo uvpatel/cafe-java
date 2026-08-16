@@ -104,7 +104,7 @@ public class Order {
         this.orderType = orderType;
         this.status = OrderStatus.DRAFT;
         this.currency = currency != null ? currency.toUpperCase().trim() : Money.DEFAULT_CURRENCY.getCurrencyCode();
-        
+
         Currency curr = getCurrency();
         this.subtotalAmount = Money.zero(curr).amount();
         this.discountAmount = Money.zero(curr).amount();
@@ -251,7 +251,7 @@ public class Order {
 
     public void recalculateTotals() {
         Currency curr = getCurrency();
-        
+
         // Sum line subtotals
         Money calculatedSubtotal = Money.zero(curr);
         for (OrderLine line : lines) {
@@ -275,16 +275,16 @@ public class Order {
         // Total = Subtotal - Discount + Tax + ServiceCharge
         Money discountMoney = new Money(this.discountAmount, curr);
         Money serviceChargeMoney = new Money(this.serviceChargeAmount, curr);
-        
+
         Money calculatedTotal = calculatedSubtotal
                 .subtract(discountMoney)
                 .add(taxMoney)
                 .add(serviceChargeMoney);
-                
+
         if (calculatedTotal.amount().compareTo(BigDecimal.ZERO) < 0) {
             calculatedTotal = Money.zero(curr);
         }
-        
+
         this.totalAmount = calculatedTotal.amount();
     }
 
@@ -293,7 +293,7 @@ public class Order {
         if (percentage == null || percentage.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Service charge percentage cannot be negative");
         }
-       
+
         Money subtotal = getSubtotal();
         BigDecimal factor = percentage.divide(new BigDecimal("100"), 4, java.math.RoundingMode.HALF_UP);
         this.serviceChargeAmount = subtotal.multiply(factor).amount();

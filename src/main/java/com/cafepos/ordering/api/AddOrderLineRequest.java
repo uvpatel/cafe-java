@@ -19,5 +19,3 @@ public record AddOrderLineRequest(
         this(productId, quantity, java.util.List.of());
     }
 }
-
-

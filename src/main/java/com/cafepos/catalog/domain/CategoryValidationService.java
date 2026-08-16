@@ -27,8 +27,8 @@ public class CategoryValidationService {
         Objects.requireNonNull(category, "Category must not be null");
         String resolvedColor = newColorHex != null && !newColorHex.isBlank() ? newColorHex : ProductCategory.DEFAULT_COLOR_HEX;
         ProductCategory.validateInputs(category.getCafeId(), newName, resolvedColor);
-        
-        if (!category.getName().equalsIgnoreCase(newName.trim()) 
+
+        if (!category.getName().equalsIgnoreCase(newName.trim())
                 && categoryRepository.existsByCafeIdAndNameIgnoreCase(category.getCafeId(), newName.trim())) {
             throw new IllegalArgumentException("Category with name '" + newName.trim() + "' already exists for this cafe");
         }

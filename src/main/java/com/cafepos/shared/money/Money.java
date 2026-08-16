@@ -77,9 +77,8 @@ public record Money(BigDecimal amount, Currency currency) {
 
     private void assertSameCurrency(Money other) {
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("Cannot operate on different currencies: " 
+            throw new IllegalArgumentException("Cannot operate on different currencies: "
                 + this.currency + " and " + other.currency);
         }
     }
 }
-
