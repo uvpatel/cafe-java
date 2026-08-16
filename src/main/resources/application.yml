@@ -23,7 +23,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
+        format_sql: false
         jdbc:
           time_zone: UTC
 
@@ -36,8 +36,20 @@ spring:
 server:
   port: 3000
   error:
-    include-message: always
-    include-binding-errors: always
+    include-message: never
+    include-binding-errors: never
+    include-stacktrace: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: when_authorized
 
 springdoc:
   api-docs:
@@ -48,11 +60,9 @@ springdoc:
 app:
   seed:
     enabled: ${SEED_DATA:false}
-    admin-password: ${SEED_ADMIN_PASSWORD:password123}
+    admin-password: ${SEED_ADMIN_PASSWORD:}
 
 logging:
   level:
     root: INFO
-    com.cafepos: DEBUG
-
-
+    com.cafepos: INFO
