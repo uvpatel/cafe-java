@@ -27,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +37,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Component
+@ConditionalOnProperty(name = "app.seed.enabled", havingValue = "true")
 public class DatabaseSeeder implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DatabaseSeeder.class);
@@ -50,9 +52,6 @@ public class DatabaseSeeder implements CommandLineRunner {
     private final TerminalRepository terminalRepository;
     private final CouponRepository couponRepository;
     private final PasswordEncodingService passwordEncodingService;
-
-    @Value("${app.seed.enabled:false}")
-    private boolean seedEnabledOnStartup;
 
     @Value("${app.seed.admin-password:password123}")
     private String demoPassword;
@@ -82,10 +81,6 @@ public class DatabaseSeeder implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) {
-        if (!seedEnabledOnStartup) {
-            log.info("Automatic database seeding on startup is disabled (app.seed.enabled=false). Seeding can be triggered on-demand via /api/v1/seed/execute.");
-            return;
-        }
         seedAll();
     }
 

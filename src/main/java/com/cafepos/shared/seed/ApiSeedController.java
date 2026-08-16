@@ -1,6 +1,8 @@
 package com.cafepos.shared.seed;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +12,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 @RestController
+@ConditionalOnProperty(name = "app.seed.enabled", havingValue = "true")
 @RequestMapping("/api/v1/seed")
 public class ApiSeedController {
 
@@ -26,6 +29,7 @@ public class ApiSeedController {
     ) {}
 
     @PostMapping("/execute")
+    @PreAuthorize("hasAnyRole('OWNER', 'MANAGER', 'ADMIN')")
     public ResponseEntity<ApiSeedResponse> executeApiSeeding(
             @RequestParam(required = false, defaultValue = "false") boolean force
     ) {

@@ -22,7 +22,6 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         jdbc:
           time_zone: UTC
@@ -54,5 +53,3 @@ logging:
   level:
     root: INFO
     com.cafepos: DEBUG
-
-
